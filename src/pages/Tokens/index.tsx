@@ -98,7 +98,7 @@ const Tokens = () => {
   return (
     <Trace page={InterfacePageName.TOKENS_PAGE} shouldLogImpression>
       <ExploreContainer>
-        <div className="w-full mx-auto max-w-[1200px] pb-10">
+        <div className="w-full mx-auto max-w-[1200px] md:pb-8 pb-0">
           <section className="flex flex-col justify-between gap-12 lg:flex-row lg:items-start mb-12">
             <div className="flex flex-col items-center flex-grow gap-6 lg:items-start">
               <div className="flex flex-col">
@@ -139,7 +139,7 @@ const Tokens = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue-400 bg-[#2C2F36] hover:bg-muted focus:bg-accent min-h-[44px] h-[44px] px-4 rounded-xl flex-1 w-full">
+                <div className="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue-400 dark:bg-[#2C2F36] bg-slate-100 hover:bg-muted focus:bg-accent min-h-[44px] h-[44px] px-4 rounded-xl flex-1 w-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -155,7 +155,7 @@ const Tokens = () => {
                       d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
                     ></path>
                   </svg>
-                  <a href="#" className="text-white">
+                  <a href="#" className="dark:text-white text-black">
                     I want to incentivize a pool
                   </a>
                 </div>
@@ -200,7 +200,7 @@ const Tokens = () => {
           </section>
         </div>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-8 gap-4 max-w-[1200px] mx-auto mb-6">
-          <div className="flex justify-between rounded-xl bg-[#2C2F36] p-4">
+          <div className="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4">
             <div>
               <img src={one} className="w-20 h-20" />
             </div>
@@ -211,7 +211,7 @@ const Tokens = () => {
               <div className="text-gray-400">TVL</div>
             </div>
           </div>
-          <div className="flex justify-between rounded-xl bg-[#2C2F36] p-4">
+          <div className="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4">
             <div>
               <img src={two} className="w-20 h-20" />
             </div>
@@ -222,7 +222,7 @@ const Tokens = () => {
               <div className="text-gray-400">24H Volume</div>
             </div>
           </div>
-          <div className="flex justify-between rounded-xl bg-[#2C2F36] p-4">
+          <div className="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4">
             <div>
               <img src={three} className="w-20 h-20" />
             </div>
@@ -231,7 +231,7 @@ const Tokens = () => {
               <div className="text-gray-400">Pools</div>
             </div>
           </div>
-          <div className="flex justify-between rounded-xl bg-[#2C2F36] p-4">
+          <div className="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4">
             <div>
               <img src={four} className="w-20 h-20" />
             </div>
