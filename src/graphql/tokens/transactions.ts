@@ -4,7 +4,7 @@ import { Transaction, TransactionType } from 'types/info'
 import { formatTokenSymbol } from 'utils/tokens'
 
 const GLOBAL_TRANSACTIONS = gql`
-  query globalTransactions($address: Bytes!) {
+  query transactions($address: Bytes!) {
     mintsAs0: mints(
       first: 500
       orderBy: timestamp

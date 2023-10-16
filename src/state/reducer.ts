@@ -6,6 +6,7 @@ import { isDevelopmentEnv } from 'utils/env'
 
 import application from './application/reducer'
 import infoapplication from './infoapplication/reducer'
+import pools from './pools/reducer'
 import tokens from './tokens/reducer'
 import burn from './burn/reducer'
 import burnV3 from './burn/v3/reducer'
@@ -30,6 +31,7 @@ const persistedReducers = {
 const appReducer = combineReducers({
   application,
   infoapplication,
+  pools,
   tokens,
   wallets,
   mint,
