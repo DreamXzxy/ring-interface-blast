@@ -44,6 +44,7 @@ import RemoveLiquidityV3 from './RemoveLiquidity/V3'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly } from './Swap/redirects'
 import Tokens from './Tokens'
+import InfoTokens from './InfoTokens'
 
 const TokenDetails = lazy(() => import('./TokenDetails'))
 const Vote = lazy(() => import('./Vote'))
@@ -212,6 +213,10 @@ export default function App() {
               {isLoaded ? (
                 <Routes>
                   <Route path="/" element={<Landing />} />
+
+                  <Route path="infotokens" element={<InfoTokens />}>
+                    <Route path=":chainName" />
+                  </Route>
 
                   <Route path="tokens" element={<Tokens />}>
                     <Route path=":chainName" />

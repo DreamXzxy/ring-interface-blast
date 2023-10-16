@@ -5,6 +5,8 @@ import { PersistConfig, persistReducer } from 'redux-persist'
 import { isDevelopmentEnv } from 'utils/env'
 
 import application from './application/reducer'
+import infoapplication from './infoapplication/reducer'
+import tokens from './tokens/reducer'
 import burn from './burn/reducer'
 import burnV3 from './burn/v3/reducer'
 import lists from './lists/reducer'
@@ -27,6 +29,8 @@ const persistedReducers = {
 
 const appReducer = combineReducers({
   application,
+  infoapplication,
+  tokens,
   wallets,
   mint,
   mintV3,
