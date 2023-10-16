@@ -214,13 +214,13 @@ export default function App() {
                 <Routes>
                   <Route path="/" element={<Landing />} />
 
-                  <Route path="infotokens" element={<InfoTokens />}>
+                  <Route path="tokens" element={<InfoTokens />}>
                     <Route path=":chainName" />
                   </Route>
 
-                  <Route path="tokens" element={<Tokens />}>
+                  {/* <Route path="tokens" element={<Tokens />}>
                     <Route path=":chainName" />
-                  </Route>
+                  </Route> */}
                   <Route path="tokens/:chainName/:tokenAddress" element={<TokenDetails />} />
                   <Route
                     path="vote/*"
