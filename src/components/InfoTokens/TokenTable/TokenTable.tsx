@@ -7,8 +7,12 @@ import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { MAX_WIDTH_MEDIA_BREAKPOINT } from '../constants'
+import { RNG_ADDRESS, addressesArray } from 'constants/tokens'
 import { HeaderRow, LoadedRow, LoadingRow } from './TokenRow'
+import { usePoolDatas } from 'state/pools/hooks'
 import { usePoolsForToken } from 'state/tokens/hooks'
+import { useInfoTokens } from 'hooks/useTokensForAddresses'
+import { useSparkLines } from 'hooks/useSparkLines'
 
 const GridContainer = styled.div`
   display: flex;
@@ -77,14 +81,16 @@ function LoadingTokenTable({ rowCount = PAGE_SIZE }: { rowCount?: number }) {
 
 export default function TokenTable() {
   const chainName = validateUrlChainParam(useParams<{ chainName?: string }>().chainName)
-  const { tokens, tokenSortRank, loadingTokens, sparklines } = useTopTokens(chainName)
-  const poolsForToken = usePoolsForToken("0x3b94440c8c4f69d5c9f47bab9c5a93064df460f5")
-  console.log(poolsForToken, 'poolsForToken111')
+  const poolsForToken = usePoolsForToken(RNG_ADDRESS)
+  const poolDatas = usePoolDatas(poolsForToken ?? [])
+  const { infoTokens, loadingTokens } = useInfoTokens(poolDatas, chainName)
+  console.log(infoTokens, 'infoTokens')
+  const sparklines = useSparkLines(addressesArray, chainName)
 
   /* loading and error state */
-  if (loadingTokens && !tokens) {
+  if (loadingTokens && !infoTokens) {
     return <LoadingTokenTable rowCount={PAGE_SIZE} />
-  } else if (!tokens) {
+  } else if (!infoTokens) {
     return (
       <NoTokensState
         message={
@@ -95,23 +101,23 @@ export default function TokenTable() {
         }
       />
     )
-  } else if (tokens?.length === 0) {
+  } else if (infoTokens?.length === 0) {
     return <NoTokensState message={<Trans>No tokens found</Trans>} />
   } else {
     return (
       <GridContainer>
         <HeaderRow />
         <TokenDataContainer>
-          {tokens.map(
+          {infoTokens.map(
             (token, index) =>
               token?.address && (
                 <LoadedRow
                   key={token.address}
                   tokenListIndex={index}
-                  tokenListLength={tokens.length}
+                  tokenListLength={infoTokens.length}
                   token={token}
                   sparklineMap={sparklines}
-                  sortRank={tokenSortRank[token.address]}
+                  sortRank={1}
                 />
               )
           )}
@@ -120,3 +126,4 @@ export default function TokenTable() {
     )
   }
 }
+

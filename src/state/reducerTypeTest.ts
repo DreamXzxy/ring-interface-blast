@@ -9,6 +9,7 @@ import { assert, Equals } from 'tsafe'
 import { ApplicationModal, ApplicationState, PopupList } from './application/reducer'
 import { InfoapplicationState} from './infoapplication/reducer'
 import { TokensState} from './tokens/reducer'
+import { PoolsState} from './pools/reducer'
 import { Field as BurnField } from './burn/actions'
 import { BurnState } from './burn/reducer'
 import { BurnV3State } from './burn/v3/reducer'
@@ -57,6 +58,7 @@ type ExpectedAppState = CombinedState<{
   application: ApplicationState
   infoapplication: InfoapplicationState
   tokens: TokensState
+  pools: PoolsState
   wallets: WalletState
   mint: MintState
   mintV3: MintV3State

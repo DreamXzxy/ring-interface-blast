@@ -8,7 +8,7 @@ import { ArrowChangeUp } from 'components/Icons/ArrowChangeUp'
 import { Info } from 'components/Icons/Info'
 import QueryTokenLogo from 'components/Logo/QueryTokenLogo'
 import { MouseoverTooltip } from 'components/Tooltip'
-import { SparklineMap, TopToken } from 'graphql/data/TopTokens'
+// import { InfoToken, SparklineMap } from 'graphql/data/InfoTokens'
 import { getTokenDetailsURL, supportedChainIdFromGQLChain, validateUrlChainParam } from 'graphql/data/util'
 import { useAtomValue } from 'jotai/utils'
 import { ForwardedRef, forwardRef } from 'react'
@@ -34,6 +34,7 @@ import {
   useSetSortMethod,
 } from '../state'
 import { ArrowCell, DeltaText, formatDelta, getDeltaArrow } from '../TokenDetails/PriceChart'
+import { InfoToken, SparklineMap } from 'graphql/data/TopTokens'
 
 const Cell = styled.div`
   display: flex;
@@ -48,7 +49,7 @@ const StyledTokenRow = styled.div<{
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 1fr 7fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
   line-height: 24px;
   max-width: ${MAX_WIDTH_MEDIA_BREAKPOINT};
   min-width: 390px;
@@ -135,15 +136,6 @@ const StyledHeaderRow = styled(StyledTokenRow)`
   }
 `
 
-const ListNumberCell = styled(Cell)<{ header: boolean }>`
-  color: ${({ theme }) => theme.neutral2};
-  min-width: 32px;
-  font-size: 14px;
-
-  @media only screen and (max-width: ${SMALL_MEDIA_BREAKPOINT}) {
-    display: none;
-  }
-`
 const DataCell = styled(Cell)<{ sortable: boolean }>`
   justify-content: flex-end;
   min-width: 80px;
@@ -368,7 +360,6 @@ function TokenRow({
 }) {
   const rowCells = (
     <>
-      <ListNumberCell header={header}>{listNumber}</ListNumberCell>
       <NameCell data-testid="name-cell">{tokenInfo}</NameCell>
       <PriceCell data-testid="price-cell" sortable={header}>
         {price}
@@ -431,7 +422,7 @@ export function LoadingRow(props: { first?: boolean; last?: boolean }) {
 interface LoadedRowProps {
   tokenListIndex: number
   tokenListLength: number
-  token: NonNullable<TopToken>
+  token: NonNullable<InfoToken>
   sparklineMap: SparklineMap
   sortRank: number
 }
@@ -501,14 +492,8 @@ export const LoadedRow = forwardRef((props: LoadedRowProps, ref: ForwardedRef<HT
               <DeltaText delta={delta}>{formattedDelta}</DeltaText>
             </ClickableContent>
           }
-          tvl={
-            <ClickableContent>
-              {formatNumber(token.market?.totalValueLocked?.value, NumberType.FiatTokenStats)}
-            </ClickableContent>
-          }
-          volume={
-            <ClickableContent>{formatNumber(token.market?.volume?.value, NumberType.FiatTokenStats)}</ClickableContent>
-          }
+          tvl={<ClickableContent>{formatNumber(token.tvlUSD, NumberType.FiatTokenStats)}</ClickableContent>}
+          volume={<ClickableContent>{formatNumber(token.volumeUSD, NumberType.FiatTokenStats)}</ClickableContent>}
           sparkLine={
             <SparkLine>
               <ParentSize>

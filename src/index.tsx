@@ -28,6 +28,8 @@ import OrderUpdater from './state/signatures/updater'
 import TransactionUpdater from './state/transactions/updater'
 import ThemeProvider, { ThemedGlobalStyle } from './theme'
 import RadialGradientByChainUpdater from './theme/components/RadialGradientByChainUpdater'
+import TokensUpdater from './state/tokens/updater'
+import PoolsUpdater from './state/pools/updater'
 
 if (window.ethereum) {
   window.ethereum.autoRefreshOnNetworkChange = false
@@ -44,6 +46,8 @@ function Updaters() {
       <OrderUpdater />
       <MulticallUpdater />
       <LogsUpdater />
+      <TokensUpdater />
+      <PoolsUpdater />
     </>
   )
 }
