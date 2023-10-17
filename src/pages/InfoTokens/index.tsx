@@ -22,6 +22,7 @@ import two from '../../assets/home/2.svg'
 import three from '../../assets/home/3.svg'
 import four from '../../assets/home/4.svg'
 import { RNG_ADDRESS } from 'constants/tokens'
+import useTokenTransfers from 'hooks/useTokenTransfers'
 
 const ExploreContainer = styled.div`
   width: 100%;
@@ -91,6 +92,9 @@ const InfoTokens = () => {
     errorPolicy: 'all',
   })
   const tokenQueryData = tokenQuery?.token
+
+  const { data, error, loading } = useTokenTransfers()
+  const tokenTransfers = data?.count
 
   useEffect(() => {
     resetFilterString()
@@ -237,7 +241,7 @@ const InfoTokens = () => {
               <img src={four} className="w-20 h-20" />
             </div>
             <div className="flex flex-col justify-between py-2">
-              <div className="text-3xl">8.3K</div>
+              <div className="text-3xl">{formatNumber(tokenTransfers, NumberType.FiatTokenStats)}</div>
               <div className="text-gray-400">Transcations</div>
             </div>
           </div>
