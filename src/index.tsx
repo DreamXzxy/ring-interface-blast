@@ -30,6 +30,7 @@ import ThemeProvider, { ThemedGlobalStyle } from './theme'
 import RadialGradientByChainUpdater from './theme/components/RadialGradientByChainUpdater'
 import TokensUpdater from './state/tokens/updater'
 import PoolsUpdater from './state/pools/updater'
+import InfoapplicationUpdater from './state/infoapplication/updater'
 
 if (window.ethereum) {
   window.ethereum.autoRefreshOnNetworkChange = false
@@ -48,6 +49,7 @@ function Updaters() {
       <LogsUpdater />
       <TokensUpdater />
       <PoolsUpdater />
+      <InfoapplicationUpdater />
     </>
   )
 }
