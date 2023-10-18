@@ -238,6 +238,7 @@
     "clsx": "^1.1.1",
     "copy-to-clipboard": "^3.2.0",
     "d3": "^7.6.1",
+    "eslint": "7.11.0",
     "ethers": "^5.7.2",
     "ext-name": "^5.0.0",
     "focus-visible": "^5.2.0",
