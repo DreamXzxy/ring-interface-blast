@@ -1,21 +1,18 @@
-import { AppState } from 'state/reducer'
-import { TokenData } from './reducer'
-import { useCallback, useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import {
-  updateTokenData,
-  addTokenKeys,
-  addPoolAddresses
-} from './actions'
-import { fetchPoolsForToken } from 'graphql/tokens/poolsForToken'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
+import { fetchPoolsForToken } from 'graphql/tokens/poolsForToken'
+import { useCallback, useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useActiveNetworkVersion, useClients } from 'state/infoapplication/hooks'
+import { AppState } from 'state/reducer'
+
+import { addPoolAddresses, addTokenKeys, updateTokenData } from './actions'
+import { TokenData } from './reducer'
 // format dayjs with the libraries that we need
 dayjs.extend(utc)
 
 export function useAllTokenData(): {
-  [address: string]: { data: TokenData | undefined; lastUpdated: number | undefined }
+  [address: string]: { data?: TokenData; lastUpdated?: number }
 } {
   const [activeNetwork] = useActiveNetworkVersion()
   return useSelector((state: AppState) => state.tokens.byAddress[activeNetwork.id] ?? {})
@@ -52,7 +49,7 @@ export function usePoolsForToken(address: string): string[] | undefined {
   const [activeNetwork] = useActiveNetworkVersion()
   console.log(activeNetwork, 'activeNetwork')
   const token = useSelector((state: AppState) => state.tokens.byAddress[activeNetwork.id]?.[address])
-  
+
   const poolsForToken = token?.poolAddresses
   const [error, setError] = useState(false)
   const { dataClient } = useClients()

@@ -1,18 +1,18 @@
 import { Trans } from '@lingui/macro'
+import { addressesArray, RNG_ADDRESS } from 'constants/tokens'
 import { PAGE_SIZE } from 'graphql/data/TopTokens'
 import { validateUrlChainParam } from 'graphql/data/util'
+import { useSparkLines } from 'hooks/useSparkLines'
+import { useInfoTokens } from 'hooks/useTokensForAddresses'
 import { ReactNode } from 'react'
 import { AlertTriangle } from 'react-feather'
 import { useParams } from 'react-router-dom'
+import { usePoolDatas } from 'state/pools/hooks'
+import { usePoolsForToken } from 'state/tokens/hooks'
 import styled from 'styled-components'
 
 import { MAX_WIDTH_MEDIA_BREAKPOINT } from '../../Tokens/constants'
-import { RNG_ADDRESS, addressesArray } from 'constants/tokens'
 import { HeaderRow, LoadedRow, LoadingRow } from './TokenRow'
-import { usePoolDatas } from 'state/pools/hooks'
-import { usePoolsForToken } from 'state/tokens/hooks'
-import { useInfoTokens } from 'hooks/useTokensForAddresses'
-import { useSparkLines } from 'hooks/useSparkLines'
 
 const GridContainer = styled.div`
   display: flex;
@@ -125,4 +125,3 @@ export default function TokenTable() {
     )
   }
 }
-

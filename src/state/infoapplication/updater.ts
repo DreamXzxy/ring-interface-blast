@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
-import { useSubgraphStatus } from './hooks'
+
 import { useFetchedSubgraphStatus } from '../../graphql/application'
+import { useSubgraphStatus } from './hooks'
 
 export default function Updater(): null {
   // subgraph status
