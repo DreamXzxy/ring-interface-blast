@@ -8,7 +8,7 @@ import { ArrowChangeUp } from 'components/Icons/ArrowChangeUp'
 import { Info } from 'components/Icons/Info'
 import QueryTokenLogo from 'components/Logo/QueryTokenLogo'
 import { MouseoverTooltip } from 'components/Tooltip'
-// import { InfoToken, SparklineMap } from 'graphql/data/InfoTokens'
+import { InfoToken, SparklineMap } from 'graphql/data/TopTokens'
 import { getTokenDetailsURL, supportedChainIdFromGQLChain, validateUrlChainParam } from 'graphql/data/util'
 import { useAtomValue } from 'jotai/utils'
 import { ForwardedRef, forwardRef } from 'react'
@@ -23,8 +23,8 @@ import {
   MAX_WIDTH_MEDIA_BREAKPOINT,
   MEDIUM_MEDIA_BREAKPOINT,
   SMALL_MEDIA_BREAKPOINT,
-} from '../constants'
-import { LoadingBubble } from '../loading'
+} from '../../Tokens/constants'
+import { LoadingBubble } from '../../Tokens/loading'
 import {
   filterStringAtom,
   filterTimeAtom,
@@ -32,9 +32,8 @@ import {
   sortMethodAtom,
   TokenSortMethod,
   useSetSortMethod,
-} from '../state'
-import { ArrowCell, DeltaText, formatDelta, getDeltaArrow } from '../TokenDetails/PriceChart'
-import { InfoToken, SparklineMap } from 'graphql/data/TopTokens'
+} from '../../Tokens/state'
+import { ArrowCell, DeltaText, formatDelta, getDeltaArrow } from '../../Tokens/TokenDetails/PriceChart'
 
 const Cell = styled.div`
   display: flex;

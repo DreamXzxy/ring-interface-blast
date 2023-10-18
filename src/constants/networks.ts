@@ -1,8 +1,8 @@
 import { ChainId } from '@uniswap/sdk-core'
-import ARBITRUM_LOGO_URL from '../assets/images/arbitrum.svg'
+import ARBITRUM_LOGO_URL from '../assets/svg/arbitrum_logo.svg'
 import ETHEREUM_LOGO_URL from '../assets/images/ethereum-logo.png'
-import POLYGON_LOGO_URL from 'assets/images/polygon-logo.png'
-import CELO_LOGO_URL from 'assets/images/celo-logo.svg'
+import POLYGON_LOGO_URL from 'assets/svg/polygon-matic-logo.svg'
+import CELO_LOGO_URL from 'assets/images/celoCircle.png'
 
 const INFURA_KEY = process.env.REACT_APP_INFURA_KEY
 if (typeof INFURA_KEY === 'undefined') {
