@@ -105,5 +105,4 @@ export function useInfoTokens(poolDatas: PoolData[], chain: Chain): UseInfoToken
     .filter((tokenData): tokenData is InfoToken => tokenData !== null && tokenData !== undefined)
 
   return useMemo(() => ({ infoTokens: tokensArray, loadingTokens: loading }), [tokensArray, loading])
-  // return { tokens: tokensArray };
 }
