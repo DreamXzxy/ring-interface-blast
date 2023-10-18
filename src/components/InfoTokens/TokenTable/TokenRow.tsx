@@ -258,9 +258,6 @@ const VolumeCell = styled(DataCell)`
     display: none;
   }
 `
-const SmallLoadingBubble = styled(LoadingBubble)`
-  width: 25%;
-`
 const MediumLoadingBubble = styled(LoadingBubble)`
   width: 65%;
 `
@@ -335,7 +332,6 @@ function HeaderCell({
 /* Token Row: skeleton row component */
 function TokenRow({
   header,
-  listNumber,
   tokenInfo,
   price,
   percentChange,
@@ -346,7 +342,6 @@ function TokenRow({
 }: {
   first?: boolean
   header: boolean
-  listNumber: ReactNode
   $loading?: boolean
   tvl: ReactNode
   price: ReactNode
@@ -384,7 +379,6 @@ export function HeaderRow() {
   return (
     <TokenRow
       header={true}
-      listNumber="#"
       tokenInfo={<Trans>Token name</Trans>}
       price={<HeaderCell category={TokenSortMethod.PRICE} />}
       percentChange={<HeaderCell category={TokenSortMethod.PERCENT_CHANGE} />}
@@ -400,7 +394,6 @@ export function LoadingRow(props: { first?: boolean; last?: boolean }) {
   return (
     <TokenRow
       header={false}
-      listNumber={<SmallLoadingBubble />}
       $loading
       tokenInfo={
         <>
@@ -464,7 +457,6 @@ export const LoadedRow = forwardRef((props: LoadedRowProps, ref: ForwardedRef<HT
       >
         <TokenRow
           header={false}
-          listNumber={sortRank}
           tokenInfo={
             <ClickableName>
               <QueryTokenLogo token={token} />

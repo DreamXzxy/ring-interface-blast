@@ -1,12 +1,9 @@
-import {
-  updateTokenData,
-  addTokenKeys,
-  addPoolAddresses,
-} from './actions'
 import { createReducer } from '@reduxjs/toolkit'
-import { PriceChartEntry, Transaction } from 'types/info'
 import { SupportedNetwork } from 'constants/networks'
+import { PriceChartEntry, Transaction } from 'types/info'
 import { currentTimestamp } from 'utils/data'
+
+import { addPoolAddresses, addTokenKeys, updateTokenData } from './actions'
 
 export type TokenData = {
   // token is in some pool on uniswap
@@ -47,15 +44,15 @@ export interface TokensState {
   byAddress: {
     [networkId: string]: {
       [address: string]: {
-        data: TokenData | undefined
-        poolAddresses: string[] | undefined
-        chartData: TokenChartEntry[] | undefined
+        data?: TokenData
+        poolAddresses?: string[]
+        chartData?: TokenChartEntry[]
         priceData: {
-          oldestFetchedTimestamp?: number | undefined
+          oldestFetchedTimestamp?: number
           [secondsInterval: number]: PriceChartEntry[] | undefined
         }
-        transactions: Transaction[] | undefined
-        lastUpdated: number | undefined
+        transactions?: Transaction[]
+        lastUpdated?: number
       }
     }
   }

@@ -8,79 +8,9 @@ import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppState } from 'state/reducer'
 import {
-  addPopup,
-  ApplicationModal,
-  PopupContent,
-  removePopup,
-  setOpenModal,
   updateActiveNetworkVersion,
   updateSubgraphStatus,
 } from './actions'
-import { useWeb3React } from '@web3-react/core'
-
-export function useBlockNumber(): number | undefined {
-  const { chainId: connectedChainId } = useWeb3React()
-  const chainId = connectedChainId
-  return useSelector((state: AppState) => state.infoapplication.blockNumber[chainId ?? -1])
-}
-
-export function useModalOpen(modal: ApplicationModal): boolean {
-  const openModal = useSelector((state: AppState) => state.infoapplication.openModal)
-  return openModal === modal
-}
-
-export function useToggleModal(modal: ApplicationModal): () => void {
-  const open = useModalOpen(modal)
-  const dispatch = useDispatch()
-  return useCallback(() => dispatch(setOpenModal(open ? null : modal)), [dispatch, modal, open])
-}
-
-export function useOpenModal(modal: ApplicationModal): () => void {
-  const dispatch = useDispatch()
-  return useCallback(() => dispatch(setOpenModal(modal)), [dispatch, modal])
-}
-
-export function useCloseModals(): () => void {
-  const dispatch = useDispatch()
-  return useCallback(() => dispatch(setOpenModal(null)), [dispatch])
-}
-
-export function useWalletModalToggle(): () => void {
-  return useToggleModal(ApplicationModal.WALLET)
-}
-
-export function useToggleSettingsMenu(): () => void {
-  return useToggleModal(ApplicationModal.SETTINGS)
-}
-
-// returns a function that allows adding a popup
-export function useAddPopup(): (content: PopupContent, key?: string) => void {
-  const dispatch = useDispatch()
-
-  return useCallback(
-    (content: PopupContent, key?: string) => {
-      dispatch(addPopup({ content, key }))
-    },
-    [dispatch]
-  )
-}
-
-// returns a function that allows removing a popup via its key
-export function useRemovePopup(): (key: string) => void {
-  const dispatch = useDispatch()
-  return useCallback(
-    (key: string) => {
-      dispatch(removePopup({ key }))
-    },
-    [dispatch]
-  )
-}
-
-// get the list of active popups
-export function useActivePopups(): AppState['infoapplication']['popupList'] {
-  const list = useSelector((state: AppState) => state.infoapplication.popupList)
-  return useMemo(() => list.filter((item) => item.show), [list])
-}
 
 // returns a function that allows adding a popup
 export function useSubgraphStatus(): [
