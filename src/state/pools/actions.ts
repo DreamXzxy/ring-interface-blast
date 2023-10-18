@@ -1,4 +1,3 @@
-// import { TickProcessed } from 'graphql/data/pools/tickData'
 import { createAction } from '@reduxjs/toolkit'
 import { PoolData, PoolChartEntry } from './reducer'
 import { Transaction } from 'types/info'
@@ -21,16 +20,3 @@ export const updatePoolTransactions = createAction<{
   transactions: Transaction[]
   networkId: SupportedNetwork
 }>('pool/updatePoolTransactions')
-
-// export const updateTickData = createAction<{
-//   poolAddress: string
-//   tickData:
-//     | {
-//         ticksProcessed: TickProcessed[]
-//         feeTier: string
-//         tickSpacing: number
-//         activeTickIdx: number
-//       }
-//     | undefined
-//   networkId: SupportedNetwork
-// }>('pool/updateTickData')

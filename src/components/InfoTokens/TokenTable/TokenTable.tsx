@@ -84,7 +84,6 @@ export default function TokenTable() {
   const poolsForToken = usePoolsForToken(RNG_ADDRESS)
   const poolDatas = usePoolDatas(poolsForToken ?? [])
   const { infoTokens, loadingTokens } = useInfoTokens(poolDatas, chainName)
-  console.log(infoTokens, 'infoTokens')
   const sparklines = useSparkLines(addressesArray, chainName)
 
   /* loading and error state */

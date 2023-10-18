@@ -1,23 +1,14 @@
 import { AppState } from 'state/reducer'
-import { TokenData, TokenChartEntry } from './reducer'
-import { useCallback, useEffect, useState, useMemo } from 'react'
+import { TokenData } from './reducer'
+import { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   updateTokenData,
   addTokenKeys,
-  addPoolAddresses,
-  // updateChartData,
-  // updatePriceData,
-  // updateTransactions,
+  addPoolAddresses
 } from './actions'
-// import { isAddress } from 'ethers/lib/utils'
 import { fetchPoolsForToken } from 'graphql/tokens/poolsForToken'
-// import { fetchTokenChartData } from 'graphql/tokens/chartData'
-// import { fetchTokenPriceData } from 'graphql/tokens/priceData'
-// import { fetchTokenTransactions } from 'graphql/data/tokens/transactions'
-// import { PriceChartEntry, Transaction } from 'types/info'
-// import { notEmpty } from 'utils/notEmpty'
-import dayjs, { OpUnitType } from 'dayjs'
+import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import { useActiveNetworkVersion, useClients } from 'state/infoapplication/hooks'
 // format dayjs with the libraries that we need
@@ -50,49 +41,6 @@ export function useAddTokenKeys(): (addresses: string[]) => void {
     [activeNetwork.id, dispatch]
   )
 }
-
-// export function useTokenDatas(addresses: string[] | undefined): TokenData[] | undefined {
-//   const allTokenData = useAllTokenData()
-//   const addTokenKeys = useAddTokenKeys()
-
-//   // if token not tracked yet track it
-//   addresses?.map((a) => {
-//     if (!allTokenData[a]) {
-//       addTokenKeys([a])
-//     }
-//   })
-
-//   const data = useMemo(() => {
-//     if (!addresses) {
-//       return undefined
-//     }
-//     return addresses
-//       .map((a) => {
-//         return allTokenData[a]?.data
-//       })
-//       .filter(notEmpty)
-//   }, [addresses, allTokenData])
-
-//   return data
-// }
-
-// export function useTokenData(address: string | undefined): TokenData | undefined {
-//   const allTokenData = useAllTokenData()
-//   const addTokenKeys = useAddTokenKeys()
-
-//   // if invalid address return
-//   if (!address || !isAddress(address)) {
-//     return undefined
-//   }
-
-//   // if token not tracked yet track it
-//   if (!allTokenData[address]) {
-//     addTokenKeys([address])
-//   }
-
-//   // return data
-//   return allTokenData[address]?.data
-// }
 
 /**
  * Get top pools addresses that token is included in
