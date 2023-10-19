@@ -85,6 +85,11 @@ export function useInfoTokens(poolDatas: PoolData[], chain: Chain): UseInfoToken
         addressKey = address0;
       }
 
+      // weth
+      if (addressKey === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') {
+        addressKey = 'NATIVE'
+      }
+
       const matchingToken = unwrappedTokens.find((token: any) => token.address === addressKey);  // Consider providing a proper type for 'token' instead of 'any'
 
       if (matchingToken) {
