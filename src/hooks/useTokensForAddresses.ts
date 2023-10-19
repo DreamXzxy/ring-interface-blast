@@ -1,4 +1,4 @@
-import { addressesArray } from 'constants/tokens'
+import { addressesArray, RNG_ADDRESS } from 'constants/tokens'
 import { Chain } from 'graphql/data/__generated__/types-and-hooks'
 import { InfoToken } from 'graphql/data/TopTokens'
 import { supportedChainIdFromGQLChain, unwrapToken } from 'graphql/data/util'
@@ -80,7 +80,8 @@ export function useInfoTokens(poolDatas: PoolData[], chain: Chain): UseInfoToken
       
       let addressKey = address1;
 
-      if (address1 === '0x3b94440c8c4f69d5c9f47bab9c5a93064df460f5'.toLowerCase()) {
+      // sort tokens
+      if (address1 === RNG_ADDRESS.toLowerCase()) {
         addressKey = address0;
       }
 
