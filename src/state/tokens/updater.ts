@@ -1,7 +1,8 @@
-import { useAllTokenData, useUpdateTokenData, useAddTokenKeys } from './hooks'
-import { useEffect, useMemo } from 'react'
-import { useTopTokenAddresses } from 'graphql/tokens/topTokens'
 import { useFetchedTokenDatas } from 'graphql/tokens/tokenData'
+import { useTopTokenAddresses } from 'graphql/tokens/topTokens'
+import { useEffect, useMemo } from 'react'
+
+import { useAddTokenKeys, useAllTokenData, useUpdateTokenData } from './hooks'
 
 export default function Updater(): null {
   // updaters
@@ -31,9 +32,11 @@ export default function Updater(): null {
   }, [allTokenData])
 
   // update unloaded pool entries with fetched data
-  const { error: tokenDataError, loading: tokenDataLoading, data: tokenDatas } = useFetchedTokenDatas(
-    unfetchedTokenAddresses
-  )
+  const {
+    error: tokenDataError,
+    loading: tokenDataLoading,
+    data: tokenDatas,
+  } = useFetchedTokenDatas(unfetchedTokenAddresses)
 
   useEffect(() => {
     if (tokenDatas && !tokenDataError && !tokenDataLoading) {

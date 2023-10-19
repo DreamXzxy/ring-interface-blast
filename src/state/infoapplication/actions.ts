@@ -11,22 +11,10 @@ export type PopupContent = {
   }
 }
 
-export enum ApplicationModal {
-  WALLET,
-  SETTINGS,
-  MENU,
-}
-
-export const updateBlockNumber = createAction<{ chainId: number; blockNumber: number }>('infoapplication/updateBlockNumber')
-export const setOpenModal = createAction<ApplicationModal | null>('infoapplication/setOpenModal')
-export const addPopup = createAction<{ key?: string; removeAfterMs?: number | null; content: PopupContent }>(
-  'infoapplication/addPopup'
-)
-export const removePopup = createAction<{ key: string }>('infoapplication/removePopup')
 export const updateSubgraphStatus = createAction<{
   available: boolean | null
-  syncedBlock: number | undefined
-  headBlock: number | undefined
+  syncedBlock?: number
+  headBlock?: number
 }>('infoapplication/updateSubgraphStatus')
 export const updateActiveNetworkVersion = createAction<{ activeNetworkVersion: NetworkInfo }>(
   'infoapplication/updateActiveNetworkVersion'

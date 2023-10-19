@@ -4,9 +4,6 @@ import { Trace } from 'analytics'
 import TokenTable from 'components/InfoTokens/TokenTable/TokenTable'
 import { MAX_WIDTH_MEDIA_BREAKPOINT, MEDIUM_MEDIA_BREAKPOINT } from 'components/Tokens/constants'
 import { filterStringAtom } from 'components/Tokens/state'
-// import NetworkFilter from 'components/Tokens/TokenTable/NetworkFilter'
-// import SearchBar from 'components/Tokens/TokenTable/SearchBar'
-// import TimeSelector from 'components/Tokens/TokenTable/TimeSelector'
 import { MouseoverTooltip } from 'components/Tooltip'
 import { useTokenQuery } from 'graphql/data/__generated__/types-and-hooks'
 import { validateUrlChainParam } from 'graphql/data/util'
@@ -22,6 +19,7 @@ import two from '../../assets/home/2.svg'
 import three from '../../assets/home/3.svg'
 import four from '../../assets/home/4.svg'
 import { RNG_ADDRESS } from 'constants/tokens'
+import useTokenTransfers from 'hooks/useTokenTransfers'
 
 const ExploreContainer = styled.div`
   width: 100%;
@@ -91,6 +89,9 @@ const InfoTokens = () => {
     errorPolicy: 'all',
   })
   const tokenQueryData = tokenQuery?.token
+
+  const { data, error, loading } = useTokenTransfers()
+  const tokenTransfers = data?.count
 
   useEffect(() => {
     resetFilterString()
@@ -237,7 +238,7 @@ const InfoTokens = () => {
               <img src={four} className="w-20 h-20" />
             </div>
             <div className="flex flex-col justify-between py-2">
-              <div className="text-3xl">8.3K</div>
+              <div className="text-3xl">{formatNumber(tokenTransfers, NumberType.FiatTokenStats)}</div>
               <div className="text-gray-400">Transcations</div>
             </div>
           </div>
@@ -252,15 +253,6 @@ const InfoTokens = () => {
             </ThemedText.LargeHeader>
           </MouseoverTooltip>
         </TitleContainer>
-        {/* <FiltersWrapper>
-          <FiltersContainer>
-            <NetworkFilter />
-            <TimeSelector />
-          </FiltersContainer>
-          <SearchContainer>
-            <SearchBar />
-          </SearchContainer>
-        </FiltersWrapper> */}
         <TokenTable />
       </ExploreContainer>
     </Trace>

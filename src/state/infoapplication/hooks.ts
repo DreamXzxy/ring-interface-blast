@@ -1,100 +1,16 @@
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client'
 import {
-  // arbitrumBlockClient,
-  // arbitrumClient,
   blockClient,
   client,
-  // optimismClient,
-  // optimismBlockClient,
-  // polygonBlockClient,
-  // polygonClient,
-  // celoClient,
-  // celoBlockClient,
-  // bscClient,
-  // bscBlockClient,
-  // avalancheClient,
-  // avalancheBlockClient,
-  // baseBlockClient,
-  // baseClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppState } from 'state/reducer'
 import {
-  addPopup,
-  ApplicationModal,
-  PopupContent,
-  removePopup,
-  setOpenModal,
   updateActiveNetworkVersion,
   updateSubgraphStatus,
 } from './actions'
-import { useWeb3React } from '@web3-react/core'
-
-export function useBlockNumber(): number | undefined {
-  const { chainId: connectedChainId } = useWeb3React()
-  const chainId = connectedChainId
-  return useSelector((state: AppState) => state.infoapplication.blockNumber[chainId ?? -1])
-}
-
-export function useModalOpen(modal: ApplicationModal): boolean {
-  const openModal = useSelector((state: AppState) => state.infoapplication.openModal)
-  return openModal === modal
-}
-
-export function useToggleModal(modal: ApplicationModal): () => void {
-  const open = useModalOpen(modal)
-  const dispatch = useDispatch()
-  return useCallback(() => dispatch(setOpenModal(open ? null : modal)), [dispatch, modal, open])
-}
-
-export function useOpenModal(modal: ApplicationModal): () => void {
-  const dispatch = useDispatch()
-  return useCallback(() => dispatch(setOpenModal(modal)), [dispatch, modal])
-}
-
-export function useCloseModals(): () => void {
-  const dispatch = useDispatch()
-  return useCallback(() => dispatch(setOpenModal(null)), [dispatch])
-}
-
-export function useWalletModalToggle(): () => void {
-  return useToggleModal(ApplicationModal.WALLET)
-}
-
-export function useToggleSettingsMenu(): () => void {
-  return useToggleModal(ApplicationModal.SETTINGS)
-}
-
-// returns a function that allows adding a popup
-export function useAddPopup(): (content: PopupContent, key?: string) => void {
-  const dispatch = useDispatch()
-
-  return useCallback(
-    (content: PopupContent, key?: string) => {
-      dispatch(addPopup({ content, key }))
-    },
-    [dispatch]
-  )
-}
-
-// returns a function that allows removing a popup via its key
-export function useRemovePopup(): (key: string) => void {
-  const dispatch = useDispatch()
-  return useCallback(
-    (key: string) => {
-      dispatch(removePopup({ key }))
-    },
-    [dispatch]
-  )
-}
-
-// get the list of active popups
-export function useActivePopups(): AppState['infoapplication']['popupList'] {
-  const list = useSelector((state: AppState) => state.infoapplication.popupList)
-  return useMemo(() => list.filter((item) => item.show), [list])
-}
 
 // returns a function that allows adding a popup
 export function useSubgraphStatus(): [
@@ -136,20 +52,6 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
   switch (activeNetwork.id) {
     case SupportedNetwork.ETHEREUM:
       return client
-    // case SupportedNetwork.ARBITRUM:
-    //   return arbitrumClient
-    // case SupportedNetwork.OPTIMISM:
-    //   return optimismClient
-    // case SupportedNetwork.POLYGON:
-    //   return polygonClient
-    // case SupportedNetwork.CELO:
-    //   return celoClient
-    // case SupportedNetwork.BNB:
-    //   return bscClient
-    // case SupportedNetwork.AVALANCHE:
-    //   return avalancheClient
-    // case SupportedNetwork.BASE:
-    //   return baseClient
     default:
       return client
   }
@@ -161,20 +63,6 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
   switch (activeNetwork.id) {
     case SupportedNetwork.ETHEREUM:
       return blockClient
-    // case SupportedNetwork.ARBITRUM:
-    //   return arbitrumBlockClient
-    // case SupportedNetwork.OPTIMISM:
-    //   return optimismBlockClient
-    // case SupportedNetwork.POLYGON:
-    //   return polygonBlockClient
-    // case SupportedNetwork.CELO:
-    //   return celoBlockClient
-    // case SupportedNetwork.BNB:
-    //   return bscBlockClient
-    // case SupportedNetwork.AVALANCHE:
-    //   return avalancheBlockClient
-    // case SupportedNetwork.BASE:
-    //   return baseBlockClient
     default:
       return blockClient
   }

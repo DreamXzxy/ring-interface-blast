@@ -8,7 +8,7 @@ import { ArrowChangeUp } from 'components/Icons/ArrowChangeUp'
 import { Info } from 'components/Icons/Info'
 import QueryTokenLogo from 'components/Logo/QueryTokenLogo'
 import { MouseoverTooltip } from 'components/Tooltip'
-// import { InfoToken, SparklineMap } from 'graphql/data/InfoTokens'
+import { InfoToken, SparklineMap } from 'graphql/data/TopTokens'
 import { getTokenDetailsURL, supportedChainIdFromGQLChain, validateUrlChainParam } from 'graphql/data/util'
 import { useAtomValue } from 'jotai/utils'
 import { ForwardedRef, forwardRef } from 'react'
@@ -23,8 +23,8 @@ import {
   MAX_WIDTH_MEDIA_BREAKPOINT,
   MEDIUM_MEDIA_BREAKPOINT,
   SMALL_MEDIA_BREAKPOINT,
-} from '../constants'
-import { LoadingBubble } from '../loading'
+} from '../../Tokens/constants'
+import { LoadingBubble } from '../../Tokens/loading'
 import {
   filterStringAtom,
   filterTimeAtom,
@@ -32,9 +32,8 @@ import {
   sortMethodAtom,
   TokenSortMethod,
   useSetSortMethod,
-} from '../state'
-import { ArrowCell, DeltaText, formatDelta, getDeltaArrow } from '../TokenDetails/PriceChart'
-import { InfoToken, SparklineMap } from 'graphql/data/TopTokens'
+} from '../../Tokens/state'
+import { ArrowCell, DeltaText, formatDelta, getDeltaArrow } from '../../Tokens/TokenDetails/PriceChart'
 
 const Cell = styled.div`
   display: flex;
@@ -259,9 +258,6 @@ const VolumeCell = styled(DataCell)`
     display: none;
   }
 `
-const SmallLoadingBubble = styled(LoadingBubble)`
-  width: 25%;
-`
 const MediumLoadingBubble = styled(LoadingBubble)`
   width: 65%;
 `
@@ -336,7 +332,6 @@ function HeaderCell({
 /* Token Row: skeleton row component */
 function TokenRow({
   header,
-  listNumber,
   tokenInfo,
   price,
   percentChange,
@@ -347,7 +342,6 @@ function TokenRow({
 }: {
   first?: boolean
   header: boolean
-  listNumber: ReactNode
   $loading?: boolean
   tvl: ReactNode
   price: ReactNode
@@ -385,7 +379,6 @@ export function HeaderRow() {
   return (
     <TokenRow
       header={true}
-      listNumber="#"
       tokenInfo={<Trans>Token name</Trans>}
       price={<HeaderCell category={TokenSortMethod.PRICE} />}
       percentChange={<HeaderCell category={TokenSortMethod.PERCENT_CHANGE} />}
@@ -401,7 +394,6 @@ export function LoadingRow(props: { first?: boolean; last?: boolean }) {
   return (
     <TokenRow
       header={false}
-      listNumber={<SmallLoadingBubble />}
       $loading
       tokenInfo={
         <>
@@ -465,7 +457,6 @@ export const LoadedRow = forwardRef((props: LoadedRowProps, ref: ForwardedRef<HT
       >
         <TokenRow
           header={false}
-          listNumber={sortRank}
           tokenInfo={
             <ClickableName>
               <QueryTokenLogo token={token} />

@@ -1,30 +1,18 @@
-import { AppState } from 'state/reducer'
-import { TokenData, TokenChartEntry } from './reducer'
-import { useCallback, useEffect, useState, useMemo } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import {
-  updateTokenData,
-  addTokenKeys,
-  addPoolAddresses,
-  // updateChartData,
-  // updatePriceData,
-  // updateTransactions,
-} from './actions'
-// import { isAddress } from 'ethers/lib/utils'
-import { fetchPoolsForToken } from 'graphql/tokens/poolsForToken'
-// import { fetchTokenChartData } from 'graphql/tokens/chartData'
-// import { fetchTokenPriceData } from 'graphql/tokens/priceData'
-// import { fetchTokenTransactions } from 'graphql/data/tokens/transactions'
-// import { PriceChartEntry, Transaction } from 'types/info'
-// import { notEmpty } from 'utils/notEmpty'
-import dayjs, { OpUnitType } from 'dayjs'
+import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
+import { fetchPoolsForToken } from 'graphql/tokens/poolsForToken'
+import { useCallback, useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useActiveNetworkVersion, useClients } from 'state/infoapplication/hooks'
+import { AppState } from 'state/reducer'
+
+import { addPoolAddresses, addTokenKeys, updateTokenData } from './actions'
+import { TokenData } from './reducer'
 // format dayjs with the libraries that we need
 dayjs.extend(utc)
 
 export function useAllTokenData(): {
-  [address: string]: { data: TokenData | undefined; lastUpdated: number | undefined }
+  [address: string]: { data?: TokenData; lastUpdated?: number }
 } {
   const [activeNetwork] = useActiveNetworkVersion()
   return useSelector((state: AppState) => state.tokens.byAddress[activeNetwork.id] ?? {})
@@ -51,49 +39,6 @@ export function useAddTokenKeys(): (addresses: string[]) => void {
   )
 }
 
-// export function useTokenDatas(addresses: string[] | undefined): TokenData[] | undefined {
-//   const allTokenData = useAllTokenData()
-//   const addTokenKeys = useAddTokenKeys()
-
-//   // if token not tracked yet track it
-//   addresses?.map((a) => {
-//     if (!allTokenData[a]) {
-//       addTokenKeys([a])
-//     }
-//   })
-
-//   const data = useMemo(() => {
-//     if (!addresses) {
-//       return undefined
-//     }
-//     return addresses
-//       .map((a) => {
-//         return allTokenData[a]?.data
-//       })
-//       .filter(notEmpty)
-//   }, [addresses, allTokenData])
-
-//   return data
-// }
-
-// export function useTokenData(address: string | undefined): TokenData | undefined {
-//   const allTokenData = useAllTokenData()
-//   const addTokenKeys = useAddTokenKeys()
-
-//   // if invalid address return
-//   if (!address || !isAddress(address)) {
-//     return undefined
-//   }
-
-//   // if token not tracked yet track it
-//   if (!allTokenData[address]) {
-//     addTokenKeys([address])
-//   }
-
-//   // return data
-//   return allTokenData[address]?.data
-// }
-
 /**
  * Get top pools addresses that token is included in
  * If not loaded, fetch and store
@@ -104,7 +49,7 @@ export function usePoolsForToken(address: string): string[] | undefined {
   const [activeNetwork] = useActiveNetworkVersion()
   console.log(activeNetwork, 'activeNetwork')
   const token = useSelector((state: AppState) => state.tokens.byAddress[activeNetwork.id]?.[address])
-  
+
   const poolsForToken = token?.poolAddresses
   const [error, setError] = useState(false)
   const { dataClient } = useClients()
