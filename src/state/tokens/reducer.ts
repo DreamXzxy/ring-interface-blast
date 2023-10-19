@@ -1,15 +1,9 @@
-import {
-  updateTokenData,
-  addTokenKeys,
-  addPoolAddresses,
-  updateChartData,
-  updatePriceData,
-  updateTransactions,
-} from './actions'
 import { createReducer } from '@reduxjs/toolkit'
-import { PriceChartEntry, Transaction } from 'types/info'
 import { SupportedNetwork } from 'constants/networks'
+import { PriceChartEntry, Transaction } from 'types/info'
 import { currentTimestamp } from 'utils/data'
+
+import { addPoolAddresses, addTokenKeys, updateTokenData } from './actions'
 
 export type TokenData = {
   // token is in some pool on uniswap
@@ -50,15 +44,15 @@ export interface TokensState {
   byAddress: {
     [networkId: string]: {
       [address: string]: {
-        data: TokenData | undefined
-        poolAddresses: string[] | undefined
-        chartData: TokenChartEntry[] | undefined
+        data?: TokenData
+        poolAddresses?: string[]
+        chartData?: TokenChartEntry[]
         priceData: {
-          oldestFetchedTimestamp?: number | undefined
+          oldestFetchedTimestamp?: number
           [secondsInterval: number]: PriceChartEntry[] | undefined
         }
-        transactions: Transaction[] | undefined
-        lastUpdated: number | undefined
+        transactions?: Transaction[]
+        lastUpdated?: number
       }
     }
   }
@@ -67,13 +61,6 @@ export interface TokensState {
 export const initialState: TokensState = {
   byAddress: {
     [SupportedNetwork.ETHEREUM]: {},
-    [SupportedNetwork.ARBITRUM]: {},
-    [SupportedNetwork.OPTIMISM]: {},
-    [SupportedNetwork.POLYGON]: {},
-    [SupportedNetwork.CELO]: {},
-    [SupportedNetwork.BNB]: {},
-    [SupportedNetwork.AVALANCHE]: {},
-    [SupportedNetwork.BASE]: {},
   },
 }
 
@@ -107,26 +94,4 @@ export default createReducer(initialState, (builder) =>
     .addCase(addPoolAddresses, (state, { payload: { tokenAddress, poolAddresses, networkId } }) => {
       state.byAddress[networkId][tokenAddress] = { ...state.byAddress[networkId][tokenAddress], poolAddresses }
     })
-    // add list of pools the token is included in
-    .addCase(updateChartData, (state, { payload: { tokenAddress, chartData, networkId } }) => {
-      state.byAddress[networkId][tokenAddress] = { ...state.byAddress[networkId][tokenAddress], chartData }
-    })
-    // add list of pools the token is included in
-    .addCase(updateTransactions, (state, { payload: { tokenAddress, transactions, networkId } }) => {
-      state.byAddress[networkId][tokenAddress] = { ...state.byAddress[networkId][tokenAddress], transactions }
-    })
-    // update historical price volume based on interval size
-    .addCase(
-      updatePriceData,
-      (state, { payload: { tokenAddress, secondsInterval, priceData, oldestFetchedTimestamp, networkId } }) => {
-        state.byAddress[networkId][tokenAddress] = {
-          ...state.byAddress[networkId][tokenAddress],
-          priceData: {
-            ...state.byAddress[networkId][tokenAddress].priceData,
-            [secondsInterval]: priceData,
-            oldestFetchedTimestamp,
-          },
-        }
-      }
-    )
 )

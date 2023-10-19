@@ -1,8 +1,5 @@
 import { ChainId } from '@uniswap/sdk-core'
-import ARBITRUM_LOGO_URL from '../assets/images/arbitrum.svg'
 import ETHEREUM_LOGO_URL from '../assets/images/ethereum-logo.png'
-import POLYGON_LOGO_URL from 'assets/images/polygon-logo.png'
-import CELO_LOGO_URL from 'assets/images/celo-logo.svg'
 
 const INFURA_KEY = process.env.REACT_APP_INFURA_KEY
 if (typeof INFURA_KEY === 'undefined') {
@@ -157,56 +154,17 @@ export const RPC_URLS = {
 }
 
 export enum SupportedNetwork {
-  ETHEREUM,
-  ARBITRUM,
-  OPTIMISM,
-  POLYGON,
-  CELO,
-  BNB,
-  BASE,
-  AVALANCHE,
+  ETHEREUM
 }
 
 export const START_BLOCKS: { [key: string]: number } = {
-  [SupportedNetwork.ETHEREUM]: 14292820,
-  [SupportedNetwork.POLYGON]: 25459720,
-  [SupportedNetwork.ARBITRUM]: 175,
-  [SupportedNetwork.OPTIMISM]: 10028767,
-  [SupportedNetwork.CELO]: 13916355,
-  [SupportedNetwork.BNB]: 26324014,
-  [SupportedNetwork.AVALANCHE]: 31422450,
-  [SupportedNetwork.BASE]: 1371680,
+  [SupportedNetwork.ETHEREUM]: 14292820
 }
-
-export const MATIC_ADDRESS = '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270'
-export const CELO_ADDRESS = '0x471EcE3750Da237f93B8E339c536989b8978a438'
 
 const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
 const ARBITRUM_WETH_ADDRESS = '0x82af49447d8a07e3bd95bd0d56f35241523fbab1'
 
 export const WETH_ADDRESSES = [WETH_ADDRESS, ARBITRUM_WETH_ADDRESS]
-
-export const PolygonNetworkInfo: NetworkInfo = {
-  chainId: ChainId.POLYGON,
-  id: SupportedNetwork.POLYGON,
-  route: 'polygon',
-  name: 'Polygon',
-  bgColor: '#8247e5',
-  primaryColor: '#8247e5',
-  secondaryColor: '#FB7876',
-  imageURL: POLYGON_LOGO_URL,
-}
-
-export const CeloNetworkInfo: NetworkInfo = {
-  chainId: ChainId.CELO,
-  id: SupportedNetwork.CELO,
-  route: 'celo',
-  name: 'Celo',
-  bgColor: '#02502F',
-  primaryColor: '#35D07F',
-  secondaryColor: '#9ACDB2',
-  imageURL: CELO_LOGO_URL,
-}
 
 export type NetworkInfo = {
   chainId: ChainId
@@ -230,17 +188,6 @@ export const EthereumNetworkInfo: NetworkInfo = {
   imageURL: ETHEREUM_LOGO_URL,
 }
 
-export const ArbitrumNetworkInfo: NetworkInfo = {
-  chainId: ChainId.ARBITRUM_ONE,
-  id: SupportedNetwork.ARBITRUM,
-  route: 'arbitrum',
-  name: 'Arbitrum',
-  imageURL: ARBITRUM_LOGO_URL,
-  bgColor: '#0A294B',
-  primaryColor: '#0490ED',
-  secondaryColor: '#96BEDC',
-}
-
 export const POOL_HIDE: { [key: string]: string[] } = {
   [SupportedNetwork.ETHEREUM]: [
     '0x86d257cdb7bc9c0df10e84c8709697f92770b335',
@@ -250,12 +197,5 @@ export const POOL_HIDE: { [key: string]: string[] } = {
     '0x277667eb3e34f134adf870be9550e9f323d0dc24',
     '0x8c0411f2ad5470a66cb2e9c64536cfb8dcd54d51',
     '0x055284a4ca6532ecc219ac06b577d540c686669d',
-  ],
-  [SupportedNetwork.POLYGON]: ['0x5f616541c801e2b9556027076b730e0197974f6a'],
-  [SupportedNetwork.ARBITRUM]: [],
-  [SupportedNetwork.OPTIMISM]: [],
-  [SupportedNetwork.CELO]: [],
-  [SupportedNetwork.BNB]: [],
-  [SupportedNetwork.AVALANCHE]: [],
-  [SupportedNetwork.BASE]: [],
+  ]
 }

@@ -1,18 +1,18 @@
 import { Trans } from '@lingui/macro'
-import { PAGE_SIZE, useTopTokens } from 'graphql/data/TopTokens'
+import { addressesArray, RNG_ADDRESS } from 'constants/tokens'
+import { PAGE_SIZE } from 'graphql/data/TopTokens'
 import { validateUrlChainParam } from 'graphql/data/util'
+import { useSparkLines } from 'hooks/useSparkLines'
+import { useInfoTokens } from 'hooks/useTokensForAddresses'
 import { ReactNode } from 'react'
 import { AlertTriangle } from 'react-feather'
 import { useParams } from 'react-router-dom'
-import styled from 'styled-components'
-
-import { MAX_WIDTH_MEDIA_BREAKPOINT } from '../constants'
-import { RNG_ADDRESS, addressesArray } from 'constants/tokens'
-import { HeaderRow, LoadedRow, LoadingRow } from './TokenRow'
 import { usePoolDatas } from 'state/pools/hooks'
 import { usePoolsForToken } from 'state/tokens/hooks'
-import { useInfoTokens } from 'hooks/useTokensForAddresses'
-import { useSparkLines } from 'hooks/useSparkLines'
+import styled from 'styled-components'
+
+import { MAX_WIDTH_MEDIA_BREAKPOINT } from '../../Tokens/constants'
+import { HeaderRow, LoadedRow, LoadingRow } from './TokenRow'
 
 const GridContainer = styled.div`
   display: flex;
@@ -84,7 +84,6 @@ export default function TokenTable() {
   const poolsForToken = usePoolsForToken(RNG_ADDRESS)
   const poolDatas = usePoolDatas(poolsForToken ?? [])
   const { infoTokens, loadingTokens } = useInfoTokens(poolDatas, chainName)
-  console.log(infoTokens, 'infoTokens')
   const sparklines = useSparkLines(addressesArray, chainName)
 
   /* loading and error state */
@@ -126,4 +125,3 @@ export default function TokenTable() {
     )
   }
 }
-

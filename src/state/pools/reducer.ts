@@ -1,11 +1,8 @@
-// import { currentTimestamp } from 'utils'
 import { currentTimestamp } from 'utils/data'
 import { updatePoolData, addPoolKeys, updatePoolChartData, updatePoolTransactions } from './actions'
 import { createReducer } from '@reduxjs/toolkit'
-// import { SerializedToken } from 'state/infouser/actions'
 import { SerializedToken } from 'state/user/types'
 import { Transaction } from 'types/info'
-// import { PoolTickData } from 'graphql/data/pools/tickData'
 import { SupportedNetwork } from 'constants/networks'
 
 export interface Pool {
@@ -83,13 +80,6 @@ export interface PoolsState {
 export const initialState: PoolsState = {
   byAddress: {
     [SupportedNetwork.ETHEREUM]: {},
-    [SupportedNetwork.ARBITRUM]: {},
-    [SupportedNetwork.OPTIMISM]: {},
-    [SupportedNetwork.POLYGON]: {},
-    [SupportedNetwork.CELO]: {},
-    [SupportedNetwork.BNB]: {},
-    [SupportedNetwork.AVALANCHE]: {},
-    [SupportedNetwork.BASE]: {},
   },
 }
 
