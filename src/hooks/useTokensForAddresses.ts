@@ -1,25 +1,14 @@
-import { addressesArray, RNG_ADDRESS } from 'constants/tokens'
+import { RNG_ADDRESS, addressesArray } from 'constants/tokens'
 import { Chain } from 'graphql/data/__generated__/types-and-hooks'
 import { InfoToken } from 'graphql/data/TopTokens'
 import { supportedChainIdFromGQLChain, unwrapToken } from 'graphql/data/util'
-import { useEffect, useMemo, useReducer } from 'react'
+import { useMemo } from 'react'
 import { PoolData } from 'state/pools/reducer'
-
 import { useSearchTokens } from '../graphql/data/SearchTokens'
 
 interface UseInfoTokensReturnValue {
   infoTokens?: InfoToken[]
   loadingTokens: boolean
-}
-
-interface State {
-  loading: boolean;
-  infoTokens: InfoToken[] | undefined;  // Updated type here
-}
-
-interface Action {
-  type: string;
-  payload?: InfoToken[];
 }
 
 function useMultipleSearchTokens(addresses: string[], chainId?: number) {
@@ -28,61 +17,54 @@ function useMultipleSearchTokens(addresses: string[], chainId?: number) {
   return tokensDataArray
 }
 
-function reducer(state: State, action: Action): State {
-    switch (action.type) {
-        case 'SET_LOADING':
-            return { ...state, loading: true };
-        case 'SET_INFO_TOKENS':
-            return { ...state, loading: false, infoTokens: action.payload || undefined };  // Updated fallback value here
-        default:
-            throw new Error();
-    }
-}
-
 function useTokensForAddresses(addresses: string[], chainId?: number) {
   const tokensDataArray = useMultipleSearchTokens(addresses, chainId)
 
-  const tokens = useMemo(() => {
+  const { tokens, loading, error } = useMemo(() => {
     const combinedTokens = []
-
+    let loading = false
+    let error = null
     for (const tokensData of tokensDataArray) {
-      if (!tokensData.loading && !tokensData.error) {
+      if (tokensData.loading) {
+        loading = true
+      } else if (tokensData.error) {
+        error = tokensData.error
+      } else {
         combinedTokens.push(...tokensData.data)
       }
     }
-
-    return combinedTokens
+    return {
+      tokens: combinedTokens,
+      loading,
+      error,
+    }
   }, [tokensDataArray])
 
-  const loading = tokensDataArray.some((tokensData) => tokensData.loading)
-  const error = tokensDataArray.find((tokensData) => tokensData.error)
-
-  return {
-    tokens,
-    loading,
-    error,
-  }
+  return { tokens, loading, error }
 }
 
 export function useInfoTokens(poolDatas: PoolData[], chain: Chain): UseInfoTokensReturnValue {
-  const [state, dispatch] = useReducer(reducer, { loading: true, infoTokens: undefined });
-  const chainId = supportedChainIdFromGQLChain(chain);
-  const { tokens: allTokens, loading: loadingTokens } = useTokensForAddresses(addressesArray, chainId);
-  const unwrappedTokens = allTokens.map((token: any) => unwrapToken(chainId ?? 1, token));
+  const chainId = supportedChainIdFromGQLChain(chain)
+  const { tokens: allTokens, loading } = useTokensForAddresses(addressesArray, chainId)
 
-  // Directly create tokensArray in useMemo
-  const tokensArray = useMemo(() => {
-    const tokensArr: InfoToken[] = [];
+  const { infoTokens, loadingTokens } = useMemo(() => {
+    if (loading || !poolDatas.every(poolData => poolData !== undefined)) {
+      return { infoTokens: undefined, loadingTokens: true }
+    }
+
+    const unwrappedTokens = allTokens.map((token) => unwrapToken(chainId ?? 1, token))
+    const tokensArr: InfoToken[] = []
+
     poolDatas.forEach((poolData) => {
-      const { token1, token0, tvlUSD, volumeUSD, volumeUSDWeek } = poolData;
-      const address0 = token0.address.toLowerCase();
-      const address1 = token1.address.toLowerCase();
-      
-      let addressKey = address1;
+      const { token1, token0, tvlUSD, volumeUSD, volumeUSDWeek } = poolData
+      const address0 = token0.address.toLowerCase()
+      const address1 = token1.address.toLowerCase()
+
+      let addressKey = address1
 
       // sort tokens
       if (address1 === RNG_ADDRESS.toLowerCase()) {
-        addressKey = address0;
+        addressKey = address0
       }
 
       // weth
@@ -90,29 +72,26 @@ export function useInfoTokens(poolDatas: PoolData[], chain: Chain): UseInfoToken
         addressKey = 'NATIVE'
       }
 
-      const matchingToken = unwrappedTokens.find((token: any) => token.address === addressKey);  // Consider providing a proper type for 'token' instead of 'any'
-
+      const matchingToken = unwrappedTokens.find((token) => token.address === addressKey)
       if (matchingToken) {
         const infoToken = {
           ...matchingToken,
           tvlUSD,
           volumeUSD,
           volumeUSDWeek,
-        };
-        tokensArr.push(infoToken);
+        }
+        tokensArr.push(infoToken)
       }
-    });
-    return tokensArr;
-  }, [poolDatas, unwrappedTokens]);
+    })
 
-  useEffect(() => {
-    if (!loadingTokens && tokensArray.length > 0) {
-      dispatch({ type: 'SET_INFO_TOKENS', payload: tokensArray });
+    return {
+      infoTokens: tokensArr.length > 0 ? tokensArr : undefined,
+      loadingTokens: tokensArr.length === 0,
     }
-  }, [loadingTokens, tokensArray]);
+  }, [allTokens, loading, poolDatas, chainId])
 
   return {
-    infoTokens: state.loading ? undefined : state.infoTokens,
-    loadingTokens: state.loading,
-  };
+    infoTokens,
+    loadingTokens,
+  }
 }
