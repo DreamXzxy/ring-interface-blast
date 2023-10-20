@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro'
-import { addressesArray, RNG_ADDRESS } from 'constants/tokens'
+import { RNG_PAIR_TOKENS } from 'constants/tokens'
 import { PAGE_SIZE } from 'graphql/data/TopTokens'
 import { validateUrlChainParam } from 'graphql/data/util'
 import { useSparkLines } from 'hooks/useSparkLines'
@@ -7,12 +7,11 @@ import { useInfoTokens } from 'hooks/useTokensForAddresses'
 import { ReactNode } from 'react'
 import { AlertTriangle } from 'react-feather'
 import { useParams } from 'react-router-dom'
-import { usePoolDatas } from 'state/pools/hooks'
-import { usePoolsForToken } from 'state/tokens/hooks'
 import styled from 'styled-components'
 
 import { MAX_WIDTH_MEDIA_BREAKPOINT } from '../../Tokens/constants'
 import { HeaderRow, LoadedRow, LoadingRow } from './TokenRow'
+import { PoolData } from 'state/pools/reducer'
 
 const GridContainer = styled.div`
   display: flex;
@@ -79,12 +78,10 @@ function LoadingTokenTable({ rowCount = PAGE_SIZE }: { rowCount?: number }) {
   )
 }
 
-export default function TokenTable() {
+export default function TokenTable({ poolDatas }: { poolDatas: PoolData[]}) {
   const chainName = validateUrlChainParam(useParams<{ chainName?: string }>().chainName)
-  const poolsForToken = usePoolsForToken(RNG_ADDRESS)
-  const poolDatas = usePoolDatas(poolsForToken ?? [])
   const { infoTokens, loadingTokens } = useInfoTokens(poolDatas, chainName)
-  const sparklines = useSparkLines(addressesArray, chainName)
+  const sparklines = useSparkLines(RNG_PAIR_TOKENS, chainName)
 
   /* loading and error state */
   if (loadingTokens && !infoTokens) {
