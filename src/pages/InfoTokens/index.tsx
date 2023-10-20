@@ -5,11 +5,9 @@ import TokenTable from 'components/InfoTokens/TokenTable/TokenTable'
 import { MAX_WIDTH_MEDIA_BREAKPOINT, MEDIUM_MEDIA_BREAKPOINT } from 'components/Tokens/constants'
 import { filterStringAtom } from 'components/Tokens/state'
 import { MouseoverTooltip } from 'components/Tooltip'
-import { useTokenQuery } from 'graphql/data/__generated__/types-and-hooks'
-import { validateUrlChainParam } from 'graphql/data/util'
 import { useResetAtom } from 'jotai/utils'
-import { useEffect } from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useEffect, useMemo } from 'react'
+import { useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import { ThemedText } from 'theme'
 import { formatNumber, NumberType } from 'utils/formatNumbers'
@@ -20,6 +18,8 @@ import three from '../../assets/home/3.svg'
 import four from '../../assets/home/4.svg'
 import { RNG_ADDRESS } from 'constants/tokens'
 import useTokenTransfers from 'hooks/useTokenTransfers'
+import { usePoolsForToken } from 'state/tokens/hooks'
+import { usePoolDatas } from 'state/pools/hooks'
 
 const ExploreContainer = styled.div`
   width: 100%;
@@ -41,61 +41,31 @@ const TitleContainer = styled.div`
   margin-right: auto;
   display: flex;
 `
-const FiltersContainer = styled.div`
-  display: flex;
-  gap: 8px;
-  height: 40px;
-
-  @media only screen and (max-width: ${MEDIUM_MEDIA_BREAKPOINT}) {
-    order: 2;
-  }
-`
-const SearchContainer = styled(FiltersContainer)`
-  margin-left: 8px;
-  width: 100%;
-
-  @media only screen and (max-width: ${MEDIUM_MEDIA_BREAKPOINT}) {
-    margin: 0px;
-    order: 1;
-  }
-`
-const FiltersWrapper = styled.div`
-  display: flex;
-  max-width: ${MAX_WIDTH_MEDIA_BREAKPOINT};
-  margin: 0 auto;
-  margin-bottom: 20px;
-  color: ${({ theme }) => theme.neutral3};
-  flex-direction: row;
-
-  @media only screen and (max-width: ${MEDIUM_MEDIA_BREAKPOINT}) {
-    flex-direction: column;
-    gap: 8px;
-  }
-`
 
 const InfoTokens = () => {
   const resetFilterString = useResetAtom(filterStringAtom)
   const location = useLocation()
-  const { chainName } = useParams<{
-    tokenAddress: string
-    chainName?: string
-  }>()
-  const chain = validateUrlChainParam(chainName)
-  const { data: tokenQuery } = useTokenQuery({
-    variables: {
-      address: RNG_ADDRESS,
-      chain,
-    },
-    errorPolicy: 'all',
-  })
-  const tokenQueryData = tokenQuery?.token
-
-  const { data, error, loading } = useTokenTransfers()
-  const tokenTransfers = data?.count
 
   useEffect(() => {
     resetFilterString()
   }, [location, resetFilterString])
+
+  const poolsForToken = usePoolsForToken(RNG_ADDRESS)
+  const poolDatas = usePoolDatas(poolsForToken ?? [])
+
+  const { data, error, loading } = useTokenTransfers()
+  const tokenTransfers = data?.count
+
+  const infoTokens = useMemo(() => {
+    if (!poolDatas) {
+      return undefined;
+    }
+
+    const totaltvlUSD = poolDatas.reduce((sum, token) => sum + token.tvlUSD, 0)
+    const totalvolumeUSD = poolDatas.reduce((sum, token) => sum + token.volumeUSD, 0)
+    const pools = poolDatas.length
+    return { totaltvlUSD, totalvolumeUSD, pools };
+  }, [poolDatas])
 
   return (
     <Trace page={InterfacePageName.TOKENS_PAGE} shouldLogImpression>
@@ -208,7 +178,7 @@ const InfoTokens = () => {
             </div>
             <div className="flex flex-col justify-between py-2">
               <div className="text-3xl">
-                {formatNumber(tokenQueryData?.market?.totalValueLocked?.value, NumberType.FiatTokenStats)}
+                {formatNumber(infoTokens?.totaltvlUSD, NumberType.FiatTokenStats)}
               </div>
               <div className="text-gray-400">TVL</div>
             </div>
@@ -219,7 +189,7 @@ const InfoTokens = () => {
             </div>
             <div className="flex flex-col justify-between py-2">
               <div className="text-3xl">
-                {formatNumber(tokenQueryData?.market?.volume24H?.value, NumberType.FiatTokenStats)}
+                {formatNumber(infoTokens?.totalvolumeUSD, NumberType.FiatTokenStats)}
               </div>
               <div className="text-gray-400">24H Volume</div>
             </div>
@@ -229,7 +199,7 @@ const InfoTokens = () => {
               <img src={three} className="w-20 h-20" />
             </div>
             <div className="flex flex-col justify-between py-2">
-              <div className="text-3xl">25</div>
+              <div className="text-3xl">{infoTokens?.pools}</div>
               <div className="text-gray-400">Pools</div>
             </div>
           </div>
@@ -253,7 +223,7 @@ const InfoTokens = () => {
             </ThemedText.LargeHeader>
           </MouseoverTooltip>
         </TitleContainer>
-        <TokenTable />
+        <TokenTable poolDatas={poolDatas}/>
       </ExploreContainer>
     </Trace>
   )
