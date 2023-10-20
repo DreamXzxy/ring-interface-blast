@@ -1,10 +1,11 @@
-import { RNG_ADDRESS, addressesArray } from 'constants/tokens'
+import { RNG_PAIR_TOKENS } from 'constants/tokens'
 import { Chain } from 'graphql/data/__generated__/types-and-hooks'
 import { InfoToken } from 'graphql/data/TopTokens'
 import { supportedChainIdFromGQLChain, unwrapToken } from 'graphql/data/util'
 import { useMemo } from 'react'
 import { PoolData } from 'state/pools/reducer'
 import { useSearchTokens } from '../graphql/data/SearchTokens'
+import { ChainId } from '@uniswap/sdk-core'
 
 interface UseInfoTokensReturnValue {
   infoTokens?: InfoToken[]
@@ -12,7 +13,7 @@ interface UseInfoTokensReturnValue {
 }
 
 function useMultipleSearchTokens(addresses: string[], chainId?: number) {
-  const tokensDataArray = addresses.map((address) => useSearchTokens(address, chainId ?? 1))
+  const tokensDataArray = addresses.map((address) => useSearchTokens(address, chainId ?? ChainId.MAINNET))
 
   return tokensDataArray
 }
@@ -45,34 +46,26 @@ function useTokensForAddresses(addresses: string[], chainId?: number) {
 
 export function useInfoTokens(poolDatas: PoolData[], chain: Chain): UseInfoTokensReturnValue {
   const chainId = supportedChainIdFromGQLChain(chain)
-  const { tokens: allTokens, loading } = useTokensForAddresses(addressesArray, chainId)
+  const { tokens: allTokens, loading } = useTokensForAddresses(RNG_PAIR_TOKENS, chainId)
 
   const { infoTokens, loadingTokens } = useMemo(() => {
     if (loading || !poolDatas.every(poolData => poolData !== undefined)) {
       return { infoTokens: undefined, loadingTokens: true }
     }
 
-    const unwrappedTokens = allTokens.map((token) => unwrapToken(chainId ?? 1, token))
+    const unwrappedTokens = allTokens.map((token) => unwrapToken(chainId ?? ChainId.MAINNET, token))
     const tokensArr: InfoToken[] = []
 
     poolDatas.forEach((poolData) => {
-      const { token1, token0, tvlUSD, volumeUSD, volumeUSDWeek } = poolData
-      const address0 = token0.address.toLowerCase()
-      const address1 = token1.address.toLowerCase()
-
-      let addressKey = address1
-
-      // sort tokens
-      if (address1 === RNG_ADDRESS.toLowerCase()) {
-        addressKey = address0
-      }
+      const { token1, tvlUSD, volumeUSD, volumeUSDWeek } = poolData
+      let address1 = token1.address.toLowerCase()
 
       // weth
-      if (addressKey === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') {
-        addressKey = 'NATIVE'
+      if (address1 === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') {
+        address1 = 'NATIVE'
       }
 
-      const matchingToken = unwrappedTokens.find((token) => token.address === addressKey)
+      const matchingToken = unwrappedTokens.find((token) => token.address === address1)
       if (matchingToken) {
         const infoToken = {
           ...matchingToken,

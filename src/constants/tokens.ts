@@ -474,9 +474,11 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in ChainId]?: s
   },
 }
 
-export const addressesArray = [
+export const RNG_PAIR_TOKENS = [
   '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
   '0xe41d2489571d322189246dafa5ebde1f4699f498',
+  '0x6f40d4a6237c257fff2db00fa0510deeecd303eb',
+  '0x808507121b80c02388fad14726482e061b8da827',
   '0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2',
   '0x514910771af9ca656af840dff83e8264ecf986ca',
   '0xc18360217d8f7ab5e7c516566761ea12ce7f9d72',
