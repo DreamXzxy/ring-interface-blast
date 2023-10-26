@@ -4,7 +4,7 @@ import {
   client,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
-import { useCallback, useMemo } from 'react'
+import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppState } from 'state/reducer'
 import {
