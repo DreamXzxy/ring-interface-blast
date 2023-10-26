@@ -64,6 +64,9 @@ export const PageTabs = () => {
 
   return (
     <>
+      <MenuItem href="/ring" isActive={pathname.startsWith('/ring')}>
+        <Trans>Ring</Trans>
+      </MenuItem>
       <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
         <Trans>Swap</Trans>
       </MenuItem>

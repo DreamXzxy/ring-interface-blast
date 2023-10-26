@@ -31,7 +31,7 @@ import DarkModeQueryParamReader from '../theme/components/DarkModeQueryParamRead
 import AddLiquidity from './AddLiquidity'
 import { RedirectDuplicateTokenIds } from './AddLiquidity/redirects'
 import { RedirectDuplicateTokenIdsV2 } from './AddLiquidityV2/redirects'
-import Landing from './Landing'
+import InfoTokens from './InfoTokens'
 import MigrateV2 from './MigrateV2'
 import MigrateV2Pair from './MigrateV2/MigrateV2Pair'
 import NotFound from './NotFound'
@@ -43,8 +43,6 @@ import RemoveLiquidity from './RemoveLiquidity'
 import RemoveLiquidityV3 from './RemoveLiquidity/V3'
 import Swap from './Swap'
 import { RedirectPathToSwapOnly } from './Swap/redirects'
-import Tokens from './Tokens'
-import InfoTokens from './InfoTokens'
 
 const TokenDetails = lazy(() => import('./TokenDetails'))
 const Vote = lazy(() => import('./Vote'))
@@ -212,7 +210,13 @@ export default function App() {
             <Suspense fallback={<Loader />}>
               {isLoaded ? (
                 <Routes>
-                  <Route path="/" element={<Landing />} />
+                  <Route path="/" element={<InfoTokens />}>
+                    <Route path=":chainName" />
+                  </Route>
+
+                  <Route path="ring" element={<InfoTokens />}>
+                    <Route path=":chainName" />
+                  </Route>
 
                   <Route path="tokens" element={<InfoTokens />}>
                     <Route path=":chainName" />
