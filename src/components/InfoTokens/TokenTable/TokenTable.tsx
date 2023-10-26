@@ -7,11 +7,11 @@ import { useInfoTokens } from 'hooks/useTokensForAddresses'
 import { ReactNode } from 'react'
 import { AlertTriangle } from 'react-feather'
 import { useParams } from 'react-router-dom'
+import { PoolData } from 'state/pools/reducer'
 import styled from 'styled-components'
 
 import { MAX_WIDTH_MEDIA_BREAKPOINT } from '../../Tokens/constants'
 import { HeaderRow, LoadedRow, LoadingRow } from './TokenRow'
-import { PoolData } from 'state/pools/reducer'
 
 const GridContainer = styled.div`
   display: flex;
@@ -78,7 +78,7 @@ function LoadingTokenTable({ rowCount = PAGE_SIZE }: { rowCount?: number }) {
   )
 }
 
-export default function TokenTable({ poolDatas }: { poolDatas: PoolData[]}) {
+export default function TokenTable({ poolDatas }: { poolDatas: PoolData[] }) {
   const chainName = validateUrlChainParam(useParams<{ chainName?: string }>().chainName)
   const { infoTokens, loadingTokens } = useInfoTokens(poolDatas, chainName)
   const sparklines = useSparkLines(RNG_PAIR_TOKENS, chainName)
