@@ -2,12 +2,16 @@ import { Trans } from '@lingui/macro'
 import { InterfacePageName } from '@uniswap/analytics-events'
 import { Trace } from 'analytics'
 import TokenTable from 'components/InfoTokens/TokenTable/TokenTable'
-import { MAX_WIDTH_MEDIA_BREAKPOINT, MEDIUM_MEDIA_BREAKPOINT } from 'components/Tokens/constants'
+import { MAX_WIDTH_MEDIA_BREAKPOINT } from 'components/Tokens/constants'
 import { filterStringAtom } from 'components/Tokens/state'
 import { MouseoverTooltip } from 'components/Tooltip'
+import { RNG_ADDRESS } from 'constants/tokens'
+import useTokenTransfers from 'hooks/useTokenTransfers'
 import { useResetAtom } from 'jotai/utils'
 import { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
+import { usePoolDatas } from 'state/pools/hooks'
+import { usePoolsForToken } from 'state/tokens/hooks'
 import styled from 'styled-components'
 import { ThemedText } from 'theme'
 import { formatNumber, NumberType } from 'utils/formatNumbers'
@@ -16,10 +20,6 @@ import one from '../../assets/home/1.svg'
 import two from '../../assets/home/2.svg'
 import three from '../../assets/home/3.svg'
 import four from '../../assets/home/4.svg'
-import { RNG_ADDRESS } from 'constants/tokens'
-import useTokenTransfers from 'hooks/useTokenTransfers'
-import { usePoolsForToken } from 'state/tokens/hooks'
-import { usePoolDatas } from 'state/pools/hooks'
 
 const ExploreContainer = styled.div`
   width: 100%;
@@ -53,18 +53,18 @@ const InfoTokens = () => {
   const poolsForToken = usePoolsForToken(RNG_ADDRESS)
   const poolDatas = usePoolDatas(poolsForToken ?? [])
 
-  const { data, error, loading } = useTokenTransfers()
+  const { data } = useTokenTransfers()
   const tokenTransfers = data?.count
 
   const infoTokens = useMemo(() => {
     if (!poolDatas) {
-      return undefined;
+      return undefined
     }
 
     const totaltvlUSD = poolDatas.reduce((sum, token) => sum + token.tvlUSD, 0)
     const totalvolumeUSD = poolDatas.reduce((sum, token) => sum + token.volumeUSD, 0)
     const pools = poolDatas.length
-    return { totaltvlUSD, totalvolumeUSD, pools };
+    return { totaltvlUSD, totalvolumeUSD, pools }
   }, [poolDatas])
 
   return (
@@ -75,19 +75,19 @@ const InfoTokens = () => {
             <div className="flex flex-col items-center flex-grow gap-6 lg:items-start">
               <div className="flex flex-col">
                 <h1 className="scroll-m-20 text-3xl font-bold tracking-tighter md:text-5xl lg:leading-[1.1]">
-                  Put your funds to work <br />
-                  by providing liquidity.
+                  List your tokens on DEX <br />
+                  Traded by millions of users.
                 </h1>
                 <p className="scroll-m-20 leading-7 [:not(:first-child)]:mt-6 text-lg text-muted-foreground sm:text-xl max-w-[500px] mt-4">
-                  When you add liquidity to a pool, you can receive a share of its trading volume and potentially snag
-                  extra rewards when there are incentives involved!
+                  Ring Exchange enables single side liquidity provision on Decentralized Exchange. <br /> Allowing
+                  Web3.0 users trade your tokens freely and openly without creating account.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row w-full sm:w-[unset] gap-4">
                 <div className="flex items-center w-full">
                   <div className="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue-400 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-600 text-white min-h-[44px] h-[44px] px-4 rounded-xl flex-1 w-full sm:flex-0 sm:w-[unset] rounded-r-none">
-                    <a href="#" className="text-white">
-                      I want to create a position
+                    <a href="https://forms.gle/a777EUMn7UpzXjFe9" className="text-white">
+                      I want to list a token on Ring Exchange
                     </a>
                   </div>
                   <div
@@ -111,37 +111,17 @@ const InfoTokens = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue-400 dark:bg-[#2C2F36] bg-slate-100 hover:bg-muted focus:bg-accent min-h-[44px] h-[44px] px-4 rounded-xl flex-1 w-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                    className="w-5 h-5"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
-                    ></path>
-                  </svg>
-                  <a href="#" className="dark:text-white text-black">
-                    I want to incentivize a pool
-                  </a>
-                </div>
               </div>
             </div>
             <div className="flex flex-col items-center gap-4 lg:items-end">
               <div className="flex flex-col items-center gap-1 lg:items-end">
-                <span className="font-semibold lg:text-sm">Looking for a partnership with Few?</span>
+                <span className="font-semibold lg:text-sm">Looking for a partnership with Ring Exchange?</span>
                 <div className="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue text-blue hover:underline hover:text-blue-700 hover:font-semibold !p-0 !h-[unset] !min-h-[unset] min-h-[36px] h-[36px] px-3 text-sm rounded-xl flex-1 w-full sm:flex-0 sm:w-[unset]">
-                  <a href="/partner">Apply here</a>
+                  <a href="https://forms.gle/a777EUMn7UpzXjFe9">Apply here</a>
                 </div>
               </div>
               <div className="flex flex-col items-center gap-1 lg:items-end">
-                <span className="font-semibold lg:text-sm">Need Help?</span>
+                <span className="font-semibold lg:text-sm">Join our community</span>
                 <div className="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue text-blue hover:underline hover:text-blue-700 hover:font-semibold !p-0 !h-[unset] !min-h-[unset] min-h-[36px] h-[36px] px-3 text-sm rounded-xl">
                   <svg
                     viewBox="0 0 256 199"
@@ -177,9 +157,7 @@ const InfoTokens = () => {
               <img src={one} className="w-20 h-20" />
             </div>
             <div className="flex flex-col justify-between py-2">
-              <div className="text-3xl">
-                {formatNumber(infoTokens?.totaltvlUSD, NumberType.FiatTokenStats)}
-              </div>
+              <div className="text-3xl">{formatNumber(infoTokens?.totaltvlUSD, NumberType.FiatTokenStats)}</div>
               <div className="text-gray-400">TVL</div>
             </div>
           </div>
@@ -188,9 +166,7 @@ const InfoTokens = () => {
               <img src={two} className="w-20 h-20" />
             </div>
             <div className="flex flex-col justify-between py-2">
-              <div className="text-3xl">
-                {formatNumber(infoTokens?.totalvolumeUSD, NumberType.FiatTokenStats)}
-              </div>
+              <div className="text-3xl">{formatNumber(infoTokens?.totalvolumeUSD, NumberType.FiatTokenStats)}</div>
               <div className="text-gray-400">24H Volume</div>
             </div>
           </div>
@@ -200,7 +176,7 @@ const InfoTokens = () => {
             </div>
             <div className="flex flex-col justify-between py-2">
               <div className="text-3xl">{infoTokens?.pools}</div>
-              <div className="text-gray-400">Pools</div>
+              <div className="text-gray-400">Trading Pairs</div>
             </div>
           </div>
           <div className="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4">
@@ -208,22 +184,22 @@ const InfoTokens = () => {
               <img src={four} className="w-20 h-20" />
             </div>
             <div className="flex flex-col justify-between py-2">
-              <div className="text-3xl">{formatNumber(tokenTransfers, NumberType.FiatTokenStats)}</div>
+              <div className="text-3xl">{formatNumber(tokenTransfers, NumberType.NFTCollectionStats)}</div>
               <div className="text-gray-400">Transcations</div>
             </div>
           </div>
         </div>
         <TitleContainer>
           <MouseoverTooltip
-            text={<Trans>This table contains the top tokens by FewSwap volume, sorted based on your input.</Trans>}
+            text={<Trans>This table contains the top tokens by Ring Exchange volume.</Trans>}
             placement="bottom"
           >
             <ThemedText.LargeHeader>
-              <Trans>Top tokens on FewSwap</Trans>
+              <Trans>Top tokens on Ring Exchange</Trans>
             </ThemedText.LargeHeader>
           </MouseoverTooltip>
         </TitleContainer>
-        <TokenTable poolDatas={poolDatas}/>
+        <TokenTable poolDatas={poolDatas} />
       </ExploreContainer>
     </Trace>
   )
