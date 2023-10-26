@@ -53,7 +53,7 @@ const InfoTokens = () => {
   const poolsForToken = usePoolsForToken(RNG_ADDRESS)
   const poolDatas = usePoolDatas(poolsForToken ?? [])
 
-  const { data, error, loading } = useTokenTransfers()
+  const { data } = useTokenTransfers()
   const tokenTransfers = data?.count
 
   const infoTokens = useMemo(() => {

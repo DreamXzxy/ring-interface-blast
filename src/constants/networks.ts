@@ -1,4 +1,5 @@
 import { ChainId } from '@uniswap/sdk-core'
+
 import ETHEREUM_LOGO_URL from '../assets/images/ethereum-logo.png'
 
 const INFURA_KEY = process.env.REACT_APP_INFURA_KEY
@@ -154,11 +155,11 @@ export const RPC_URLS = {
 }
 
 export enum SupportedNetwork {
-  ETHEREUM
+  ETHEREUM,
 }
 
 export const START_BLOCKS: { [key: string]: number } = {
-  [SupportedNetwork.ETHEREUM]: 14292820
+  [SupportedNetwork.ETHEREUM]: 14292820,
 }
 
 const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
@@ -197,5 +198,5 @@ export const POOL_HIDE: { [key: string]: string[] } = {
     '0x277667eb3e34f134adf870be9550e9f323d0dc24',
     '0x8c0411f2ad5470a66cb2e9c64536cfb8dcd54d51',
     '0x055284a4ca6532ecc219ac06b577d540c686669d',
-  ]
+  ],
 }

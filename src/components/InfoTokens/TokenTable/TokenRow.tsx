@@ -268,7 +268,7 @@ const IconLoadingBubble = styled(LoadingBubble)`
   border-radius: 50%;
   width: 24px;
 `
-export const SparkLineLoadingBubble = styled(LongLoadingBubble)`
+const SparkLineLoadingBubble = styled(LongLoadingBubble)`
   height: 4px;
 `
 
@@ -280,16 +280,16 @@ const InfoIconContainer = styled.div`
   cursor: help;
 `
 
-export const HEADER_DESCRIPTIONS: Record<TokenSortMethod, ReactNode | undefined> = {
+const HEADER_DESCRIPTIONS: Record<TokenSortMethod, ReactNode | undefined> = {
   [TokenSortMethod.PRICE]: undefined,
   [TokenSortMethod.PERCENT_CHANGE]: undefined,
   [TokenSortMethod.TOTAL_VALUE_LOCKED]: (
     <Trans>
-      Total value locked (TVL) is the aggregate amount of the asset available across all Uniswap v3 liquidity pools.
+      Total value locked (TVL) is the aggregate amount of the asset available across all Ring Exchange liquidity pools.
     </Trans>
   ),
   [TokenSortMethod.VOLUME]: (
-    <Trans>Volume is the amount of the asset that has been traded on Uniswap v3 during the selected time frame.</Trans>
+    <Trans>Volume is the amount of the asset that has been traded on Ring Exchange during the selected time frame.</Trans>
   ),
 }
 
