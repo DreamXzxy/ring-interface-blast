@@ -6,7 +6,7 @@ exports[`should inject metadata for valid tokens 1`] = `
   <head>
     <meta charset="utf-8" />
 
-    <title>Uniswap Interface</title>
+    <title>Ring Exchange Interface</title>
 
     <!--
        will be replaced with the URL of the \`public\` folder during build.
@@ -151,7 +151,7 @@ exports[`should inject metadata for valid tokens 2`] = `
   <head>
     <meta charset="utf-8" />
 
-    <title>Uniswap Interface</title>
+    <title>Ring Exchange Interface</title>
 
     <!--
        will be replaced with the URL of the \`public\` folder during build.
@@ -296,7 +296,7 @@ exports[`should inject metadata for valid tokens 3`] = `
   <head>
     <meta charset="utf-8" />
 
-    <title>Uniswap Interface</title>
+    <title>Ring Exchange Interface</title>
 
     <!--
        will be replaced with the URL of the \`public\` folder during build.
@@ -441,7 +441,7 @@ exports[`should inject metadata for valid tokens 4`] = `
   <head>
     <meta charset="utf-8" />
 
-    <title>Uniswap Interface</title>
+    <title>Ring Exchange Interface</title>
 
     <!--
        will be replaced with the URL of the \`public\` folder during build.
