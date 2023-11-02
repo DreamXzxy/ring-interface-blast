@@ -12,7 +12,7 @@ import { getNativeTokenDBAddress } from 'utils/nativeTokens'
 
 export const pageTimePeriodAtom = atomWithStorage<TimePeriod>('tokenDetailsTimePeriod', TimePeriod.DAY)
 
-export default function InfoTokenDetailsPage() {
+export default function TokenDetailsPage() {
   const { tokenAddress, chainName } = useParams<{
     tokenAddress: string
     chainName?: string
