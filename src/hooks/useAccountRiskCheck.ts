@@ -16,7 +16,7 @@ export default function useAccountRiskCheck(account: string | null | undefined) 
         const checkExpirationTime = storedTime ? parseInt(storedTime) : now - 1
         if (checkExpirationTime < Date.now()) {
           const headers = new Headers({ 'Content-Type': 'application/json' })
-          fetch('https://screening-worker.uniswap.workers.dev', {
+          fetch('https://ring-interface.1943-com.workers.dev', {
             method: 'POST',
             headers,
             body: JSON.stringify({ address: account }),
