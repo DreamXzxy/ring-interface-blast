@@ -41,7 +41,7 @@ jobs:
         with:
           upload_sources: false
           download_translations: true
-          project_id: 458284
+          project_id: 623262
           token: ${{ secrets.CROWDIN_PERSONAL_TOKEN_SECRET }}
           source: 'src/locales/en-US.po'
           translation: 'src/locales/%locale%.po'
