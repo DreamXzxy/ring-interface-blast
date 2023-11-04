@@ -1,5 +1,5 @@
 import TokenDetails from 'components/InfoTokens/TokenDetails'
-import { TokenDetailsPageSkeleton } from 'components/Tokens/TokenDetails/Skeleton'
+import { TokenDetailsPageSkeleton } from 'components/InfoTokens/TokenDetails/Skeleton'
 import { NATIVE_CHAIN_ID } from 'constants/tokens'
 import { useTokenPriceQuery, useTokenQuery } from 'graphql/data/__generated__/types-and-hooks'
 import { TimePeriod, toHistoryDuration, validateUrlChainParam } from 'graphql/data/util'

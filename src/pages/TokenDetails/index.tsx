@@ -1,4 +1,4 @@
-import TokenDetails from 'components/InfoTokens/TokenDetails'
+import TokenDetails from 'components/Tokens/TokenDetails'
 import { TokenDetailsPageSkeleton } from 'components/Tokens/TokenDetails/Skeleton'
 import { NATIVE_CHAIN_ID } from 'constants/tokens'
 import { useTokenPriceQuery, useTokenQuery } from 'graphql/data/__generated__/types-and-hooks'
@@ -12,7 +12,7 @@ import { getNativeTokenDBAddress } from 'utils/nativeTokens'
 
 export const pageTimePeriodAtom = atomWithStorage<TimePeriod>('tokenDetailsTimePeriod', TimePeriod.DAY)
 
-export default function InfoTokenDetailsPage() {
+export default function TokenDetailsPage() {
   const { tokenAddress, chainName } = useParams<{
     tokenAddress: string
     chainName?: string

@@ -17,7 +17,7 @@ import TokenDetailsSkeleton, {
   TokenDetailsLayout,
   TokenInfoContainer,
   TokenNameCell,
-} from 'components/Tokens/TokenDetails/Skeleton'
+} from './Skeleton'
 import StatsSection from 'components/Tokens/TokenDetails/StatsSection'
 import TokenSafetyMessage from 'components/TokenSafety/TokenSafetyMessage'
 import TokenSafetyModal from 'components/TokenSafety/TokenSafetyModal'
@@ -26,7 +26,7 @@ import { checkWarning } from 'constants/tokenSafety'
 import { TokenPriceQuery } from 'graphql/data/__generated__/types-and-hooks'
 import { Chain, TokenQuery, TokenQueryData } from 'graphql/data/Token'
 import { QueryToken } from 'graphql/data/Token'
-import { getTokenDetailsURL, InterfaceGqlChain, supportedChainIdFromGQLChain } from 'graphql/data/util'
+import { getInfoTokenDetailsURL, InterfaceGqlChain, supportedChainIdFromGQLChain } from 'graphql/data/util'
 import { useOnGlobalChainSwitch } from 'hooks/useGlobalChainSwitch'
 import { UNKNOWN_TOKEN_SYMBOL, useTokenFromActiveNetwork } from 'lib/hooks/useCurrency'
 import { Swap } from 'pages/Swap'
@@ -142,9 +142,9 @@ export default function TokenDetails({
       if (!address) return
       const bridgedAddress = crossChainMap[update]
       if (bridgedAddress) {
-        startTokenTransition(() => navigate(getTokenDetailsURL({ address: bridgedAddress, chain: update })))
+        startTokenTransition(() => navigate(getInfoTokenDetailsURL({ address: bridgedAddress, chain: update })))
       } else if (didFetchFromChain || detailedToken?.isNative) {
-        startTokenTransition(() => navigate(getTokenDetailsURL({ address, chain: update })))
+        startTokenTransition(() => navigate(getInfoTokenDetailsURL({ address, chain: update })))
       }
     },
     [address, crossChainMap, didFetchFromChain, navigate, detailedToken?.isNative]
@@ -163,7 +163,7 @@ export default function TokenDetails({
       const newDefaultTokenID = tokens[Field.OUTPUT]?.currencyId ?? tokens[Field.INPUT]?.currencyId
       startTokenTransition(() =>
         navigate(
-          getTokenDetailsURL({
+          getInfoTokenDetailsURL({
             // The function falls back to "NATIVE" if the address is null
             address: newDefaultTokenID === 'ETH' ? null : newDefaultTokenID,
             chain,
