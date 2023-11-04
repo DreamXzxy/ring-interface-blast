@@ -207,6 +207,21 @@ export function getTokenDetailsURL({
   return `/tokens/${chainName}/${tokenAddress}${inputAddressSuffix}`
 }
 
+export function getInfoTokenDetailsURL({
+  address,
+  chain,
+  inputAddress,
+}: {
+  address?: string | null
+  chain: Chain
+  inputAddress?: string | null
+}) {
+  const chainName = chain.toLowerCase()
+  const tokenAddress = address ?? NATIVE_CHAIN_ID
+  const inputAddressSuffix = inputAddress ? `?inputCurrency=${inputAddress}` : ''
+  return `/ringTokens/${chainName}/${tokenAddress}${inputAddressSuffix}`
+}
+
 export function unwrapToken<
   T extends {
     address?: string | null
