@@ -2,11 +2,7 @@ import { createReducer } from '@reduxjs/toolkit'
 import { NetworkInfo } from 'constants/networks'
 
 import { EthereumNetworkInfo } from '../../constants/networks'
-import {
-  updateActiveNetworkVersion,
-  PopupContent,
-  updateSubgraphStatus,
-} from './actions'
+import { PopupContent, updateActiveNetworkVersion, updateSubgraphStatus } from './actions'
 
 type PopupList = Array<{ key: string; show: boolean; content: PopupContent; removeAfterMs: number | null }>
 
@@ -15,8 +11,8 @@ export interface InfoapplicationState {
   readonly popupList: PopupList
   readonly subgraphStatus: {
     available: boolean | null
-    syncedBlock: number | undefined
-    headBlock: number | undefined
+    syncedBlock?: number
+    headBlock?: number
   }
   readonly activeNetworkVersion: NetworkInfo
 }

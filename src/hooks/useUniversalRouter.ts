@@ -160,6 +160,6 @@ export function useUniversalRouterSwapCallback(
     options.slippageTolerance,
     provider,
     trade,
-    blockNumber
+    blockNumber,
   ])
 }

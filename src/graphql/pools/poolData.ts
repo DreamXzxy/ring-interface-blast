@@ -1,13 +1,13 @@
 import { useQuery } from '@apollo/client'
 import gql from 'graphql-tag'
 import { useBlocksFromTimestamps } from 'hooks/useBlocksFromTimestamps'
-import { useActiveNetworkVersion, useClients } from 'state/infoapplication/hooks'
+import { useClients } from 'state/infoapplication/hooks'
 import { PoolData } from 'state/pools/reducer'
 import { get2DayChange } from 'utils/data'
 import { useDeltaTimestamps } from 'utils/queries'
 import { formatTokenName, formatTokenSymbol } from 'utils/tokens'
 
-export const POOLS_BULK = (block: number | undefined, pools: string[]) => {
+const POOLS_BULK = (block: number | undefined, pools: string[]) => {
   let poolString = `[`
   pools.map((address) => {
     return (poolString += `"${address}",`)
@@ -106,7 +106,6 @@ export function usePoolDatas(poolAddresses: string[]): {
 } {
   // get client
   const { dataClient } = useClients()
-  const [activeNetwork] = useActiveNetworkVersion()
 
   // get blocks from historic timestamps
   const [t24, t48, tWeek] = useDeltaTimestamps()
@@ -233,15 +232,15 @@ export function usePoolDatas(poolAddresses: string[]): {
         tick: parseFloat(current.tick),
         token0: {
           address: current.token0.id,
-          name: formatTokenName(current.token0.id, current.token0.name, activeNetwork),
-          symbol: formatTokenSymbol(current.token0.id, current.token0.symbol, activeNetwork),
+          name: formatTokenName(current.token0.id, current.token0.name),
+          symbol: formatTokenSymbol(current.token0.id, current.token0.symbol),
           decimals: parseInt(current.token0.decimals),
           derivedETH: parseFloat(current.token0.derivedETH),
         },
         token1: {
           address: current.token1.id,
-          name: formatTokenName(current.token1.id, current.token1.name, activeNetwork),
-          symbol: formatTokenSymbol(current.token1.id, current.token1.symbol, activeNetwork),
+          name: formatTokenName(current.token1.id, current.token1.name),
+          symbol: formatTokenSymbol(current.token1.id, current.token1.symbol),
           decimals: parseInt(current.token1.decimals),
           derivedETH: parseFloat(current.token1.derivedETH),
         },

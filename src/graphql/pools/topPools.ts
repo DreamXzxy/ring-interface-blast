@@ -1,12 +1,12 @@
-import { useMemo } from 'react'
 import { useQuery } from '@apollo/client'
+import { POOL_HIDE } from 'constants/networks'
 import gql from 'graphql-tag'
+import { useMemo } from 'react'
 import { useActiveNetworkVersion, useClients } from 'state/infoapplication/hooks'
 // import { notEmpty } from 'utils'
 import { notEmpty } from 'utils/notEmpty'
-import { POOL_HIDE } from 'constants/networks'
 
-export const TOP_POOLS = gql`
+const TOP_POOLS = gql`
   query topPools {
     pools(first: 50, orderBy: totalValueLockedUSD, orderDirection: desc, subgraphError: allow) {
       id
@@ -26,7 +26,7 @@ interface TopPoolsResponse {
 export function useTopPoolAddresses(): {
   loading: boolean
   error: boolean
-  addresses: string[] | undefined
+  addresses?: string[]
 } {
   const [currentNetwork] = useActiveNetworkVersion()
   const { dataClient } = useClients()
@@ -51,7 +51,7 @@ export function useTopPoolAddresses(): {
   }, [currentNetwork.id, data])
 
   return {
-    loading: loading,
+    loading,
     error: Boolean(error),
     addresses: formattedData,
   }

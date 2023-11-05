@@ -1,23 +1,18 @@
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client'
-import {
-  blockClient,
-  client,
-} from 'apollo/client'
+import { blockClient, client } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppState } from 'state/reducer'
-import {
-  updateActiveNetworkVersion,
-  updateSubgraphStatus,
-} from './actions'
+
+import { updateActiveNetworkVersion, updateSubgraphStatus } from './actions'
 
 // returns a function that allows adding a popup
 export function useSubgraphStatus(): [
   {
     available: boolean | null
-    syncedBlock: number | undefined
-    headBlock: number | undefined
+    syncedBlock?: number
+    headBlock?: number
   },
   (available: boolean | null, syncedBlock: number | undefined, headBlock: number | undefined) => void
 ] {
@@ -47,7 +42,7 @@ export function useActiveNetworkVersion(): [NetworkInfo, (activeNetworkVersion: 
 }
 
 // get the apollo client related to the active network
-export function useDataClient(): ApolloClient<NormalizedCacheObject> {
+function useDataClient(): ApolloClient<NormalizedCacheObject> {
   const [activeNetwork] = useActiveNetworkVersion()
   switch (activeNetwork.id) {
     case SupportedNetwork.ETHEREUM:
@@ -58,7 +53,7 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
 }
 
 // get the apollo client related to the active network for fetching blocks
-export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
+function useBlockClient(): ApolloClient<NormalizedCacheObject> {
   const [activeNetwork] = useActiveNetworkVersion()
   switch (activeNetwork.id) {
     case SupportedNetwork.ETHEREUM:

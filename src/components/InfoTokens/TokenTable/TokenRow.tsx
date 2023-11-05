@@ -289,7 +289,9 @@ const HEADER_DESCRIPTIONS: Record<TokenSortMethod, ReactNode | undefined> = {
     </Trans>
   ),
   [TokenSortMethod.VOLUME]: (
-    <Trans>Volume is the amount of the asset that has been traded on Ring Exchange during the selected time frame.</Trans>
+    <Trans>
+      Volume is the amount of the asset that has been traded on Ring Exchange during the selected time frame.
+    </Trans>
   ),
 }
 

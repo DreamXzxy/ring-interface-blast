@@ -1,15 +1,15 @@
-import { getPercentChange } from 'utils/data'
 import { useQuery } from '@apollo/client'
 import gql from 'graphql-tag'
-import { useDeltaTimestamps } from 'utils/queries'
 import { useBlocksFromTimestamps } from 'hooks/useBlocksFromTimestamps'
-import { get2DayChange } from 'utils/data'
-import { TokenData } from 'state/tokens/reducer'
 import { useEthPrices } from 'hooks/useEthPrices'
-import { formatTokenSymbol, formatTokenName } from 'utils/tokens'
-import { useActiveNetworkVersion, useClients } from 'state/infoapplication/hooks'
+import { useClients } from 'state/infoapplication/hooks'
+import { TokenData } from 'state/tokens/reducer'
+import { getPercentChange } from 'utils/data'
+import { get2DayChange } from 'utils/data'
+import { useDeltaTimestamps } from 'utils/queries'
+import { formatTokenName, formatTokenSymbol } from 'utils/tokens'
 
-export const TOKENS_BULK = (block: number | undefined, tokens: string[]) => {
+const TOKENS_BULK = (block: number | undefined, tokens: string[]) => {
   let tokenString = `[`
   tokens.map((address) => {
     return (tokenString += `"${address}",`)
@@ -60,18 +60,13 @@ interface TokenDataResponse {
 /**
  * Fetch top addresses by volume
  */
-export function useFetchedTokenDatas(
-  tokenAddresses: string[]
-): {
+export function useFetchedTokenDatas(tokenAddresses: string[]): {
   loading: boolean
   error: boolean
-  data:
-    | {
-        [address: string]: TokenData
-      }
-    | undefined
+  data?: {
+    [address: string]: TokenData
+  }
 } {
-  const [activeNetwork] = useActiveNetworkVersion()
   const { dataClient } = useClients()
 
   // get blocks from historic timestamps
@@ -85,26 +80,29 @@ export function useFetchedTokenDatas(
     client: dataClient,
   })
 
-  const { loading: loading24, error: error24, data: data24 } = useQuery<TokenDataResponse>(
-    TOKENS_BULK(parseInt(block24?.number), tokenAddresses),
-    {
-      client: dataClient,
-    }
-  )
+  const {
+    loading: loading24,
+    error: error24,
+    data: data24,
+  } = useQuery<TokenDataResponse>(TOKENS_BULK(parseInt(block24?.number), tokenAddresses), {
+    client: dataClient,
+  })
 
-  const { loading: loading48, error: error48, data: data48 } = useQuery<TokenDataResponse>(
-    TOKENS_BULK(parseInt(block48?.number), tokenAddresses),
-    {
-      client: dataClient,
-    }
-  )
+  const {
+    loading: loading48,
+    error: error48,
+    data: data48,
+  } = useQuery<TokenDataResponse>(TOKENS_BULK(parseInt(block48?.number), tokenAddresses), {
+    client: dataClient,
+  })
 
-  const { loading: loadingWeek, error: errorWeek, data: dataWeek } = useQuery<TokenDataResponse>(
-    TOKENS_BULK(parseInt(blockWeek?.number), tokenAddresses),
-    {
-      client: dataClient,
-    }
-  )
+  const {
+    loading: loadingWeek,
+    error: errorWeek,
+    data: dataWeek,
+  } = useQuery<TokenDataResponse>(TOKENS_BULK(parseInt(blockWeek?.number), tokenAddresses), {
+    client: dataClient,
+  })
 
   const anyError = Boolean(error || error24 || error48 || blockError || errorWeek)
   const anyLoading = Boolean(loading || loading24 || loading48 || loadingWeek || !blocks)
@@ -198,8 +196,8 @@ export function useFetchedTokenDatas(
     accum[address] = {
       exists: !!current,
       address,
-      name: current ? formatTokenName(address, current.name, activeNetwork) : '',
-      symbol: current ? formatTokenSymbol(address, current.symbol, activeNetwork) : '',
+      name: current ? formatTokenName(address, current.name) : '',
+      symbol: current ? formatTokenSymbol(address, current.symbol) : '',
       volumeUSD,
       volumeUSDChange,
       volumeUSDWeek,

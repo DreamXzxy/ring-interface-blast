@@ -1,9 +1,9 @@
-import { useMemo } from 'react'
 import { useQuery } from '@apollo/client'
 import gql from 'graphql-tag'
+import { useMemo } from 'react'
 import { useClients } from 'state/infoapplication/hooks'
 
-export const TOP_TOKENS = gql`
+const TOP_TOKENS = gql`
   query topPools {
     tokens(first: 50, orderBy: totalValueLockedUSD, orderDirection: desc, subgraphError: allow) {
       id
@@ -23,7 +23,7 @@ interface TopTokensResponse {
 export function useTopTokenAddresses(): {
   loading: boolean
   error: boolean
-  addresses: string[] | undefined
+  addresses?: string[]
 } {
   const { dataClient } = useClients()
 
@@ -38,7 +38,7 @@ export function useTopTokenAddresses(): {
   }, [data])
 
   return {
-    loading: loading,
+    loading,
     error: Boolean(error),
     addresses: formattedData,
   }

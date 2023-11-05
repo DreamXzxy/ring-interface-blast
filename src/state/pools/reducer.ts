@@ -1,15 +1,9 @@
-import { currentTimestamp } from 'utils/data'
-import { updatePoolData, addPoolKeys, updatePoolChartData, updatePoolTransactions } from './actions'
 import { createReducer } from '@reduxjs/toolkit'
-import { SerializedToken } from 'state/user/types'
-import { Transaction } from 'types/info'
 import { SupportedNetwork } from 'constants/networks'
+import { Transaction } from 'types/info'
+import { currentTimestamp } from 'utils/data'
 
-export interface Pool {
-  address: string
-  token0: SerializedToken
-  token1: SerializedToken
-}
+import { addPoolKeys, updatePoolChartData, updatePoolData, updatePoolTransactions } from './actions'
 
 export interface PoolData {
   // basic token info
@@ -67,17 +61,17 @@ export interface PoolsState {
   byAddress: {
     [networkId: string]: {
       [address: string]: {
-        data: PoolData | undefined
-        chartData: PoolChartEntry[] | undefined
-        transactions: Transaction[] | undefined
-        lastUpdated: number | undefined
+        data?: PoolData
+        chartData?: PoolChartEntry[]
+        transactions?: Transaction[]
+        lastUpdated?: number
         // tickData: PoolTickData | undefined
       }
     }
   }
 }
 
-export const initialState: PoolsState = {
+const initialState: PoolsState = {
   byAddress: {
     [SupportedNetwork.ETHEREUM]: {},
   },
@@ -110,7 +104,7 @@ export default createReducer(initialState, (builder) =>
       })
     })
     .addCase(updatePoolChartData, (state, { payload: { poolAddress, chartData, networkId } }) => {
-      state.byAddress[networkId][poolAddress] = { ...state.byAddress[networkId][poolAddress], chartData: chartData }
+      state.byAddress[networkId][poolAddress] = { ...state.byAddress[networkId][poolAddress], chartData }
     })
     .addCase(updatePoolTransactions, (state, { payload: { poolAddress, transactions, networkId } }) => {
       state.byAddress[networkId][poolAddress] = { ...state.byAddress[networkId][poolAddress], transactions }

@@ -1,11 +1,12 @@
+import { ChainId } from '@uniswap/sdk-core'
 import { RNG_PAIR_TOKENS } from 'constants/tokens'
 import { Chain } from 'graphql/data/__generated__/types-and-hooks'
 import { InfoToken } from 'graphql/data/TopTokens'
 import { supportedChainIdFromGQLChain, unwrapToken } from 'graphql/data/util'
 import { useMemo } from 'react'
 import { PoolData } from 'state/pools/reducer'
+
 import { useSearchTokens } from '../graphql/data/SearchTokens'
-import { ChainId } from '@uniswap/sdk-core'
 
 interface UseInfoTokensReturnValue {
   infoTokens?: InfoToken[]
@@ -49,7 +50,7 @@ export function useInfoTokens(poolDatas: PoolData[], chain: Chain): UseInfoToken
   const { tokens: allTokens, loading } = useTokensForAddresses(RNG_PAIR_TOKENS, chainId)
 
   const { infoTokens, loadingTokens } = useMemo(() => {
-    if (loading || !poolDatas.every(poolData => poolData !== undefined)) {
+    if (loading || !poolDatas.every((poolData) => poolData !== undefined)) {
       return { infoTokens: undefined, loadingTokens: true }
     }
 

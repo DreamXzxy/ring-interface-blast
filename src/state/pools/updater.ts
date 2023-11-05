@@ -1,9 +1,10 @@
-import { useUpdatePoolData, useAllPoolData, useAddPoolKeys } from './hooks'
-import { useEffect, useMemo } from 'react'
-import { useTopPoolAddresses } from 'graphql/pools/topPools'
-import { usePoolDatas } from 'graphql/pools/poolData'
 import { POOL_HIDE } from 'constants/networks'
+import { usePoolDatas } from 'graphql/pools/poolData'
+import { useTopPoolAddresses } from 'graphql/pools/topPools'
+import { useEffect, useMemo } from 'react'
 import { useActiveNetworkVersion } from 'state/infoapplication/hooks'
+
+import { useAddPoolKeys, useAllPoolData, useUpdatePoolData } from './hooks'
 
 export default function Updater(): null {
   // updaters
