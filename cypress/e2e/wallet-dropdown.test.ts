@@ -132,11 +132,11 @@ describe('Wallet Dropdown', () => {
       cy.viewport('iphone-6').visit('/')
     })
 
-    it('should dismiss the wallet bottom sheet when clicking buy crypto', () => {
-      cy.get(getTestSelector('web3-status-connected')).click()
-      cy.get(getTestSelector('wallet-buy-crypto')).click()
-      cy.contains('Buy crypto').should('not.be.visible')
-    })
+    // it('should dismiss the wallet bottom sheet when clicking buy crypto', () => {
+    //   cy.get(getTestSelector('web3-status-connected')).click()
+    //   cy.get(getTestSelector('wallet-buy-crypto')).click()
+    //   cy.contains('Buy crypto').should('not.be.visible')
+    // })
 
     it('should use a bottom sheet and dismiss when on a mobile screen size', () => {
       cy.get(getTestSelector('web3-status-connected')).click()

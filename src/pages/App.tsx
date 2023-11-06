@@ -212,9 +212,7 @@ export default function App() {
             <Suspense fallback={<Loader />}>
               {isLoaded ? (
                 <Routes>
-                  <Route path="/" element={<InfoTokens />}>
-                    <Route path=":chainName" />
-                  </Route>
+                  <Route path="/" element={<InfoTokens />} />
 
                   <Route path="ring" element={<InfoTokens />}>
                     <Route path=":chainName" />
