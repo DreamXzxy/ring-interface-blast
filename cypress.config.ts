@@ -2,7 +2,7 @@ import { defineConfig } from 'cypress'
 import { setupHardhatEvents } from 'cypress-hardhat'
 
 export default defineConfig({
-  projectId: 'of36dc',
+  projectId: 'bt16j7',
   defaultCommandTimeout: 24000, // 2x average block time
   chromeWebSecurity: false,
   experimentalMemoryManagement: true, // better memory management, see https://github.com/cypress-io/cypress/pull/25462
