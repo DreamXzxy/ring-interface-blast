@@ -10,6 +10,7 @@ import { ApplicationModal, ApplicationState, PopupList } from './application/red
 import { Field as BurnField } from './burn/actions'
 import { BurnState } from './burn/reducer'
 import { BurnV3State } from './burn/v3/reducer'
+import { InfoapplicationState } from './infoapplication/reducer'
 import { ListsState } from './lists/reducer'
 import { LogsState } from './logs/slice'
 import { Log } from './logs/utils'
@@ -17,10 +18,12 @@ import { Field } from './mint/actions'
 import { MintState } from './mint/reducer'
 import { Field as FieldV3 } from './mint/v3/actions'
 import { FullRange, MintState as MintV3State } from './mint/v3/reducer'
+import { PoolsState } from './pools/reducer'
 import { AppState } from './reducer'
 import { routingApi } from './routing/slice'
 import { RouterPreference } from './routing/types'
 import { SignatureState } from './signatures/reducer'
+import { TokensState } from './tokens/reducer'
 import { TransactionState } from './transactions/reducer'
 import { TransactionDetails } from './transactions/types'
 import { UserState } from './user/reducer'
@@ -53,6 +56,9 @@ type ExpectedAppState = CombinedState<{
   signatures: SignatureState
   lists: ListsState
   application: ApplicationState
+  infoapplication: InfoapplicationState
+  tokens: TokensState
+  pools: PoolsState
   wallets: WalletState
   mint: MintState
   mintV3: MintV3State

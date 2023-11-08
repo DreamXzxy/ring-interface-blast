@@ -1,5 +1,7 @@
 import { ChainId } from '@uniswap/sdk-core'
 
+import ETHEREUM_LOGO_URL from '../assets/images/ethereum-logo.png'
+
 const INFURA_KEY = process.env.REACT_APP_INFURA_KEY
 if (typeof INFURA_KEY === 'undefined') {
   throw new Error(`REACT_APP_INFURA_KEY must be a defined environment variable`)
@@ -150,4 +152,51 @@ export const RPC_URLS = {
   [ChainId.BNB]: [QUICKNODE_BNB_RPC_URL, ...FALLBACK_URLS[ChainId.BNB]],
   [ChainId.AVALANCHE]: [`https://avalanche-mainnet.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[ChainId.AVALANCHE]],
   [ChainId.BASE]: [`https://base-mainnet.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[ChainId.BASE]],
+}
+
+export enum SupportedNetwork {
+  ETHEREUM,
+}
+
+export const START_BLOCKS: { [key: string]: number } = {
+  [SupportedNetwork.ETHEREUM]: 14292820,
+}
+
+const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
+const ARBITRUM_WETH_ADDRESS = '0x82af49447d8a07e3bd95bd0d56f35241523fbab1'
+
+export const WETH_ADDRESSES = [WETH_ADDRESS, ARBITRUM_WETH_ADDRESS]
+
+export type NetworkInfo = {
+  chainId: ChainId
+  id: SupportedNetwork
+  route: string
+  name: string
+  imageURL: string
+  bgColor: string
+  primaryColor: string
+  secondaryColor: string
+}
+
+export const EthereumNetworkInfo: NetworkInfo = {
+  chainId: ChainId.MAINNET,
+  id: SupportedNetwork.ETHEREUM,
+  route: '',
+  name: 'Ethereum',
+  bgColor: '#fc077d',
+  primaryColor: '#fc077d',
+  secondaryColor: '#2172E5',
+  imageURL: ETHEREUM_LOGO_URL,
+}
+
+export const POOL_HIDE: { [key: string]: string[] } = {
+  [SupportedNetwork.ETHEREUM]: [
+    '0x86d257cdb7bc9c0df10e84c8709697f92770b335',
+    '0xf8dbd52488978a79dfe6ffbd81a01fc5948bf9ee',
+    '0x8fe8d9bb8eeba3ed688069c3d6b556c9ca258248',
+    '0xa850478adaace4c08fc61de44d8cf3b64f359bec',
+    '0x277667eb3e34f134adf870be9550e9f323d0dc24',
+    '0x8c0411f2ad5470a66cb2e9c64536cfb8dcd54d51',
+    '0x055284a4ca6532ecc219ac06b577d540c686669d',
+  ],
 }

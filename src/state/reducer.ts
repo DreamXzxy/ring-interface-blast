@@ -7,13 +7,16 @@ import { isDevelopmentEnv } from 'utils/env'
 import application from './application/reducer'
 import burn from './burn/reducer'
 import burnV3 from './burn/v3/reducer'
+import infoapplication from './infoapplication/reducer'
 import lists from './lists/reducer'
 import logs from './logs/slice'
 import { customCreateMigrate, migrations } from './migrations'
 import mint from './mint/reducer'
 import mintV3 from './mint/v3/reducer'
+import pools from './pools/reducer'
 import { routingApi } from './routing/slice'
 import signatures from './signatures/reducer'
+import tokens from './tokens/reducer'
 import transactions from './transactions/reducer'
 import user from './user/reducer'
 import wallets from './wallets/reducer'
@@ -27,6 +30,9 @@ const persistedReducers = {
 
 const appReducer = combineReducers({
   application,
+  infoapplication,
+  pools,
+  tokens,
   wallets,
   mint,
   mintV3,

@@ -64,12 +64,18 @@ export const PageTabs = () => {
 
   return (
     <>
+      <MenuItem href="/ring" isActive={pathname.startsWith('/ring')}>
+        <Trans>Ring</Trans>
+      </MenuItem>
       <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
         <Trans>Swap</Trans>
       </MenuItem>
       <MenuItem href={`/tokens/${chainName.toLowerCase()}`} isActive={pathname.startsWith('/tokens')}>
         <Trans>Tokens</Trans>
       </MenuItem>
+      {/* <MenuItem href={`/tokens/${chainName.toLowerCase()}`} isActive={pathname.startsWith('/tokens')}>
+        <Trans>Tokens</Trans>
+      </MenuItem> */}
       {!shouldDisableNFTRoutes && (
         <MenuItem dataTestId="nft-nav" href="/nfts" isActive={isNftPage}>
           <Trans>NFTs</Trans>
@@ -115,7 +121,7 @@ const Navbar = ({ blur }: { blur: boolean }) => {
               <UniIcon
                 width="48"
                 height="48"
-                data-testid="uniswap-logo"
+                data-testid="ring-logo"
                 className={styles.logo}
                 onClick={handleUniIconClick}
               />

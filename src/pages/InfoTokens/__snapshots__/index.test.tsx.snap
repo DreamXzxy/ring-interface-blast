@@ -1,0 +1,3955 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`disable nft on landing page does not render nft information and card 1`] = `
+.c4 {
+  color: #222222;
+}
+
+.c20 {
+  border-radius: 12px;
+  border-radius: 12px;
+  height: 24px;
+  width: 50%;
+  width: 50%;
+  -webkit-animation: fAQEyV 1.5s infinite;
+  animation: fAQEyV 1.5s infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  background: linear-gradient( to left, #22222212 25%, rgba(53,53,53,0.07) 50%, #22222212 75% );
+  will-change: background-position;
+  background-size: 400%;
+}
+
+.c3 {
+  display: inline-block;
+  height: inherit;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c6 {
+  background-color: transparent;
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  line-height: 24px;
+  max-width: 1200px;
+  min-width: 390px;
+  height: 64px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  width: 100%;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c6:hover {
+  background-color: #98A1C014;
+}
+
+.c19 {
+  background-color: transparent;
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  line-height: 24px;
+  max-width: 1200px;
+  min-width: 390px;
+  height: 72px;
+  padding-top: 8px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  width: 100%;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c26 {
+  background-color: transparent;
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  line-height: 24px;
+  max-width: 1200px;
+  min-width: 390px;
+  height: 64px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  width: 100%;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c27 {
+  background-color: transparent;
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  line-height: 24px;
+  max-width: 1200px;
+  min-width: 390px;
+  height: 72px;
+  padding-top: 0px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  width: 100%;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c27:hover {
+  border-radius: 0px 0px 8px 8px;
+}
+
+.c7 {
+  border-bottom: 1px solid;
+  border-color: #22222212;
+  border-radius: 8px 8px 0px 0px;
+  color: #7D7D7D;
+  font-size: 14px;
+  height: 48px;
+  line-height: 16px;
+  padding: 0px 12px;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c7:hover {
+  background-color: transparent;
+}
+
+.c10 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  min-width: 80px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+}
+
+.c23 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  min-width: 80px;
+  -webkit-user-select: unset;
+  -moz-user-select: unset;
+  -ms-user-select: unset;
+  user-select: unset;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+}
+
+.c14 {
+  padding-right: 8px;
+}
+
+.c9 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 0px 8px;
+  min-width: 240px;
+  gap: 8px;
+}
+
+.c11 {
+  padding-right: 8px;
+}
+
+.c13 {
+  padding-right: 8px;
+}
+
+.c12 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.c12:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c12:hover:hover {
+  opacity: 0.6;
+}
+
+.c12:hover:active {
+  opacity: 0.4;
+}
+
+.c17 {
+  padding: 0px 24px;
+  min-width: 120px;
+}
+
+.c16 {
+  padding-right: 8px;
+}
+
+.c22 {
+  width: 65%;
+}
+
+.c24 {
+  width: 90%;
+}
+
+.c21 {
+  border-radius: 50%;
+  width: 24px;
+}
+
+.c25 {
+  height: 4px;
+}
+
+.c15 {
+  width: 16px;
+  margin-left: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: help;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1200px;
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #22222212;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  width: 100%;
+}
+
+.c0 {
+  position: absolute;
+  top: 0;
+  padding: 72px 0px 0px 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.c1 {
+  width: 100%;
+  min-width: 320px;
+  padding: 68px 12px 0px;
+}
+
+.c2 {
+  margin-bottom: 32px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width:1200px) {
+  .c6 {
+    grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c6 {
+    grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c6 {
+    grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c6 {
+    grid-template-columns: 2fr 3fr;
+    min-width: unset;
+    border-bottom: 0.5px solid #F9F9F9;
+  }
+
+  .c6:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .c19 {
+    grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c19 {
+    grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c19 {
+    grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c19 {
+    grid-template-columns: 2fr 3fr;
+    min-width: unset;
+    border-bottom: 0.5px solid #F9F9F9;
+  }
+
+  .c19:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .c26 {
+    grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c26 {
+    grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c26 {
+    grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c26 {
+    grid-template-columns: 2fr 3fr;
+    min-width: unset;
+    border-bottom: 0.5px solid #F9F9F9;
+  }
+
+  .c26:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .c27 {
+    grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c27 {
+    grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c27 {
+    grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c27 {
+    grid-template-columns: 2fr 3fr;
+    min-width: unset;
+    border-bottom: 0.5px solid #F9F9F9;
+  }
+
+  .c27:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c7 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c14 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:396px) {
+  .c9 {
+    min-width: 200px;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c13 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .c17 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c16 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    padding-top: 48px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c1 {
+    padding-top: 20px;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+    data-testid="ring-page"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="w-full mx-auto max-w-[1200px] md:pb-8 pb-0"
+      >
+        <section
+          class="flex flex-col justify-between gap-12 lg:flex-row lg:items-start mb-12"
+        >
+          <div
+            class="flex flex-col items-center flex-grow gap-6 lg:items-start"
+          >
+            <div
+              class="flex flex-col"
+            >
+              <h1
+                class="scroll-m-20 text-3xl font-bold tracking-tighter md:text-5xl lg:leading-[1.1]"
+              >
+                List your tokens on DEX 
+                <br />
+                Traded by millions of users.
+              </h1>
+              <p
+                class="scroll-m-20 leading-7 [:not(:first-child)]:mt-6 text-lg text-muted-foreground sm:text-xl max-w-[500px] mt-4"
+              >
+                Ring Exchange enables single side liquidity provision on Decentralized Exchange. 
+                <br />
+                 Allowing Web3.0 users trade your tokens freely and openly without creating account.
+              </p>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row w-full sm:w-[unset] gap-4"
+            >
+              <div
+                class="flex items-center w-full"
+              >
+                <div
+                  class="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue-400 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-600 text-white min-h-[44px] h-[44px] px-4 rounded-xl flex-1 w-full sm:flex-0 sm:w-[unset] rounded-r-none"
+                >
+                  <a
+                    class="text-white"
+                    href="https://forms.gle/a777EUMn7UpzXjFe9"
+                  >
+                    I want to list a token on Ring Exchange
+                  </a>
+                </div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue-400 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-600 text-white min-h-[44px] h-[44px] px-4 rounded-xl rounded-l-none"
+                  data-state="closed"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-4 h-4"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center gap-4 lg:items-end"
+          >
+            <div
+              class="flex flex-col items-center gap-1 lg:items-end"
+            >
+              <span
+                class="font-semibold lg:text-sm"
+              >
+                Looking for a partnership with Ring Exchange?
+              </span>
+              <div
+                class="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue text-blue hover:underline hover:text-blue-700 hover:font-semibold !p-0 !h-[unset] !min-h-[unset] min-h-[36px] h-[36px] px-3 text-sm rounded-xl flex-1 w-full sm:flex-0 sm:w-[unset]"
+              >
+                <a
+                  href="https://forms.gle/a777EUMn7UpzXjFe9"
+                >
+                  Apply here
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1 lg:items-end"
+            >
+              <span
+                class="font-semibold lg:text-sm"
+              >
+                Join our community
+              </span>
+              <div
+                class="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue text-blue hover:underline hover:text-blue-700 hover:font-semibold !p-0 !h-[unset] !min-h-[unset] min-h-[36px] h-[36px] px-3 text-sm rounded-xl"
+              >
+                <svg
+                  class="w-[18px] h-[18px]"
+                  preserveAspectRatio="xMidYMid"
+                  version="1.1"
+                  viewBox="0 0 256 199"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+                      fill="currentColor"
+                      fill-rule="nonzero"
+                    />
+                  </g>
+                </svg>
+                <a
+                  class="cursor-pointer text-blue hover:underline"
+                  href="https://discord.gg/NVPXN4e"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Join our discord
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        class="grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-8 gap-4 max-w-[1200px] mx-auto mb-6"
+      >
+        <div
+          class="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4"
+        >
+          <div>
+            <img
+              class="w-20 h-20"
+              src="1.svg"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between py-2"
+          >
+            <div
+              class="text-3xl"
+            >
+              -
+            </div>
+            <div
+              class="text-gray-400"
+            >
+              TVL
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4"
+        >
+          <div>
+            <img
+              class="w-20 h-20"
+              src="2.svg"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between py-2"
+          >
+            <div
+              class="text-3xl"
+            >
+              -
+            </div>
+            <div
+              class="text-gray-400"
+            >
+              24H Volume
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4"
+        >
+          <div>
+            <img
+              class="w-20 h-20"
+              src="3.svg"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between py-2"
+          >
+            <div
+              class="text-3xl"
+            >
+              0
+            </div>
+            <div
+              class="text-gray-400"
+            >
+              Trading Pairs
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4"
+        >
+          <div>
+            <img
+              class="w-20 h-20"
+              src="4.svg"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between py-2"
+          >
+            <div
+              class="text-3xl"
+            >
+              -
+            </div>
+            <div
+              class="text-gray-400"
+            >
+              Transcations
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c2"
+      >
+        <div
+          class="c3"
+        >
+          <div>
+            <div
+              class="c4 css-z82nir"
+            >
+              Top tokens on Ring Exchange
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6 c7"
+          data-testid="header-row"
+        >
+          <div
+            class="c8 c9"
+            data-testid="name-cell"
+          >
+            Token name
+          </div>
+          <div
+            class="c8 c10 c11"
+            data-testid="price-cell"
+          >
+            <span
+              class="c12"
+            >
+              Price
+            </span>
+          </div>
+          <div
+            class="c8 c10 c13"
+            data-testid="percent-change-cell"
+          >
+            <span
+              class="c12"
+            >
+              Change
+            </span>
+          </div>
+          <div
+            class="c8 c10 c14"
+            data-testid="tvl-cell"
+          >
+            <span
+              class="c12"
+            >
+              TVL
+              <div
+                class="c3"
+              >
+                <div>
+                  <div
+                    class="c15"
+                  >
+                    <svg
+                      fill="none"
+                      height="16px"
+                      viewBox="0 0 24 24"
+                      width="16px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12.75 16.5C12.75 16.914 12.414 17.25 12 17.25C11.586 17.25 11.25 16.914 11.25 16.5V11.929C11.25 11.515 11.586 11.179 12 11.179C12.414 11.179 12.75 11.515 12.75 11.929V16.5ZM12.02 9.5C11.468 9.5 11.0149 9.052 11.0149 8.5C11.0149 7.948 11.458 7.5 12.01 7.5H12.02C12.573 7.5 13.02 7.948 13.02 8.5C13.02 9.052 12.572 9.5 12.02 9.5Z"
+                        fill="#9B9B9B"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div
+            class="c8 c10 c16"
+            data-testid="volume-cell"
+          >
+            <span
+              class="c12"
+            >
+              <svg
+                color="#7D7D7D"
+                fill="none"
+                height="16"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6979 16.2453L6.31787 9.75247C5.58184 8.66118 6.2058 7 7.35185 7L16.6482 7C17.7942 7 18.4182 8.66243 17.6821 9.75247L13.3021 16.2453C12.623 17.2516 11.377 17.2516 10.6979 16.2453Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Volume
+              <div
+                class="c3"
+              >
+                <div>
+                  <div
+                    class="c15"
+                  >
+                    <svg
+                      fill="none"
+                      height="16px"
+                      viewBox="0 0 24 24"
+                      width="16px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12.75 16.5C12.75 16.914 12.414 17.25 12 17.25C11.586 17.25 11.25 16.914 11.25 16.5V11.929C11.25 11.515 11.586 11.179 12 11.179C12.414 11.179 12.75 11.515 12.75 11.929V16.5ZM12.02 9.5C11.468 9.5 11.0149 9.052 11.0149 8.5C11.0149 7.948 11.458 7.5 12.01 7.5H12.02C12.573 7.5 13.02 7.948 13.02 8.5C13.02 9.052 12.572 9.5 12.02 9.5Z"
+                        fill="#9B9B9B"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div
+            class="c8 c17"
+          />
+        </div>
+        <div
+          class="c18"
+        >
+          <div
+            class="c19"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c27"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`disable nft on landing page renders nft information and card 1`] = `
+.c4 {
+  color: #222222;
+}
+
+.c20 {
+  border-radius: 12px;
+  border-radius: 12px;
+  height: 24px;
+  width: 50%;
+  width: 50%;
+  -webkit-animation: fAQEyV 1.5s infinite;
+  animation: fAQEyV 1.5s infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  background: linear-gradient( to left, #22222212 25%, rgba(53,53,53,0.07) 50%, #22222212 75% );
+  will-change: background-position;
+  background-size: 400%;
+}
+
+.c3 {
+  display: inline-block;
+  height: inherit;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c6 {
+  background-color: transparent;
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  line-height: 24px;
+  max-width: 1200px;
+  min-width: 390px;
+  height: 64px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  width: 100%;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c6:hover {
+  background-color: #98A1C014;
+}
+
+.c19 {
+  background-color: transparent;
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  line-height: 24px;
+  max-width: 1200px;
+  min-width: 390px;
+  height: 72px;
+  padding-top: 8px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  width: 100%;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c26 {
+  background-color: transparent;
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  line-height: 24px;
+  max-width: 1200px;
+  min-width: 390px;
+  height: 64px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  width: 100%;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c27 {
+  background-color: transparent;
+  display: grid;
+  font-size: 16px;
+  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  line-height: 24px;
+  max-width: 1200px;
+  min-width: 390px;
+  height: 72px;
+  padding-top: 0px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  width: 100%;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c27:hover {
+  border-radius: 0px 0px 8px 8px;
+}
+
+.c7 {
+  border-bottom: 1px solid;
+  border-color: #22222212;
+  border-radius: 8px 8px 0px 0px;
+  color: #7D7D7D;
+  font-size: 14px;
+  height: 48px;
+  line-height: 16px;
+  padding: 0px 12px;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c7:hover {
+  background-color: transparent;
+}
+
+.c10 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  min-width: 80px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+}
+
+.c23 {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  min-width: 80px;
+  -webkit-user-select: unset;
+  -moz-user-select: unset;
+  -ms-user-select: unset;
+  user-select: unset;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+}
+
+.c14 {
+  padding-right: 8px;
+}
+
+.c9 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 0px 8px;
+  min-width: 240px;
+  gap: 8px;
+}
+
+.c11 {
+  padding-right: 8px;
+}
+
+.c13 {
+  padding-right: 8px;
+}
+
+.c12 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.c12:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition-duration: 125ms;
+  transition-duration: 125ms;
+}
+
+.c12:hover:hover {
+  opacity: 0.6;
+}
+
+.c12:hover:active {
+  opacity: 0.4;
+}
+
+.c17 {
+  padding: 0px 24px;
+  min-width: 120px;
+}
+
+.c16 {
+  padding-right: 8px;
+}
+
+.c22 {
+  width: 65%;
+}
+
+.c24 {
+  width: 90%;
+}
+
+.c21 {
+  border-radius: 50%;
+  width: 24px;
+}
+
+.c25 {
+  height: 4px;
+}
+
+.c15 {
+  width: 16px;
+  margin-left: 2px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: help;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1200px;
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #22222212;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  width: 100%;
+}
+
+.c0 {
+  position: absolute;
+  top: 0;
+  padding: 72px 0px 0px 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.c1 {
+  width: 100%;
+  min-width: 320px;
+  padding: 68px 12px 0px;
+}
+
+.c2 {
+  margin-bottom: 32px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width:1200px) {
+  .c6 {
+    grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c6 {
+    grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c6 {
+    grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c6 {
+    grid-template-columns: 2fr 3fr;
+    min-width: unset;
+    border-bottom: 0.5px solid #F9F9F9;
+  }
+
+  .c6:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .c19 {
+    grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c19 {
+    grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c19 {
+    grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c19 {
+    grid-template-columns: 2fr 3fr;
+    min-width: unset;
+    border-bottom: 0.5px solid #F9F9F9;
+  }
+
+  .c19:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .c26 {
+    grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c26 {
+    grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c26 {
+    grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c26 {
+    grid-template-columns: 2fr 3fr;
+    min-width: unset;
+    border-bottom: 0.5px solid #F9F9F9;
+  }
+
+  .c26:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .c27 {
+    grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c27 {
+    grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c27 {
+    grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c27 {
+    grid-template-columns: 2fr 3fr;
+    min-width: unset;
+    border-bottom: 0.5px solid #F9F9F9;
+  }
+
+  .c27:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c7 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width:720px) {
+  .c14 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:396px) {
+  .c9 {
+    min-width: 200px;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .c13 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .c17 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:840px) {
+  .c16 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    padding-top: 48px;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c1 {
+    padding-top: 20px;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+    data-testid="ring-page"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="w-full mx-auto max-w-[1200px] md:pb-8 pb-0"
+      >
+        <section
+          class="flex flex-col justify-between gap-12 lg:flex-row lg:items-start mb-12"
+        >
+          <div
+            class="flex flex-col items-center flex-grow gap-6 lg:items-start"
+          >
+            <div
+              class="flex flex-col"
+            >
+              <h1
+                class="scroll-m-20 text-3xl font-bold tracking-tighter md:text-5xl lg:leading-[1.1]"
+              >
+                List your tokens on DEX 
+                <br />
+                Traded by millions of users.
+              </h1>
+              <p
+                class="scroll-m-20 leading-7 [:not(:first-child)]:mt-6 text-lg text-muted-foreground sm:text-xl max-w-[500px] mt-4"
+              >
+                Ring Exchange enables single side liquidity provision on Decentralized Exchange. 
+                <br />
+                 Allowing Web3.0 users trade your tokens freely and openly without creating account.
+              </p>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row w-full sm:w-[unset] gap-4"
+            >
+              <div
+                class="flex items-center w-full"
+              >
+                <div
+                  class="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue-400 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-600 text-white min-h-[44px] h-[44px] px-4 rounded-xl flex-1 w-full sm:flex-0 sm:w-[unset] rounded-r-none"
+                >
+                  <a
+                    class="text-white"
+                    href="https://forms.gle/a777EUMn7UpzXjFe9"
+                  >
+                    I want to list a token on Ring Exchange
+                  </a>
+                </div>
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue-400 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-600 text-white min-h-[44px] h-[44px] px-4 rounded-xl rounded-l-none"
+                  data-state="closed"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-4 h-4"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center gap-4 lg:items-end"
+          >
+            <div
+              class="flex flex-col items-center gap-1 lg:items-end"
+            >
+              <span
+                class="font-semibold lg:text-sm"
+              >
+                Looking for a partnership with Ring Exchange?
+              </span>
+              <div
+                class="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue text-blue hover:underline hover:text-blue-700 hover:font-semibold !p-0 !h-[unset] !min-h-[unset] min-h-[36px] h-[36px] px-3 text-sm rounded-xl flex-1 w-full sm:flex-0 sm:w-[unset]"
+              >
+                <a
+                  href="https://forms.gle/a777EUMn7UpzXjFe9"
+                >
+                  Apply here
+                </a>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-center gap-1 lg:items-end"
+            >
+              <span
+                class="font-semibold lg:text-sm"
+              >
+                Join our community
+              </span>
+              <div
+                class="cursor-pointer whitespace-nowrap inline-flex gap-2 items-center justify-center font-medium disabled:opacity-50 disabled:pointer-events-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-blue text-blue hover:underline hover:text-blue-700 hover:font-semibold !p-0 !h-[unset] !min-h-[unset] min-h-[36px] h-[36px] px-3 text-sm rounded-xl"
+              >
+                <svg
+                  class="w-[18px] h-[18px]"
+                  preserveAspectRatio="xMidYMid"
+                  version="1.1"
+                  viewBox="0 0 256 199"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+                      fill="currentColor"
+                      fill-rule="nonzero"
+                    />
+                  </g>
+                </svg>
+                <a
+                  class="cursor-pointer text-blue hover:underline"
+                  href="https://discord.gg/NVPXN4e"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Join our discord
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        class="grid lg:grid-cols-4 sm:grid-cols-2 lg:gap-8 gap-4 max-w-[1200px] mx-auto mb-6"
+      >
+        <div
+          class="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4"
+        >
+          <div>
+            <img
+              class="w-20 h-20"
+              src="1.svg"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between py-2"
+          >
+            <div
+              class="text-3xl"
+            >
+              -
+            </div>
+            <div
+              class="text-gray-400"
+            >
+              TVL
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4"
+        >
+          <div>
+            <img
+              class="w-20 h-20"
+              src="2.svg"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between py-2"
+          >
+            <div
+              class="text-3xl"
+            >
+              -
+            </div>
+            <div
+              class="text-gray-400"
+            >
+              24H Volume
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4"
+        >
+          <div>
+            <img
+              class="w-20 h-20"
+              src="3.svg"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between py-2"
+          >
+            <div
+              class="text-3xl"
+            >
+              0
+            </div>
+            <div
+              class="text-gray-400"
+            >
+              Trading Pairs
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-between rounded-xl bg-slate-100 dark:bg-[#2C2F36] p-4"
+        >
+          <div>
+            <img
+              class="w-20 h-20"
+              src="4.svg"
+            />
+          </div>
+          <div
+            class="flex flex-col justify-between py-2"
+          >
+            <div
+              class="text-3xl"
+            >
+              -
+            </div>
+            <div
+              class="text-gray-400"
+            >
+              Transcations
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c2"
+      >
+        <div
+          class="c3"
+        >
+          <div>
+            <div
+              class="c4 css-z82nir"
+            >
+              Top tokens on Ring Exchange
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6 c7"
+          data-testid="header-row"
+        >
+          <div
+            class="c8 c9"
+            data-testid="name-cell"
+          >
+            Token name
+          </div>
+          <div
+            class="c8 c10 c11"
+            data-testid="price-cell"
+          >
+            <span
+              class="c12"
+            >
+              Price
+            </span>
+          </div>
+          <div
+            class="c8 c10 c13"
+            data-testid="percent-change-cell"
+          >
+            <span
+              class="c12"
+            >
+              Change
+            </span>
+          </div>
+          <div
+            class="c8 c10 c14"
+            data-testid="tvl-cell"
+          >
+            <span
+              class="c12"
+            >
+              TVL
+              <div
+                class="c3"
+              >
+                <div>
+                  <div
+                    class="c15"
+                  >
+                    <svg
+                      fill="none"
+                      height="16px"
+                      viewBox="0 0 24 24"
+                      width="16px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12.75 16.5C12.75 16.914 12.414 17.25 12 17.25C11.586 17.25 11.25 16.914 11.25 16.5V11.929C11.25 11.515 11.586 11.179 12 11.179C12.414 11.179 12.75 11.515 12.75 11.929V16.5ZM12.02 9.5C11.468 9.5 11.0149 9.052 11.0149 8.5C11.0149 7.948 11.458 7.5 12.01 7.5H12.02C12.573 7.5 13.02 7.948 13.02 8.5C13.02 9.052 12.572 9.5 12.02 9.5Z"
+                        fill="#9B9B9B"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div
+            class="c8 c10 c16"
+            data-testid="volume-cell"
+          >
+            <span
+              class="c12"
+            >
+              <svg
+                color="#7D7D7D"
+                fill="none"
+                height="16"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.6979 16.2453L6.31787 9.75247C5.58184 8.66118 6.2058 7 7.35185 7L16.6482 7C17.7942 7 18.4182 8.66243 17.6821 9.75247L13.3021 16.2453C12.623 17.2516 11.377 17.2516 10.6979 16.2453Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Volume
+              <div
+                class="c3"
+              >
+                <div>
+                  <div
+                    class="c15"
+                  >
+                    <svg
+                      fill="none"
+                      height="16px"
+                      viewBox="0 0 24 24"
+                      width="16px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12.75 16.5C12.75 16.914 12.414 17.25 12 17.25C11.586 17.25 11.25 16.914 11.25 16.5V11.929C11.25 11.515 11.586 11.179 12 11.179C12.414 11.179 12.75 11.515 12.75 11.929V16.5ZM12.02 9.5C11.468 9.5 11.0149 9.052 11.0149 8.5C11.0149 7.948 11.458 7.5 12.01 7.5H12.02C12.573 7.5 13.02 7.948 13.02 8.5C13.02 9.052 12.572 9.5 12.02 9.5Z"
+                        fill="#9B9B9B"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+          <div
+            class="c8 c17"
+          />
+        </div>
+        <div
+          class="c18"
+        >
+          <div
+            class="c19"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c26"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+          <div
+            class="c27"
+          >
+            <div
+              class="c8 c9"
+              data-testid="name-cell"
+            >
+              <div
+                class="c20 c21"
+              />
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c11"
+              data-testid="price-cell"
+            >
+              <div
+                class="c20 c22"
+              />
+            </div>
+            <div
+              class="c8 c23 c13"
+              data-testid="percent-change-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c14"
+              data-testid="tvl-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c23 c16"
+              data-testid="volume-cell"
+            >
+              <div
+                class="c20"
+              />
+            </div>
+            <div
+              class="c8 c17"
+            >
+              <div
+                class="c20 c24 c25"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

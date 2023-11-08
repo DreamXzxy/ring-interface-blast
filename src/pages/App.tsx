@@ -31,7 +31,7 @@ import DarkModeQueryParamReader from '../theme/components/DarkModeQueryParamRead
 import AddLiquidity from './AddLiquidity'
 import { RedirectDuplicateTokenIds } from './AddLiquidity/redirects'
 import { RedirectDuplicateTokenIdsV2 } from './AddLiquidityV2/redirects'
-import Landing from './Landing'
+import InfoTokens from './InfoTokens'
 import MigrateV2 from './MigrateV2'
 import MigrateV2Pair from './MigrateV2/MigrateV2Pair'
 import NotFound from './NotFound'
@@ -46,6 +46,7 @@ import { RedirectPathToSwapOnly } from './Swap/redirects'
 import Tokens from './Tokens'
 
 const TokenDetails = lazy(() => import('./TokenDetails'))
+const InfoTokenDetails = lazy(() => import('./InfoTokenDetails'))
 const Vote = lazy(() => import('./Vote'))
 const NftExplore = lazy(() => import('nft/pages/explore'))
 const Collection = lazy(() => import('nft/pages/collection'))
@@ -211,11 +212,18 @@ export default function App() {
             <Suspense fallback={<Loader />}>
               {isLoaded ? (
                 <Routes>
-                  <Route path="/" element={<Landing />} />
+                  <Route path="/" element={<InfoTokens />} />
+
+                  <Route path="ring" element={<InfoTokens />}>
+                    <Route path=":chainName" />
+                  </Route>
+
+                  <Route path="ringTokens/:chainName/:tokenAddress" element={<InfoTokenDetails />} />
 
                   <Route path="tokens" element={<Tokens />}>
                     <Route path=":chainName" />
                   </Route>
+
                   <Route path="tokens/:chainName/:tokenAddress" element={<TokenDetails />} />
                   <Route
                     path="vote/*"

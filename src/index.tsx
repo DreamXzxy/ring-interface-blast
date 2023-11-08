@@ -2,6 +2,7 @@ import '@reach/dialog/styles.css'
 import 'inter-ui'
 import 'polyfills'
 import 'tracing'
+import './index.css'
 
 import { ApolloProvider } from '@apollo/client'
 import { FeatureFlagsProvider } from 'featureFlags'
@@ -21,9 +22,12 @@ import App from './pages/App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import store from './state'
 import ApplicationUpdater from './state/application/updater'
+import InfoapplicationUpdater from './state/infoapplication/updater'
 import ListsUpdater from './state/lists/updater'
 import LogsUpdater from './state/logs/updater'
+import PoolsUpdater from './state/pools/updater'
 import OrderUpdater from './state/signatures/updater'
+import TokensUpdater from './state/tokens/updater'
 import TransactionUpdater from './state/transactions/updater'
 import ThemeProvider, { ThemedGlobalStyle } from './theme'
 import RadialGradientByChainUpdater from './theme/components/RadialGradientByChainUpdater'
@@ -43,6 +47,9 @@ function Updaters() {
       <OrderUpdater />
       <MulticallUpdater />
       <LogsUpdater />
+      <TokensUpdater />
+      <PoolsUpdater />
+      <InfoapplicationUpdater />
     </>
   )
 }
