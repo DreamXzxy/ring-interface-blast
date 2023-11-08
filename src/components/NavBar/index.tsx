@@ -121,7 +121,7 @@ const Navbar = ({ blur }: { blur: boolean }) => {
               <UniIcon
                 width="48"
                 height="48"
-                data-testid="uniswap-logo"
+                data-testid="ring-logo"
                 className={styles.logo}
                 onClick={handleUniIconClick}
               />

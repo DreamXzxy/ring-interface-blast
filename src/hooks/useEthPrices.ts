@@ -1,18 +1,18 @@
-import { useBlocksFromTimestamps } from 'hooks/useBlocksFromTimestamps'
-import { useDeltaTimestamps } from 'utils/queries'
-import { useState, useEffect, useMemo } from 'react'
-import gql from 'graphql-tag'
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client'
+import gql from 'graphql-tag'
+import { useBlocksFromTimestamps } from 'hooks/useBlocksFromTimestamps'
+import { useEffect, useMemo, useState } from 'react'
 import { useActiveNetworkVersion, useClients } from 'state/infoapplication/hooks'
+import { useDeltaTimestamps } from 'utils/queries'
 
-export interface EthPrices {
+interface EthPrices {
   current: number
   oneDay: number
   twoDay: number
   week: number
 }
 
-export const ETH_PRICES = gql`
+const ETH_PRICES = gql`
   query prices($block24: Int!, $block48: Int!, $blockWeek: Int!) {
     current: bundles(first: 1, subgraphError: allow) {
       ethPriceUSD
@@ -47,7 +47,7 @@ interface PricesResponse {
 async function fetchEthPrices(
   blocks: [number, number, number],
   client: ApolloClient<NormalizedCacheObject>
-): Promise<{ data: EthPrices | undefined; error: boolean }> {
+): Promise<{ data?: EthPrices; error: boolean }> {
   try {
     const { data, error } = await client.query<PricesResponse>({
       query: ETH_PRICES,

@@ -1,12 +1,12 @@
+import { RNG_ADDRESS } from 'constants/tokens'
 import { useCallback, useEffect, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useActiveNetworkVersion } from 'state/infoapplication/hooks'
 import { notEmpty } from 'utils/notEmpty'
 
-import { addPoolKeys, updatePoolData } from './actions'
 import { AppState } from '../reducer'
+import { addPoolKeys, updatePoolData } from './actions'
 import { PoolData } from './reducer'
-import { RNG_ADDRESS } from 'constants/tokens'
 
 export function useAllPoolData(): {
   [address: string]: { data?: PoolData; lastUpdated?: number }
@@ -75,17 +75,17 @@ export function usePoolDatas(poolAddresses: string[]) {
 
   const sortedTokens = useMemo(() => {
     const lowerCaseRNG = RNG_ADDRESS.toLowerCase()
-  
-    return poolsWithData.map(poolData => {
+
+    return poolsWithData.map((poolData) => {
       let { token0, token1 } = poolData
-  
+
       if (token1.address.toLowerCase() === lowerCaseRNG) {
-        [token0, token1] = [token1, token0]
+        ;[token0, token1] = [token1, token0]
       }
 
       return { ...poolData, token0, token1 }
-    });
-  }, [poolsWithData]);
+    })
+  }, [poolsWithData])
 
   return sortedTokens
 }

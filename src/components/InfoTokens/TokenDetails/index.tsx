@@ -10,14 +10,6 @@ import { BreadcrumbNavLink } from 'components/Tokens/TokenDetails/BreadcrumbNavL
 import ChartSection from 'components/Tokens/TokenDetails/ChartSection'
 import MobileBalanceSummaryFooter from 'components/Tokens/TokenDetails/MobileBalanceSummaryFooter'
 import ShareButton from 'components/Tokens/TokenDetails/ShareButton'
-import TokenDetailsSkeleton, {
-  Hr,
-  LeftPanel,
-  RightPanel,
-  TokenDetailsLayout,
-  TokenInfoContainer,
-  TokenNameCell,
-} from './Skeleton'
 import StatsSection from 'components/Tokens/TokenDetails/StatsSection'
 import TokenSafetyMessage from 'components/TokenSafety/TokenSafetyMessage'
 import TokenSafetyModal from 'components/TokenSafety/TokenSafetyModal'
@@ -41,6 +33,14 @@ import { addressesAreEquivalent } from 'utils/addressesAreEquivalent'
 
 import { OnChangeTimePeriod } from '../../Tokens/TokenDetails/ChartSection'
 import InvalidTokenDetails from '../../Tokens/TokenDetails/InvalidTokenDetails'
+import TokenDetailsSkeleton, {
+  Hr,
+  LeftPanel,
+  RightPanel,
+  TokenDetailsLayout,
+  TokenInfoContainer,
+  TokenNameCell,
+} from './Skeleton'
 
 const TokenSymbol = styled.span`
   text-transform: uppercase;
@@ -205,7 +205,7 @@ export default function TokenDetails({
       <TokenDetailsLayout>
         {detailedToken && !isPending ? (
           <LeftPanel>
-            <BreadcrumbNavLink to={`/ring`}>
+            <BreadcrumbNavLink to="/ring">
               <ArrowLeft data-testid="token-details-return-button" size={14} /> Tokens
             </BreadcrumbNavLink>
             <TokenInfoContainer data-testid="token-info-container">

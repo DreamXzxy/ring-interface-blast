@@ -1,14 +1,13 @@
 import { SwapSkeleton } from 'components/swap/SwapSkeleton'
-import { ArrowLeft } from 'react-feather'
-import { useParams } from 'react-router-dom'
-import styled, { useTheme } from 'styled-components'
-import { textFadeIn } from 'theme/styles'
-
 import { LoadingBubble } from 'components/Tokens/loading'
 import { AboutContainer, AboutHeader } from 'components/Tokens/TokenDetails/About'
 import { BreadcrumbNavLink } from 'components/Tokens/TokenDetails/BreadcrumbNavLink'
 import { TokenPrice } from 'components/Tokens/TokenDetails/PriceChart'
 import { StatPair, StatsWrapper, StatWrapper } from 'components/Tokens/TokenDetails/StatsSection'
+import { ArrowLeft } from 'react-feather'
+import { useParams } from 'react-router-dom'
+import styled, { useTheme } from 'styled-components'
+import { textFadeIn } from 'theme/styles'
 
 const SWAP_COMPONENT_WIDTH = 360
 
@@ -50,7 +49,7 @@ export const RightPanel = styled.div`
     display: flex;
   }
 `
-export const ChartContainer = styled.div`
+const ChartContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 436px;
@@ -165,7 +164,7 @@ function Wave() {
   )
 }
 
-export function LoadingChart() {
+function LoadingChart() {
   return (
     <ChartContainer>
       <TokenPrice>

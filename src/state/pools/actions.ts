@@ -1,7 +1,8 @@
 import { createAction } from '@reduxjs/toolkit'
-import { PoolData, PoolChartEntry } from './reducer'
-import { Transaction } from 'types/info'
 import { SupportedNetwork } from 'constants/networks'
+import { Transaction } from 'types/info'
+
+import { PoolChartEntry, PoolData } from './reducer'
 
 // protocol wide info
 export const updatePoolData = createAction<{ pools: PoolData[]; networkId: SupportedNetwork }>('pools/updatePoolData')

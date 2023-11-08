@@ -33,7 +33,7 @@ export type TokenData = {
   priceUSDChangeWeek: number
 }
 
-export interface TokenChartEntry {
+interface TokenChartEntry {
   date: number
   volumeUSD: number
   totalValueLockedUSD: number
@@ -58,7 +58,7 @@ export interface TokensState {
   }
 }
 
-export const initialState: TokensState = {
+const initialState: TokensState = {
   byAddress: {
     [SupportedNetwork.ETHEREUM]: {},
   },

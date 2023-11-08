@@ -1,26 +1,4 @@
-export interface Block {
-  number: number
-  timestamp: string
-}
-
-export enum VolumeWindow {
-  daily,
-  weekly,
-  monthly,
-}
-
-export interface ChartDayData {
-  date: number
-  volumeUSD: number
-  tvlUSD: number
-}
-
-export interface GenericChartEntry {
-  time: string
-  value: number
-}
-
-export enum TransactionType {
+enum TransactionType {
   SWAP,
   MINT,
   BURN,

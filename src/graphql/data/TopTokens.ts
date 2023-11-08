@@ -197,7 +197,7 @@ export function useTopTokens(chain: Chain): UseTopTokensReturnValue {
 }
 
 export interface InfoToken extends TopToken {
-  tvlUSD: number;
-  volumeUSD: number;
-  volumeUSDWeek: number;
+  tvlUSD: number
+  volumeUSD: number
+  volumeUSDWeek: number
 }

@@ -1,9 +1,8 @@
 import { Trans } from '@lingui/macro'
-import { RNG_PAIR_TOKENS } from 'constants/tokens'
 import { PAGE_SIZE } from 'graphql/data/TopTokens'
 import { validateUrlChainParam } from 'graphql/data/util'
-import { useSparkLines } from 'hooks/useSparkLines'
-import { useInfoTokens } from 'hooks/useTokensForAddresses'
+import { useInfoTokens } from 'hooks/useInfoTokens'
+import { useTokensSparkLine } from 'hooks/useTokenPrices'
 import { ReactNode } from 'react'
 import { AlertTriangle } from 'react-feather'
 import { useParams } from 'react-router-dom'
@@ -80,8 +79,8 @@ function LoadingTokenTable({ rowCount = PAGE_SIZE }: { rowCount?: number }) {
 
 export default function TokenTable({ poolDatas }: { poolDatas: PoolData[] }) {
   const chainName = validateUrlChainParam(useParams<{ chainName?: string }>().chainName)
-  const { infoTokens, loadingTokens } = useInfoTokens(poolDatas, chainName)
-  const sparklines = useSparkLines(RNG_PAIR_TOKENS, chainName)
+  const { infoTokens, loadingTokens } = useInfoTokens(poolDatas)
+  const sparklines = useTokensSparkLine(chainName)
 
   /* loading and error state */
   if (loadingTokens && !infoTokens) {
