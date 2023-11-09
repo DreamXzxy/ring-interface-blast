@@ -9,11 +9,8 @@ import { MouseoverTooltip } from 'components/Tooltip'
 import { RNG_ADDRESS } from 'constants/tokens'
 import useTokenTransfers from 'hooks/useTokenTransfers'
 import { useResetAtom } from 'jotai/utils'
-import { RedirectPathToSwapOnly } from 'pages/Swap/redirects'
-import { parse } from 'qs'
 import { useEffect, useMemo } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { useAppSelector } from 'state/hooks'
 import { usePoolDatas } from 'state/pools/hooks'
 import { usePoolsForToken } from 'state/tokens/hooks'
 import styled from 'styled-components'
@@ -61,7 +58,6 @@ const TitleContainer = styled.div`
 
 export default function InfoTokens() {
   const resetFilterString = useResetAtom(filterStringAtom)
-  const selectedWallet = useAppSelector((state) => state.user.selectedWallet)
   const location = useLocation()
 
   useEffect(() => {
@@ -94,11 +90,6 @@ export default function InfoTokens() {
       }, TRANSITION_DURATIONS.fast)
     }
   }, [accountDrawerOpen, navigate])
-
-  const queryParams = parse(useLocation().search, { ignoreQueryPrefix: true })
-  if (selectedWallet && !queryParams.intro) {
-    return <RedirectPathToSwapOnly />
-  }
 
   return (
     <Trace page={InterfacePageName.TOKENS_PAGE} shouldLogImpression>

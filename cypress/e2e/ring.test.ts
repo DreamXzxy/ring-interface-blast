@@ -8,10 +8,15 @@ describe('Ring Page', () => {
     cy.screenshot()
   })
 
-  it('redirects to swap page when a user has already connected a wallet', () => {
+  it('still shows ring page when a user has already connected a wallet', () => {
     cy.visit('/', { userState: CONNECTED_WALLET_USER_STATE })
-    cy.get('#swap-page')
-    cy.url().should('include', '/swap')
+    cy.get(getTestSelector('ring-page'))
+    cy.screenshot()
+  })
+
+  it('still shows ring page when a user has already connected a wallet', () => {
+    cy.visit('/ring', { userState: CONNECTED_WALLET_USER_STATE })
+    cy.get(getTestSelector('ring-page'))
     cy.screenshot()
   })
 
