@@ -1,10 +1,11 @@
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
 import { fetchPoolsForToken } from 'graphql/tokens/poolsForToken'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useActiveNetworkVersion, useClients } from 'state/infoapplication/hooks'
 import { AppState } from 'state/reducer'
+import { notEmpty } from 'utils/notEmpty'
 
 import { addPoolAddresses, addTokenKeys, updateTokenData } from './actions'
 import { TokenData } from './reducer'
@@ -37,6 +38,31 @@ export function useAddTokenKeys(): (addresses: string[]) => void {
     (tokenAddresses: string[]) => dispatch(addTokenKeys({ tokenAddresses, networkId: activeNetwork.id })),
     [activeNetwork.id, dispatch]
   )
+}
+
+export function useTokenDatas(addresses: string[] | undefined): TokenData[] | undefined {
+  const allTokenData = useAllTokenData()
+  const addTokenKeys = useAddTokenKeys()
+
+  // if token not tracked yet track it
+  addresses?.map((a) => {
+    if (!allTokenData[a]) {
+      addTokenKeys([a])
+    }
+  })
+
+  const data = useMemo(() => {
+    if (!addresses) {
+      return undefined
+    }
+    return addresses
+      .map((a) => {
+        return allTokenData[a]?.data
+      })
+      .filter(notEmpty)
+  }, [addresses, allTokenData])
+
+  return data
 }
 
 /**

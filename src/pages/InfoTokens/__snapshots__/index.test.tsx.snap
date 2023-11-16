@@ -5,7 +5,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   color: #222222;
 }
 
-.c20 {
+.c19 {
   border-radius: 12px;
   border-radius: 12px;
   height: 24px;
@@ -44,7 +44,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 7fr 5fr 5fr 5fr 5fr;
   line-height: 24px;
   max-width: 1200px;
   min-width: 390px;
@@ -64,11 +64,11 @@ exports[`disable nft on landing page does not render nft information and card 1`
   background-color: #98A1C014;
 }
 
-.c19 {
+.c18 {
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 7fr 5fr 5fr 5fr 5fr;
   line-height: 24px;
   max-width: 1200px;
   min-width: 390px;
@@ -84,11 +84,11 @@ exports[`disable nft on landing page does not render nft information and card 1`
   transition-duration: 125ms;
 }
 
-.c26 {
+.c23 {
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 7fr 5fr 5fr 5fr 5fr;
   line-height: 24px;
   max-width: 1200px;
   min-width: 390px;
@@ -104,11 +104,11 @@ exports[`disable nft on landing page does not render nft information and card 1`
   transition-duration: 125ms;
 }
 
-.c27 {
+.c24 {
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 7fr 5fr 5fr 5fr 5fr;
   line-height: 24px;
   max-width: 1200px;
   min-width: 390px;
@@ -124,7 +124,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   transition-duration: 125ms;
 }
 
-.c27:hover {
+.c24:hover {
   border-radius: 0px 0px 8px 8px;
 }
 
@@ -162,7 +162,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   transition: background-color 250ms ease;
 }
 
-.c23 {
+.c22 {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -232,30 +232,17 @@ exports[`disable nft on landing page does not render nft information and card 1`
   opacity: 0.4;
 }
 
-.c17 {
-  padding: 0px 24px;
-  min-width: 120px;
-}
-
 .c16 {
   padding-right: 8px;
 }
 
-.c22 {
+.c21 {
   width: 65%;
 }
 
-.c24 {
-  width: 90%;
-}
-
-.c21 {
+.c20 {
   border-radius: 50%;
   width: 24px;
-}
-
-.c25 {
-  height: 4px;
 }
 
 .c15 {
@@ -296,7 +283,7 @@ exports[`disable nft on landing page does not render nft information and card 1`
   border: 1px solid #22222212;
 }
 
-.c18 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -380,91 +367,91 @@ exports[`disable nft on landing page does not render nft information and card 1`
 }
 
 @media only screen and (max-width:1200px) {
-  .c19 {
+  .c18 {
     grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:840px) {
-  .c19 {
+  .c18 {
     grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:720px) {
-  .c19 {
+  .c18 {
     grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
   }
 }
 
 @media only screen and (max-width:540px) {
-  .c19 {
+  .c18 {
     grid-template-columns: 2fr 3fr;
     min-width: unset;
     border-bottom: 0.5px solid #F9F9F9;
   }
 
-  .c19:last-of-type {
+  .c18:last-of-type {
     border-bottom: none;
   }
 }
 
 @media only screen and (max-width:1200px) {
-  .c26 {
+  .c23 {
     grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:840px) {
-  .c26 {
+  .c23 {
     grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:720px) {
-  .c26 {
+  .c23 {
     grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
   }
 }
 
 @media only screen and (max-width:540px) {
-  .c26 {
+  .c23 {
     grid-template-columns: 2fr 3fr;
     min-width: unset;
     border-bottom: 0.5px solid #F9F9F9;
   }
 
-  .c26:last-of-type {
+  .c23:last-of-type {
     border-bottom: none;
   }
 }
 
 @media only screen and (max-width:1200px) {
-  .c27 {
+  .c24 {
     grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:840px) {
-  .c27 {
+  .c24 {
     grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:720px) {
-  .c27 {
+  .c24 {
     grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
   }
 }
 
 @media only screen and (max-width:540px) {
-  .c27 {
+  .c24 {
     grid-template-columns: 2fr 3fr;
     min-width: unset;
     border-bottom: 0.5px solid #F9F9F9;
   }
 
-  .c27:last-of-type {
+  .c24:last-of-type {
     border-bottom: none;
   }
 }
@@ -492,12 +479,6 @@ exports[`disable nft on landing page does not render nft information and card 1`
 
 @media only screen and (max-width:540px) {
   .c13 {
-    display: none;
-  }
-}
-
-@media only screen and (max-width:1200px) {
-  .c17 {
     display: none;
   }
 }
@@ -883,1090 +864,947 @@ exports[`disable nft on landing page does not render nft information and card 1`
               </div>
             </span>
           </div>
-          <div
-            class="c8 c17"
-          />
         </div>
         <div
-          class="c18"
+          class="c17"
         >
           <div
-            class="c19"
+            class="c18"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c27"
+            class="c24"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
@@ -1982,7 +1820,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   color: #222222;
 }
 
-.c20 {
+.c19 {
   border-radius: 12px;
   border-radius: 12px;
   height: 24px;
@@ -2021,7 +1859,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 7fr 5fr 5fr 5fr 5fr;
   line-height: 24px;
   max-width: 1200px;
   min-width: 390px;
@@ -2041,11 +1879,11 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   background-color: #98A1C014;
 }
 
-.c19 {
+.c18 {
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 7fr 5fr 5fr 5fr 5fr;
   line-height: 24px;
   max-width: 1200px;
   min-width: 390px;
@@ -2061,11 +1899,11 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   transition-duration: 125ms;
 }
 
-.c26 {
+.c23 {
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 7fr 5fr 5fr 5fr 5fr;
   line-height: 24px;
   max-width: 1200px;
   min-width: 390px;
@@ -2081,11 +1919,11 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   transition-duration: 125ms;
 }
 
-.c27 {
+.c24 {
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 7fr 5fr 5fr 5fr 5fr;
   line-height: 24px;
   max-width: 1200px;
   min-width: 390px;
@@ -2101,7 +1939,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   transition-duration: 125ms;
 }
 
-.c27:hover {
+.c24:hover {
   border-radius: 0px 0px 8px 8px;
 }
 
@@ -2139,7 +1977,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   transition: background-color 250ms ease;
 }
 
-.c23 {
+.c22 {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -2209,30 +2047,17 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   opacity: 0.4;
 }
 
-.c17 {
-  padding: 0px 24px;
-  min-width: 120px;
-}
-
 .c16 {
   padding-right: 8px;
 }
 
-.c22 {
+.c21 {
   width: 65%;
 }
 
-.c24 {
-  width: 90%;
-}
-
-.c21 {
+.c20 {
   border-radius: 50%;
   width: 24px;
-}
-
-.c25 {
-  height: 4px;
 }
 
 .c15 {
@@ -2273,7 +2098,7 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
   border: 1px solid #22222212;
 }
 
-.c18 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2357,91 +2182,91 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
 }
 
 @media only screen and (max-width:1200px) {
-  .c19 {
+  .c18 {
     grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:840px) {
-  .c19 {
+  .c18 {
     grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:720px) {
-  .c19 {
+  .c18 {
     grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
   }
 }
 
 @media only screen and (max-width:540px) {
-  .c19 {
+  .c18 {
     grid-template-columns: 2fr 3fr;
     min-width: unset;
     border-bottom: 0.5px solid #F9F9F9;
   }
 
-  .c19:last-of-type {
+  .c18:last-of-type {
     border-bottom: none;
   }
 }
 
 @media only screen and (max-width:1200px) {
-  .c26 {
+  .c23 {
     grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:840px) {
-  .c26 {
+  .c23 {
     grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:720px) {
-  .c26 {
+  .c23 {
     grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
   }
 }
 
 @media only screen and (max-width:540px) {
-  .c26 {
+  .c23 {
     grid-template-columns: 2fr 3fr;
     min-width: unset;
     border-bottom: 0.5px solid #F9F9F9;
   }
 
-  .c26:last-of-type {
+  .c23:last-of-type {
     border-bottom: none;
   }
 }
 
 @media only screen and (max-width:1200px) {
-  .c27 {
+  .c24 {
     grid-template-columns: 1fr 6.5fr 4.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:840px) {
-  .c27 {
+  .c24 {
     grid-template-columns: 1fr 7.5fr 4.5fr 4.5fr 4.5fr 1.7fr;
   }
 }
 
 @media only screen and (max-width:720px) {
-  .c27 {
+  .c24 {
     grid-template-columns: 1fr 10fr 5fr 5fr 1.2fr;
   }
 }
 
 @media only screen and (max-width:540px) {
-  .c27 {
+  .c24 {
     grid-template-columns: 2fr 3fr;
     min-width: unset;
     border-bottom: 0.5px solid #F9F9F9;
   }
 
-  .c27:last-of-type {
+  .c24:last-of-type {
     border-bottom: none;
   }
 }
@@ -2469,12 +2294,6 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
 
 @media only screen and (max-width:540px) {
   .c13 {
-    display: none;
-  }
-}
-
-@media only screen and (max-width:1200px) {
-  .c17 {
     display: none;
   }
 }
@@ -2860,1090 +2679,947 @@ exports[`disable nft on landing page renders nft information and card 1`] = `
               </div>
             </span>
           </div>
-          <div
-            class="c8 c17"
-          />
         </div>
         <div
-          class="c18"
+          class="c17"
         >
           <div
-            class="c19"
+            class="c18"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c26"
+            class="c23"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>
           <div
-            class="c27"
+            class="c24"
           >
             <div
               class="c8 c9"
               data-testid="name-cell"
             >
               <div
-                class="c20 c21"
+                class="c19 c20"
               />
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c11"
+              class="c8 c22 c11"
               data-testid="price-cell"
             >
               <div
-                class="c20 c22"
+                class="c19 c21"
               />
             </div>
             <div
-              class="c8 c23 c13"
+              class="c8 c22 c13"
               data-testid="percent-change-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c14"
+              class="c8 c22 c14"
               data-testid="tvl-cell"
             >
               <div
-                class="c20"
+                class="c19"
               />
             </div>
             <div
-              class="c8 c23 c16"
+              class="c8 c22 c16"
               data-testid="volume-cell"
             >
               <div
-                class="c20"
-              />
-            </div>
-            <div
-              class="c8 c17"
-            >
-              <div
-                class="c20 c24 c25"
+                class="c19"
               />
             </div>
           </div>

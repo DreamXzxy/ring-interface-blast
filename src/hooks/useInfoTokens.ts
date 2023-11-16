@@ -1,54 +1,84 @@
 import { ChainId } from '@uniswap/sdk-core'
+import { RNG_ADDRESS, RNG_PAIR_TOKENS } from 'constants/tokens'
+import { getAddress } from 'ethers/lib/utils'
 import { InfoToken } from 'graphql/data/TopTokens'
-import { unwrapToken } from 'graphql/data/util'
+import { chainIdToNetworkName } from 'lib/hooks/useCurrencyLogoURIs'
 import { useMemo } from 'react'
-import { PoolData } from 'state/pools/reducer'
-
-import { useSearchTokens } from './useSearchToken'
+import {
+  useAddPoolKeys,
+  useAllPoolData,
+  usePoolsWithData,
+  useUntrackedPoolAddresses,
+  useUpdatePoolKeys,
+} from 'state/pools/hooks'
+import { useTokenDatas } from 'state/tokens/hooks'
 
 interface UseInfoTokensReturnValue {
   infoTokens?: InfoToken[]
   loadingTokens: boolean
 }
 
-export function useInfoTokens(poolDatas: PoolData[]): UseInfoTokensReturnValue {
-  const { searchTokens, loading } = useSearchTokens()
+const getTokenLogoURL = ({ address, chainId }: { address: string; chainId: ChainId }) => {
+  return `https://raw.githubusercontent.com/uniswap/assets/master/blockchains/${chainIdToNetworkName(
+    chainId
+  )}/assets/${address}/logo.png`
+}
 
-  const { infoTokens, loadingTokens } = useMemo(() => {
-    if (loading || !poolDatas.every((poolData) => poolData !== undefined)) {
-      return { infoTokens: undefined, loadingTokens: true }
-    }
+export function useInfoTokens(poolAddresses: string[]): UseInfoTokensReturnValue {
+  const allPoolData = useAllPoolData()
+  const addPoolKeys = useAddPoolKeys()
+  const tokenDatas = useTokenDatas(RNG_PAIR_TOKENS)
 
-    const tokensArr: InfoToken[] = []
+  const untrackedAddresses = useUntrackedPoolAddresses(poolAddresses, allPoolData)
 
-    poolDatas.forEach((poolData, index) => {
-      const { token1, tvlUSD, volumeUSD, volumeUSDWeek } = poolData
-      let address1 = token1.address.toLowerCase()
+  useUpdatePoolKeys(untrackedAddresses, addPoolKeys)
 
-      if (address1 === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') {
-        address1 = 'NATIVE'
+  const poolsWithData = usePoolsWithData(poolAddresses, allPoolData)
+
+  const sortedTokens = useMemo(() => {
+    const lowerCaseRNG = RNG_ADDRESS.toLowerCase()
+
+    return poolsWithData.map((poolData) => {
+      let { token0, token1 } = poolData
+
+      if (token1.address.toLowerCase() === lowerCaseRNG) {
+        ;[token0, token1] = [token1, token0]
       }
 
-      if (searchTokens) {
-        const infoToken: any = {
-          ...searchTokens[index],
-          tvlUSD,
-          volumeUSD,
-          volumeUSDWeek,
-        }
-        const unwrapInfoToken = unwrapToken(ChainId.MAINNET, infoToken)
-        tokensArr.push(unwrapInfoToken)
-      }
+      return { ...poolData, token0, token1 }
     })
+  }, [poolsWithData])
 
-    return {
-      infoTokens: tokensArr.length > 0 ? tokensArr : undefined,
-      loadingTokens: tokensArr.length > 0 ? false : true,
-    }
-  }, [searchTokens, loading, poolDatas])
+  const infoTokens: InfoToken[] = useMemo(() => {
+    return sortedTokens.reduce<InfoToken[]>((acc, poolData) => {
+      const tokenData = tokenDatas?.find(
+        (token) => token.address.toLowerCase() === poolData.token1.address.toLowerCase()
+      )
+
+      if (tokenData) {
+        const formattedAddress = getAddress(tokenData.address)
+        acc.push({
+          address: formattedAddress,
+          name: tokenData.name,
+          symbol: tokenData.symbol,
+          market: {
+            price: tokenData.priceUSD,
+            pricePercentChange: tokenData.priceUSDChange,
+          },
+          project: {
+            logoUrl: getTokenLogoURL({ address: formattedAddress, chainId: ChainId.MAINNET }),
+          },
+          tvlUSD: poolData.tvlUSD,
+          volumeUSD: poolData.volumeUSD,
+          volumeUSDWeek: poolData.volumeUSDWeek,
+        })
+      }
+      return acc
+    }, [])
+  }, [tokenDatas, sortedTokens])
 
   return {
-    infoTokens,
-    loadingTokens,
+    infoTokens: infoTokens.length > 0 ? infoTokens : undefined,
+    loadingTokens: infoTokens.length > 0 ? false : true,
   }
 }

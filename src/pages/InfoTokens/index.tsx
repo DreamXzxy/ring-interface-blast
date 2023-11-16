@@ -224,7 +224,7 @@ export default function InfoTokens() {
               </ThemedText.LargeHeader>
             </MouseoverTooltip>
           </TitleContainer>
-          <TokenTable poolDatas={poolDatas} />
+          <TokenTable poolsForToken={poolsForToken ?? []} />
         </ExploreContainer>
       </PageContainer>
     </Trace>

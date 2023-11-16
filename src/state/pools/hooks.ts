@@ -34,7 +34,7 @@ export function useAddPoolKeys(): (addresses: string[]) => void {
 }
 
 // Custom Hook 1: useUntrackedPoolAddresses
-function useUntrackedPoolAddresses(
+export function useUntrackedPoolAddresses(
   poolAddresses: string[],
   allPoolData: { [address: string]: { data?: PoolData; lastUpdated?: number } }
 ): string[] {
@@ -42,7 +42,7 @@ function useUntrackedPoolAddresses(
 }
 
 // Custom Hook 2: useUpdatePoolKeys
-function useUpdatePoolKeys(untrackedAddresses: string[], addPoolKeys: any) {
+export function useUpdatePoolKeys(untrackedAddresses: string[], addPoolKeys: any) {
   useEffect(() => {
     if (untrackedAddresses.length > 0) {
       addPoolKeys(untrackedAddresses)
@@ -51,7 +51,7 @@ function useUpdatePoolKeys(untrackedAddresses: string[], addPoolKeys: any) {
 }
 
 // Custom Hook 3: usePoolsWithData
-function usePoolsWithData(
+export function usePoolsWithData(
   poolAddresses: string[],
   allPoolDataallPoolData: { [address: string]: { data?: PoolData; lastUpdated?: number } }
 ) {

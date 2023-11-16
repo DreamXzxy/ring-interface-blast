@@ -1,15 +1,13 @@
 import { Trans } from '@lingui/macro'
 import { InterfaceEventName } from '@uniswap/analytics-events'
-import { ParentSize } from '@visx/responsive'
 import { sendAnalyticsEvent } from 'analytics'
-import SparklineChart from 'components/Charts/SparklineChart'
 import { ArrowChangeDown } from 'components/Icons/ArrowChangeDown'
 import { ArrowChangeUp } from 'components/Icons/ArrowChangeUp'
 import { Info } from 'components/Icons/Info'
-import QueryTokenLogo from 'components/Logo/QueryTokenLogo'
+import InfoTokenLogo from 'components/Logo/InfoTokenLogo'
 import { MouseoverTooltip } from 'components/Tooltip'
-import { InfoToken, SparklineMap } from 'graphql/data/TopTokens'
-import { getInfoTokenDetailsURL, supportedChainIdFromGQLChain, validateUrlChainParam } from 'graphql/data/util'
+import { InfoToken } from 'graphql/data/TopTokens'
+import { getInfoTokenSwapURL, supportedChainIdFromGQLChain, validateUrlChainParam } from 'graphql/data/util'
 import { useAtomValue } from 'jotai/utils'
 import { ForwardedRef, forwardRef } from 'react'
 import { CSSProperties, ReactNode } from 'react'
@@ -48,7 +46,7 @@ const StyledTokenRow = styled.div<{
   background-color: transparent;
   display: grid;
   font-size: 16px;
-  grid-template-columns: 6fr 4fr 4fr 4fr 4fr 5fr;
+  grid-template-columns: 7fr 5fr 5fr 5fr 5fr;
   line-height: 24px;
   max-width: ${MAX_WIDTH_MEDIA_BREAKPOINT};
   min-width: 390px;
@@ -203,18 +201,6 @@ const HeaderCellWrapper = styled.span<{ onClick?: () => void }>`
     ${ClickableStyle}
   }
 `
-const SparkLineCell = styled(Cell)`
-  padding: 0px 24px;
-  min-width: 120px;
-
-  @media only screen and (max-width: ${MAX_WIDTH_MEDIA_BREAKPOINT}) {
-    display: none;
-  }
-`
-const SparkLine = styled(Cell)`
-  width: 124px;
-  height: 42px;
-`
 const StyledLink = styled(Link)`
   text-decoration: none;
 `
@@ -261,15 +247,9 @@ const VolumeCell = styled(DataCell)`
 const MediumLoadingBubble = styled(LoadingBubble)`
   width: 65%;
 `
-const LongLoadingBubble = styled(LoadingBubble)`
-  width: 90%;
-`
 const IconLoadingBubble = styled(LoadingBubble)`
   border-radius: 50%;
   width: 24px;
-`
-const SparkLineLoadingBubble = styled(LongLoadingBubble)`
-  height: 4px;
 `
 
 const InfoIconContainer = styled.div`
@@ -339,7 +319,6 @@ function TokenRow({
   percentChange,
   tvl,
   volume,
-  sparkLine,
   ...rest
 }: {
   first?: boolean
@@ -348,7 +327,6 @@ function TokenRow({
   tvl: ReactNode
   price: ReactNode
   percentChange: ReactNode
-  sparkLine?: ReactNode
   tokenInfo: ReactNode
   volume: ReactNode
   last?: boolean
@@ -369,7 +347,6 @@ function TokenRow({
       <VolumeCell data-testid="volume-cell" sortable={header}>
         {volume}
       </VolumeCell>
-      <SparkLineCell>{sparkLine}</SparkLineCell>
     </>
   )
   if (header) return <StyledHeaderRow data-testid="header-row">{rowCells}</StyledHeaderRow>
@@ -386,7 +363,6 @@ export function HeaderRow() {
       percentChange={<HeaderCell category={TokenSortMethod.PERCENT_CHANGE} />}
       tvl={<HeaderCell category={TokenSortMethod.TOTAL_VALUE_LOCKED} />}
       volume={<HeaderCell category={TokenSortMethod.VOLUME} />}
-      sparkLine={null}
     />
   )
 }
@@ -407,7 +383,6 @@ export function LoadingRow(props: { first?: boolean; last?: boolean }) {
       percentChange={<LoadingBubble />}
       tvl={<LoadingBubble />}
       volume={<LoadingBubble />}
-      sparkLine={<SparkLineLoadingBubble />}
       {...props}
     />
   )
@@ -417,7 +392,6 @@ interface LoadedRowProps {
   tokenListIndex: number
   tokenListLength: number
   token: NonNullable<InfoToken>
-  sparklineMap: SparklineMap
   sortRank: number
 }
 
@@ -429,7 +403,7 @@ export const LoadedRow = forwardRef((props: LoadedRowProps, ref: ForwardedRef<HT
   const filterNetwork = validateUrlChainParam(useParams<{ chainName?: string }>().chainName?.toUpperCase())
   const chainId = supportedChainIdFromGQLChain(filterNetwork)
   const timePeriod = useAtomValue(filterTimeAtom)
-  const delta = token.market?.pricePercentChange?.value
+  const delta = token.market?.pricePercentChange
   const arrow = getDeltaArrow(delta)
   const smallArrow = getDeltaArrow(delta, 14)
   const formattedDelta = formatDelta(delta)
@@ -446,13 +420,13 @@ export const LoadedRow = forwardRef((props: LoadedRowProps, ref: ForwardedRef<HT
   }
 
   // A simple 0 price indicates the price is not currently available from the api
-  const price = token.market?.price?.value === 0 ? '-' : formatUSDPrice(token.market?.price?.value)
+  const price = token.market?.price === 0 ? '-' : formatUSDPrice(token.market?.price)
 
   // TODO: currency logo sizing mobile (32px) vs. desktop (24px)
   return (
     <div ref={ref} data-testid={`token-table-row-${token.address}`}>
       <StyledLink
-        to={getInfoTokenDetailsURL(token)}
+        to={getInfoTokenSwapURL(token)}
         onClick={() =>
           sendAnalyticsEvent(InterfaceEventName.EXPLORE_TOKEN_ROW_CLICKED, exploreTokenSelectedEventProperties)
         }
@@ -461,7 +435,7 @@ export const LoadedRow = forwardRef((props: LoadedRowProps, ref: ForwardedRef<HT
           header={false}
           tokenInfo={
             <ClickableName>
-              <QueryTokenLogo token={token} />
+              <InfoTokenLogo token={token} />
               <TokenInfoCell>
                 <TokenName data-cy="token-name">{token.name}</TokenName>
                 <TokenSymbol>{token.symbol}</TokenSymbol>
@@ -487,23 +461,6 @@ export const LoadedRow = forwardRef((props: LoadedRowProps, ref: ForwardedRef<HT
           }
           tvl={<ClickableContent>{formatNumber(token.tvlUSD, NumberType.FiatTokenStats)}</ClickableContent>}
           volume={<ClickableContent>{formatNumber(token.volumeUSD, NumberType.FiatTokenStats)}</ClickableContent>}
-          sparkLine={
-            <SparkLine>
-              <ParentSize>
-                {({ width, height }) =>
-                  props.sparklineMap && (
-                    <SparklineChart
-                      width={width}
-                      height={height}
-                      tokenData={token}
-                      pricePercentChange={token.market?.pricePercentChange?.value}
-                      sparklineMap={props.sparklineMap}
-                    />
-                  )
-                }
-              </ParentSize>
-            </SparkLine>
-          }
           first={tokenListIndex === 0}
           last={tokenListIndex === tokenListLength - 1}
         />

@@ -196,7 +196,17 @@ export function useTopTokens(chain: Chain): UseTopTokensReturnValue {
   )
 }
 
-export interface InfoToken extends TopToken {
+export interface InfoToken {
+  address: string
+  name: string
+  symbol: string
+  market: {
+    price?: number
+    pricePercentChange?: number
+  }
+  project?: {
+    logoUrl?: string
+  }
   tvlUSD: number
   volumeUSD: number
   volumeUSDWeek: number

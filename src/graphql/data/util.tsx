@@ -222,6 +222,11 @@ export function getInfoTokenDetailsURL({
   return `/ringTokens/${chainName}/${tokenAddress}${inputAddressSuffix}`
 }
 
+export function getInfoTokenSwapURL({ address }: { address?: string | null }) {
+  const tokenAddress = address ?? NATIVE_CHAIN_ID
+  return `/swap/?inputCurrency=ETH&outputCurrency=${tokenAddress}`
+}
+
 export function unwrapToken<
   T extends {
     address?: string | null
