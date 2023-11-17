@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { TransactionStatus } from 'graphql/data/__generated__/types-and-hooks'
+import { TransactionStatus } from 'graphql/data/graphqlTypes'
 import { TradeFillType } from 'state/routing/types'
 import { useSwapTransactionStatus } from 'state/transactions/hooks'
 import { TEST_TRADE_EXACT_INPUT } from 'test-utils/constants'

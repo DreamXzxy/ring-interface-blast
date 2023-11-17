@@ -1,10 +1,7 @@
 import { t } from '@lingui/macro'
-import { SwapOrderStatus, TransactionStatus } from 'graphql/data/__generated__/types-and-hooks'
+import { TransactionStatus } from 'graphql/data/graphqlTypes'
 import { UniswapXOrderStatus } from 'lib/hooks/orders/types'
 import { TransactionType } from 'state/transactions/types'
-
-// use even number because rows are in groups of 2
-export const DEFAULT_NFT_QUERY_AMOUNT = 26
 
 const TransactionTitleTable: { [key in TransactionType]: { [state in TransactionStatus]: string } } = {
   [TransactionType.SWAP]: {
@@ -219,20 +216,4 @@ export const OrderTextTable: {
     title: t`Swap cancelled`,
     status: TransactionStatus.Failed,
   },
-}
-
-// Non-exhaustive list of addresses Moonpay uses when sending purchased tokens
-export const MOONPAY_SENDER_ADDRESSES = [
-  '0x8216874887415e2650d12d53ff53516f04a74fd7',
-  '0x151b381058f91cf871e7ea1ee83c45326f61e96d',
-  '0xb287eac48ab21c5fb1d3723830d60b4c797555b0',
-  '0xd108fd0e8c8e71552a167e7a44ff1d345d233ba6',
-]
-
-// Converts GQL backend orderStatus enum to the enum used by the frontend and UniswapX backend
-export const OrderStatusTable: { [key in SwapOrderStatus]: UniswapXOrderStatus } = {
-  [SwapOrderStatus.Open]: UniswapXOrderStatus.OPEN,
-  [SwapOrderStatus.Expired]: UniswapXOrderStatus.EXPIRED,
-  [SwapOrderStatus.Error]: UniswapXOrderStatus.ERROR,
-  [SwapOrderStatus.InsufficientFunds]: UniswapXOrderStatus.INSUFFICIENT_FUNDS,
 }

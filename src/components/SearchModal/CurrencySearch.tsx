@@ -4,9 +4,7 @@ import { InterfaceEventName, InterfaceModalName } from '@uniswap/analytics-event
 import { Currency, Token } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { Trace } from 'analytics'
-import { useCachedPortfolioBalancesQuery } from 'components/AccountDrawer/PrefetchBalancesWrapper'
 import { sendEvent } from 'components/analytics'
-import { supportedChainIdFromGQLChain } from 'graphql/data/util'
 import useDebounce from 'hooks/useDebounce'
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import useToggle from 'hooks/useToggle'
@@ -62,7 +60,7 @@ export function CurrencySearch({
   isOpen,
   onlyShowCurrenciesWithBalance,
 }: CurrencySearchProps) {
-  const { chainId, account } = useWeb3React()
+  const { chainId } = useWeb3React()
   const theme = useTheme()
 
   const [tokenLoaderTimerElapsed, setTokenLoaderTimerElapsed] = useState(false)
@@ -91,25 +89,35 @@ export function CurrencySearch({
     return Object.values(defaultTokens).filter(getTokenFilter(debouncedQuery))
   }, [defaultTokens, debouncedQuery])
 
-  const { data, loading: balancesAreLoading } = useCachedPortfolioBalancesQuery({ account })
+  // const { data, loading: balancesAreLoading } = useCachedPortfolioBalancesQuery({ account })
+  // const balances: TokenBalances = useMemo(() => {
+  //   return (
+  //     data?.portfolios?.[0].tokenBalances?.reduce((balanceMap, tokenBalance) => {
+  //       if (
+  //         tokenBalance.token?.chain &&
+  //         supportedChainIdFromGQLChain(tokenBalance.token?.chain) === chainId &&
+  //         tokenBalance.token?.address !== undefined &&
+  //         tokenBalance.denominatedValue?.value !== undefined
+  //       ) {
+  //         const address = tokenBalance.token?.standard === 'ERC20' ? tokenBalance.token?.address?.toLowerCase() : 'ETH'
+  //         const usdValue = tokenBalance.denominatedValue?.value
+  //         const balance = tokenBalance.quantity
+  //         balanceMap[address] = { usdValue, balance: balance ?? 0 }
+  //       }
+  //       return balanceMap
+  //     }, {} as TokenBalances) ?? {}
+  //   )
+  // }, [chainId, data?.portfolios])
+  const balancesAreLoading = false
+  // TODO - new function without uniswap api
   const balances: TokenBalances = useMemo(() => {
-    return (
-      data?.portfolios?.[0].tokenBalances?.reduce((balanceMap, tokenBalance) => {
-        if (
-          tokenBalance.token?.chain &&
-          supportedChainIdFromGQLChain(tokenBalance.token?.chain) === chainId &&
-          tokenBalance.token?.address !== undefined &&
-          tokenBalance.denominatedValue?.value !== undefined
-        ) {
-          const address = tokenBalance.token?.standard === 'ERC20' ? tokenBalance.token?.address?.toLowerCase() : 'ETH'
-          const usdValue = tokenBalance.denominatedValue?.value
-          const balance = tokenBalance.quantity
-          balanceMap[address] = { usdValue, balance: balance ?? 0 }
-        }
-        return balanceMap
-      }, {} as TokenBalances) ?? {}
-    )
-  }, [chainId, data?.portfolios])
+    return {
+      ['']: {
+        usdValue: 0,
+        balance: 0,
+      },
+    }
+  }, [])
 
   const sortedTokens: Token[] = useMemo(
     () =>

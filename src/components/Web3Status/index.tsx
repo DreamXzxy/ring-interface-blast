@@ -4,7 +4,6 @@ import { useWeb3React } from '@web3-react/core'
 import { sendAnalyticsEvent, TraceEvent } from 'analytics'
 import PortfolioDrawer, { useAccountDrawer } from 'components/AccountDrawer'
 import { usePendingActivity } from 'components/AccountDrawer/MiniPortfolio/Activity/hooks'
-import PrefetchBalancesWrapper from 'components/AccountDrawer/PrefetchBalancesWrapper'
 import Loader from 'components/Icons/LoadingSpinner'
 import { IconWrapper } from 'components/Identicon/StatusIcon'
 import { getConnection } from 'connection'
@@ -12,7 +11,6 @@ import useENSName from 'hooks/useENSName'
 import useLast from 'hooks/useLast'
 import { navSearchInputVisibleSize } from 'hooks/useScreenSize'
 import { Portal } from 'nft/components/common/Portal'
-import { useIsNftClaimAvailable } from 'nft/hooks/useIsNftClaimAvailable'
 import { darken } from 'polished'
 import { useCallback } from 'react'
 import { useAppSelector } from 'state/hooks'
@@ -137,7 +135,6 @@ function Web3StatusInner() {
     sendAnalyticsEvent(InterfaceEventName.ACCOUNT_DROPDOWN_BUTTON_CLICKED)
     toggleAccountDrawer()
   }, [toggleAccountDrawer])
-  const isClaimAvailable = useIsNftClaimAvailable((state) => state.isClaimAvailable)
 
   const { hasPendingActivity, pendingActivityCount } = usePendingActivity()
 
@@ -153,7 +150,6 @@ function Web3StatusInner() {
           data-testid="web3-status-connected"
           onClick={handleWalletDropdownClick}
           pending={hasPendingActivity}
-          isClaimAvailable={isClaimAvailable}
         >
           {!hasPendingActivity && (
             <StatusIcon account={account} size={24} connection={connection} showMiniIcons={false} />
@@ -195,13 +191,13 @@ function Web3StatusInner() {
 }
 
 export default function Web3Status() {
-  const [isDrawerOpen] = useAccountDrawer()
+  // TODO new PrefetchBalancesWrapper
   return (
-    <PrefetchBalancesWrapper shouldFetchOnAccountUpdate={isDrawerOpen}>
+    <>
       <Web3StatusInner />
       <Portal>
         <PortfolioDrawer />
       </Portal>
-    </PrefetchBalancesWrapper>
+    </>
   )
 }

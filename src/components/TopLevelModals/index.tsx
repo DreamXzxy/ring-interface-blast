@@ -6,13 +6,8 @@ import AddressClaimModal from 'components/claim/AddressClaimModal'
 import ConnectedAccountBlocked from 'components/ConnectedAccountBlocked'
 import FiatOnrampModal from 'components/FiatOnrampModal'
 import useAccountRiskCheck from 'hooks/useAccountRiskCheck'
-import { lazy } from 'react'
 import { useModalIsOpen, useToggleModal } from 'state/application/hooks'
 import { ApplicationModal } from 'state/application/reducer'
-
-const Bag = lazy(() => import('nft/components/bag/Bag'))
-const TransactionCompleteModal = lazy(() => import('nft/components/collection/TransactionCompleteModal'))
-const AirdropModal = lazy(() => import('components/AirdropModal'))
 
 export default function TopLevelModals() {
   const addressClaimOpen = useModalIsOpen(ApplicationModal.ADDRESS_CLAIM)
@@ -26,12 +21,9 @@ export default function TopLevelModals() {
     <>
       <AddressClaimModal isOpen={addressClaimOpen} onDismiss={addressClaimToggle} />
       <ConnectedAccountBlocked account={account} isOpen={accountBlocked} />
-      <Bag />
       <UniwalletModal />
       <BaseAnnouncementBanner />
       <OffchainActivityModal />
-      <TransactionCompleteModal />
-      <AirdropModal />
       <FiatOnrampModal />
     </>
   )

@@ -1,5 +1,4 @@
 import { Trans } from '@lingui/macro'
-import { PAGE_SIZE } from 'graphql/data/TopTokens'
 import { useInfoTokens } from 'hooks/useInfoTokens'
 import { ReactNode } from 'react'
 import { AlertTriangle } from 'react-feather'
@@ -7,6 +6,9 @@ import styled from 'styled-components'
 
 import { MAX_WIDTH_MEDIA_BREAKPOINT } from '../../Tokens/constants'
 import { HeaderRow, LoadedRow, LoadingRow } from './TokenRow'
+
+// Number of items to render in each fetch in infinite scroll.
+const PAGE_SIZE = 20
 
 const GridContainer = styled.div`
   display: flex;

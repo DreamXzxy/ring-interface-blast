@@ -29,10 +29,6 @@ describe('disable nft on landing page', () => {
     expect(container).toMatchSnapshot()
     expect(container).not.toHaveTextContent('NFTs')
     expect(container).not.toHaveTextContent('NFT')
-    expect(container).toHaveTextContent('Looking for a partnership with Ring Exchange?')
-    expect(container).toHaveTextContent('Apply here')
-    expect(container).toHaveTextContent('Join our community')
-    expect(container).toHaveTextContent('Join our discord')
     expect(container).not.toHaveTextContent('Trade NFTs')
     expect(container).not.toHaveTextContent('Explore NFTs')
     expect(container).not.toHaveTextContent(

@@ -169,7 +169,7 @@ export default function SwapPage({ className }: { className?: string }) {
  * However if this component is being used in a context that displays information from a different, unconnected
  * chain (e.g. the TDP), then chainId should refer to the unconnected chain.
  */
-export function Swap({
+function Swap({
   className,
   prefilledState = {},
   chainId,

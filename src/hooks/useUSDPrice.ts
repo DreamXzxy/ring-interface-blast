@@ -1,12 +1,10 @@
 import { NetworkStatus } from '@apollo/client'
 import { ChainId, Currency, CurrencyAmount, Price, TradeType } from '@uniswap/sdk-core'
 import { nativeOnChain } from 'constants/tokens'
-import { Chain, useTokenSpotPriceQuery } from 'graphql/data/__generated__/types-and-hooks'
-import { chainIdToBackendName, isGqlSupportedChain, PollingInterval } from 'graphql/data/util'
+import { isGqlSupportedChain } from 'graphql/data/util'
 import { useMemo } from 'react'
 import { INTERNAL_ROUTER_PREFERENCE_PRICE, TradeState } from 'state/routing/types'
 import { useRoutingAPITrade } from 'state/routing/useRoutingAPITrade'
-import { getNativeTokenDBAddress } from 'utils/nativeTokens'
 
 import useStablecoinPrice from './useStablecoinPrice'
 
@@ -66,19 +64,21 @@ export function useUSDPrice(
   isLoading: boolean
 } {
   const currency = currencyAmount?.currency ?? prefetchCurrency
-  const chainId = currency?.chainId
-  const chain = chainId ? chainIdToBackendName(chainId) : undefined
 
   // Use ETH-based pricing if available.
   const { data: tokenEthPrice, isLoading: isTokenEthPriceLoading } = useETHPrice(currency)
   const isTokenEthPriced = Boolean(tokenEthPrice || isTokenEthPriceLoading)
-  const { data, networkStatus } = useTokenSpotPriceQuery({
-    variables: { chain: chain ?? Chain.Ethereum, address: getNativeTokenDBAddress(chain ?? Chain.Ethereum) },
-    skip: !isTokenEthPriced,
-    pollInterval: PollingInterval.Normal,
-    notifyOnNetworkStatusChange: true,
-    fetchPolicy: 'cache-first',
-  })
+  // const { data, networkStatus } = useTokenSpotPriceQuery({
+  //   variables: { chain: chain ?? Chain.Ethereum, address: getNativeTokenDBAddress(chain ?? Chain.Ethereum) },
+  //   skip: !isTokenEthPriced,
+  //   pollInterval: PollingInterval.Normal,
+  //   notifyOnNetworkStatusChange: true,
+  //   fetchPolicy: 'cache-first',
+  // })
+
+  // TODO new function without uniswap api
+  const data: any = undefined
+  const networkStatus: NetworkStatus = NetworkStatus.loading
 
   // Use USDC-based pricing for chains not yet supported by backend (for ETH-based pricing).
   const stablecoinPrice = useStablecoinPrice(isTokenEthPriced ? undefined : currency)

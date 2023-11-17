@@ -359,7 +359,7 @@ export function formatPrice(
   return formatNumber(parseFloat(price.toSignificant()), type)
 }
 
-export function formatNumberOrString(price: Nullish<number | string>, type: NumberType): string {
+function formatNumberOrString(price: Nullish<number | string>, type: NumberType): string {
   if (price === null || price === undefined) return '-'
   if (typeof price === 'string') return formatNumber(parseFloat(price), type)
   return formatNumber(price, type)
@@ -367,12 +367,6 @@ export function formatNumberOrString(price: Nullish<number | string>, type: Numb
 
 export function formatUSDPrice(price: Nullish<number | string>, type: NumberType = NumberType.FiatTokenPrice): string {
   return formatNumberOrString(price, type)
-}
-
-/** Formats USD and non-USD prices */
-export function formatFiatPrice(price: Nullish<number>, currency = 'USD'): string {
-  if (price === null || price === undefined) return '-'
-  return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(price)
 }
 
 // Convert [CurrencyAmount] to number with necessary precision for price formatting.

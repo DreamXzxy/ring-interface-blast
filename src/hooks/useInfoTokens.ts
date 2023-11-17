@@ -1,7 +1,7 @@
 import { ChainId } from '@uniswap/sdk-core'
+import { InfoToken } from 'components/InfoTokens/TokenTable/TokenRow'
 import { RNG_ADDRESS, RNG_PAIR_TOKENS } from 'constants/tokens'
 import { getAddress } from 'ethers/lib/utils'
-import { InfoToken } from 'graphql/data/TopTokens'
 import { chainIdToNetworkName } from 'lib/hooks/useCurrencyLogoURIs'
 import { useMemo } from 'react'
 import {

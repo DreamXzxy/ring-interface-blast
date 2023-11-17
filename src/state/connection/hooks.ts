@@ -1,7 +1,6 @@
 export {
   default as useCurrencyBalance,
   useCurrencyBalances,
-  useNativeCurrencyBalances,
   useTokenBalance,
   useTokenBalances,
   useTokenBalancesWithLoadingIndicator,

@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`useTokensSparkLine returns the right initial value based on breakpoints 1`] = `
-Object {
-  "current": Object {},
-}
-`;

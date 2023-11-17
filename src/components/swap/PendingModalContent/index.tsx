@@ -5,7 +5,7 @@ import { OrderContent } from 'components/AccountDrawer/MiniPortfolio/Activity/Of
 import { ColumnCenter } from 'components/Column'
 import Column from 'components/Column'
 import Row from 'components/Row'
-import { TransactionStatus } from 'graphql/data/__generated__/types-and-hooks'
+import { TransactionStatus } from 'graphql/data/graphqlTypes'
 import { SwapResult } from 'hooks/useSwapCallback'
 import { useUnmountingAnimation } from 'hooks/useUnmountingAnimation'
 import { UniswapXOrderStatus } from 'lib/hooks/orders/types'

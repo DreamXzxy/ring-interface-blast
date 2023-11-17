@@ -155,7 +155,15 @@ export const ChainSelector = ({ leftAlign }: ChainSelectorProps) => {
           ) : (
             <img src={info.logoUrl} alt={info.label} className={styles.Image} data-testid="chain-selector-logo" />
           )}
-          {isOpen ? <ChevronUp {...chevronProps} /> : <ChevronDown {...chevronProps} />}
+          {isOpen ? (
+            <div style={{ width: '20px', height: '20px' }}>
+              <ChevronUp {...chevronProps} />
+            </div>
+          ) : (
+            <div style={{ width: '20px', height: '20px' }}>
+              <ChevronDown {...chevronProps} />
+            </div>
+          )}
         </Row>
       </MouseoverTooltip>
       {isOpen && (isMobile ? <Portal>{dropdown}</Portal> : <>{dropdown}</>)}

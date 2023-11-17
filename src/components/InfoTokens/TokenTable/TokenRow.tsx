@@ -6,7 +6,6 @@ import { ArrowChangeUp } from 'components/Icons/ArrowChangeUp'
 import { Info } from 'components/Icons/Info'
 import InfoTokenLogo from 'components/Logo/InfoTokenLogo'
 import { MouseoverTooltip } from 'components/Tooltip'
-import { InfoToken } from 'graphql/data/TopTokens'
 import { getInfoTokenSwapURL, supportedChainIdFromGQLChain, validateUrlChainParam } from 'graphql/data/util'
 import { useAtomValue } from 'jotai/utils'
 import { ForwardedRef, forwardRef } from 'react'
@@ -32,6 +31,22 @@ import {
   useSetSortMethod,
 } from '../../Tokens/state'
 import { ArrowCell, DeltaText, formatDelta, getDeltaArrow } from '../../Tokens/TokenDetails/PriceChart'
+
+export interface InfoToken {
+  address: string
+  name: string
+  symbol: string
+  market: {
+    price?: number
+    pricePercentChange?: number
+  }
+  project?: {
+    logoUrl?: string
+  }
+  tvlUSD: number
+  volumeUSD: number
+  volumeUSDWeek: number
+}
 
 const Cell = styled.div`
   display: flex;

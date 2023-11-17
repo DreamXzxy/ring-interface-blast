@@ -1,5 +1,5 @@
+import { InfoToken } from 'components/InfoTokens/TokenTable/TokenRow'
 import { NATIVE_CHAIN_ID } from 'constants/tokens'
-import { InfoToken } from 'graphql/data/TopTokens'
 
 import AssetLogo, { AssetLogoBaseProps } from './AssetLogo'
 
