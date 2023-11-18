@@ -1,10 +1,12 @@
 import { NetworkStatus } from '@apollo/client'
 import { ChainId, Currency, CurrencyAmount, Price, TradeType } from '@uniswap/sdk-core'
 import { nativeOnChain } from 'constants/tokens'
-import { isGqlSupportedChain } from 'graphql/data/util'
+import { Chain } from 'graphql/data/graphqlTypes'
+import { chainIdToBackendName, isGqlSupportedChain } from 'graphql/data/util'
 import { useMemo } from 'react'
 import { INTERNAL_ROUTER_PREFERENCE_PRICE, TradeState } from 'state/routing/types'
 import { useRoutingAPITrade } from 'state/routing/useRoutingAPITrade'
+import { useTokenSpotPriceQuery } from 'utils/fetchPrice'
 
 import useStablecoinPrice from './useStablecoinPrice'
 
@@ -65,20 +67,12 @@ export function useUSDPrice(
 } {
   const currency = currencyAmount?.currency ?? prefetchCurrency
 
+  const chainId = currency?.chainId
+  const chain = chainId ? chainIdToBackendName(chainId) : undefined
   // Use ETH-based pricing if available.
   const { data: tokenEthPrice, isLoading: isTokenEthPriceLoading } = useETHPrice(currency)
   const isTokenEthPriced = Boolean(tokenEthPrice || isTokenEthPriceLoading)
-  // const { data, networkStatus } = useTokenSpotPriceQuery({
-  //   variables: { chain: chain ?? Chain.Ethereum, address: getNativeTokenDBAddress(chain ?? Chain.Ethereum) },
-  //   skip: !isTokenEthPriced,
-  //   pollInterval: PollingInterval.Normal,
-  //   notifyOnNetworkStatusChange: true,
-  //   fetchPolicy: 'cache-first',
-  // })
-
-  // TODO new function without uniswap api
-  const data: any = undefined
-  const networkStatus: NetworkStatus = NetworkStatus.loading
+  const { data, networkStatus } = useTokenSpotPriceQuery(chain ?? Chain.Ethereum, nativeOnChain(chainId ?? 1))
 
   // Use USDC-based pricing for chains not yet supported by backend (for ETH-based pricing).
   const stablecoinPrice = useStablecoinPrice(isTokenEthPriced ? undefined : currency)
@@ -90,7 +84,7 @@ export function useUSDPrice(
       return { data: parseFloat(stablecoinPrice.quote(currencyAmount).toSignificant()), isLoading: false }
     } else {
       // Otherwise, get the price of the token in ETH, and then multiply by the price of ETH.
-      const ethUSDPrice = data?.token?.project?.markets?.[0]?.price?.value
+      const ethUSDPrice = data?.token?.project?.markets?.[1]?.price?.value
       if (ethUSDPrice && tokenEthPrice) {
         return { data: parseFloat(tokenEthPrice.quote(currencyAmount).toExact()) * ethUSDPrice, isLoading: false }
       } else {

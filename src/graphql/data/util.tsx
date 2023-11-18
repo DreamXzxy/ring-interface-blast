@@ -27,6 +27,29 @@ const GQL_TESTNET_CHAINS = [Chain.EthereumGoerli, Chain.EthereumSepolia] as cons
 const UX_SUPPORTED_GQL_CHAINS = [...GQL_MAINNET_CHAINS, ...GQL_TESTNET_CHAINS] as const
 type InterfaceGqlChain = (typeof UX_SUPPORTED_GQL_CHAINS)[number]
 
+const CHAIN_ID_TO_BACKEND_NAME: { [key: number]: InterfaceGqlChain } = {
+  [ChainId.MAINNET]: Chain.Ethereum,
+  [ChainId.GOERLI]: Chain.EthereumGoerli,
+  [ChainId.SEPOLIA]: Chain.EthereumSepolia,
+  [ChainId.POLYGON]: Chain.Polygon,
+  [ChainId.POLYGON_MUMBAI]: Chain.Polygon,
+  [ChainId.CELO]: Chain.Celo,
+  [ChainId.CELO_ALFAJORES]: Chain.Celo,
+  [ChainId.ARBITRUM_ONE]: Chain.Arbitrum,
+  [ChainId.ARBITRUM_GOERLI]: Chain.Arbitrum,
+  [ChainId.OPTIMISM]: Chain.Optimism,
+  [ChainId.OPTIMISM_GOERLI]: Chain.Optimism,
+  [ChainId.BNB]: Chain.Bnb,
+  [ChainId.AVALANCHE]: Chain.Avalanche,
+  [ChainId.BASE]: Chain.Base,
+}
+
+export function chainIdToBackendName(chainId: number | undefined) {
+  return chainId && CHAIN_ID_TO_BACKEND_NAME[chainId]
+    ? CHAIN_ID_TO_BACKEND_NAME[chainId]
+    : CHAIN_ID_TO_BACKEND_NAME[ChainId.MAINNET]
+}
+
 const GQL_CHAINS = [ChainId.MAINNET, ChainId.OPTIMISM, ChainId.POLYGON, ChainId.ARBITRUM_ONE, ChainId.CELO] as const
 type GqlChainsType = (typeof GQL_CHAINS)[number]
 

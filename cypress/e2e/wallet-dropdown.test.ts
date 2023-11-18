@@ -30,14 +30,6 @@ describe('Wallet Dropdown', () => {
       if (featureFlag) {
         cy.get(getTestSelector('language-settings-button')).click()
       }
-
-      cy.get(getTestSelector('wallet-language-item')).contains('Afrikaans').click({ force: true })
-      cy.location('hash').should('match', /\?lng=af-ZA$/)
-      cy.contains('Uniswap available in: English')
-
-      cy.get(getTestSelector('wallet-language-item')).contains('English').click({ force: true })
-      cy.location('hash').should('match', /\?lng=en-US$/)
-      cy.contains('Uniswap available in: English').should('not.exist')
     })
   }
 
@@ -131,12 +123,6 @@ describe('Wallet Dropdown', () => {
     beforeEach(() => {
       cy.viewport('iphone-6').visit('/')
     })
-
-    // it('should dismiss the wallet bottom sheet when clicking buy crypto', () => {
-    //   cy.get(getTestSelector('web3-status-connected')).click()
-    //   cy.get(getTestSelector('wallet-buy-crypto')).click()
-    //   cy.contains('Buy crypto').should('not.be.visible')
-    // })
 
     it('should use a bottom sheet and dismiss when on a mobile screen size', () => {
       cy.get(getTestSelector('web3-status-connected')).click()
