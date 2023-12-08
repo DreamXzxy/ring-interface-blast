@@ -1,4 +1,4 @@
-import { ChainId } from '@uniswap/sdk-core'
+import { ChainId } from 'utils/ringChains'
 
 import { ExplorerDataType, getExplorerLink } from './getExplorerLink'
 
@@ -21,6 +21,9 @@ describe('#getExplorerLink', () => {
   it('bnb chain', () => {
     expect(getExplorerLink(ChainId.BNB, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://bscscan.com/address/abc')
   })
+  it('bnb testnet chain', () => {
+    expect(getExplorerLink(ChainId.BNB_TEST, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://testnet.bscscan.com/abc')
+  })
   it('polygon', () => {
     expect(getExplorerLink(137, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://polygonscan.com/address/abc')
   })
@@ -37,5 +40,10 @@ describe('#getExplorerLink', () => {
   })
   it('base', () => {
     expect(getExplorerLink(ChainId.BASE, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://basescan.org/address/abc')
+  })
+  it('base goerli', () => {
+    expect(getExplorerLink(ChainId.BASE_GOERLI, 'abc', ExplorerDataType.ADDRESS)).toEqual(
+      'https://goerli.basescan.org/address/abc'
+    )
   })
 })

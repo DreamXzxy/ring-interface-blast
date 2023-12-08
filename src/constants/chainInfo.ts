@@ -1,4 +1,4 @@
-import { ChainId } from '@uniswap/sdk-core'
+import { ChainId } from 'utils/ringChains'
 import bnbCircleLogoUrl from 'assets/images/bnbCircle.svg'
 import ethereumLogoUrl from 'assets/images/ethereum-logo.png'
 import polygonCircleLogoUrl from 'assets/images/polygonCircle.png'
@@ -227,6 +227,22 @@ const CHAIN_INFO: ChainInfoMap = {
     color: darkTheme.chain_56,
     backgroundColor: darkTheme.chain_56_background,
   },
+  [ChainId.BNB_TEST]: {
+    networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms(`10m`),
+    bridge: 'https://cbridge.celer.network/1/97',
+    docs: 'https://docs.bnbchain.org/',
+    explorer: 'https://testnet.bscscan.com/',
+    infoLink: 'https://info.uniswap.org/#/bnb/',
+    label: 'BNB Chain',
+    logoUrl: bnbLogo,
+    circleLogoUrl: bnbCircleLogoUrl,
+    squareLogoUrl: bnbSquareLogoUrl,
+    nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
+    defaultListUrl: PLASMA_BNB_LIST,
+    color: darkTheme.chain_56,
+    backgroundColor: darkTheme.chain_56_background,
+  },
   [ChainId.AVALANCHE]: {
     networkType: NetworkType.L1,
     blockWaitMsBeforeWarning: ms(`10m`),
@@ -257,6 +273,22 @@ const CHAIN_INFO: ChainInfoMap = {
     circleLogoUrl: baseLogo,
     squareLogoUrl: baseSquareLogo,
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    color: darkTheme.chain_84531,
+  },
+  [ChainId.BASE_GOERLI]: {
+    networkType: NetworkType.L2,
+    blockWaitMsBeforeWarning: ms(`25m`),
+    bridge: 'https://goerli-bridge.base.org/deposit',
+    defaultListUrl: BASE_LIST,
+    docs: 'https://docs.base.org',
+    explorer: 'https://goerli.basescan.org/',
+    infoLink: 'https://info.uniswap.org/#/base/', // base testnet not supported
+    label: 'Base Goerli',
+    logoUrl: baseLogo,
+    statusPage: 'https://status.base.org/',
+    circleLogoUrl: baseLogo,
+    squareLogoUrl: baseSquareLogo,
+    nativeCurrency: { name: 'Base Goerli Ether', symbol: 'ETH', decimals: 18 },
     color: darkTheme.chain_84531,
   },
 } as const

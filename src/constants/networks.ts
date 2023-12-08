@@ -1,4 +1,4 @@
-import { ChainId } from '@uniswap/sdk-core'
+import { ChainId } from 'utils/ringChains'
 
 import ETHEREUM_LOGO_URL from '../assets/images/ethereum-logo.png'
 
@@ -9,6 +9,14 @@ if (typeof INFURA_KEY === 'undefined') {
 const QUICKNODE_BNB_RPC_URL = process.env.REACT_APP_BNB_RPC_URL
 if (typeof QUICKNODE_BNB_RPC_URL === 'undefined') {
   throw new Error(`REACT_APP_BNB_RPC_URL must be a defined environment variable`)
+}
+const QUICKNODE_BNB_TEST_RPC_URL = process.env.REACT_APP_BNB_TEST_RPC_URL
+if (typeof QUICKNODE_BNB_RPC_URL === 'undefined') {
+  throw new Error(`REACT_APP_BNB_TEST_RPC_URL must be a defined environment variable`)
+}
+const QUICKNODE_BASE_GOERLI_RPC_URL = process.env.REACT_APP_BASE_GOERLI_RPC_URL
+if (typeof QUICKNODE_BASE_GOERLI_RPC_URL === 'undefined') {
+  throw new Error(`REACT_APP_BASE_GOERLI_RPC_URL must be a defined environment variable`)
 }
 const QUICKNODE_BASE_RPC_URL = process.env.REACT_APP_BASE_MAINNET_RPC_URL
 if (typeof QUICKNODE_BASE_RPC_URL === 'undefined') {
@@ -106,6 +114,16 @@ export const FALLBACK_URLS = {
     'https://bsc-dataseed4.defibit.io',
     'https://rpc.ankr.com/bsc',
   ],
+  [ChainId.BNB_TEST]: [
+    // "Safe" URLs
+    'https://broken-indulgent-scion.bsc-testnet.quiknode.pro/7c4df4b034ba682ce7b50451da400a8f3a0df7ca/',
+    'https://data-seed-prebsc-1-s1.bnbchain.org:8545',
+    'https://data-seed-prebsc-2-s1.bnbchain.org:8545',
+    'https://data-seed-prebsc-1-s2.bnbchain.org:8545',
+    'https://data-seed-prebsc-2-s2.bnbchain.org:8545',
+   ' https://data-seed-prebsc-1-s3.bnbchain.org:8545',
+   ' https://data-seed-prebsc-2-s3.bnbchain.org:8545',
+  ],
   [ChainId.AVALANCHE]: [
     // "Safe" URLs
     'https://api.avax.network/ext/bc/C/rpc',
@@ -118,6 +136,14 @@ export const FALLBACK_URLS = {
     QUICKNODE_BASE_RPC_URL,
     'https://base-mainnet.blastapi.io/b5a802d8-151d-4443-90a7-699108dc4e01',
     'https://svc.blockdaemon.com/base/mainnet/native?apiKey=zpka_1334e7c450464d06b6e33a972a7a4e57_75320f43',
+  ],
+  [ChainId.BASE_GOERLI]: [
+    // "Safe" URLs
+    'https://goerli.base.org',
+    // "Unsafe" URLs
+    QUICKNODE_BASE_GOERLI_RPC_URL,
+    'https://base-goerli.blastapi.io/b5a802d8-151d-4443-90a7-699108dc4e01',
+    'https://svc.blockdaemon.com/base/testnet/native?apiKey=zpka_1334e7c450464d06b6e33a972a7a4e57_75320f43',
   ],
 }
 
@@ -150,8 +176,10 @@ export const RPC_URLS = {
   [ChainId.CELO]: FALLBACK_URLS[ChainId.CELO],
   [ChainId.CELO_ALFAJORES]: FALLBACK_URLS[ChainId.CELO_ALFAJORES],
   [ChainId.BNB]: [QUICKNODE_BNB_RPC_URL, ...FALLBACK_URLS[ChainId.BNB]],
+  [ChainId.BNB_TEST]: [QUICKNODE_BNB_TEST_RPC_URL, ...FALLBACK_URLS[ChainId.BNB_TEST]],
   [ChainId.AVALANCHE]: [`https://avalanche-mainnet.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[ChainId.AVALANCHE]],
   [ChainId.BASE]: [`https://base-mainnet.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[ChainId.BASE]],
+  [ChainId.BASE_GOERLI]: [`https://base-goerli.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[ChainId.BASE_GOERLI]],
 }
 
 export enum SupportedNetwork {

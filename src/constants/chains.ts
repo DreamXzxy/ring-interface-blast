@@ -1,4 +1,5 @@
-import { ChainId, SUPPORTED_CHAINS, SupportedChainsType } from '@uniswap/sdk-core'
+import { ChainId, SUPPORTED_CHAINS, SupportedChainsType } from 'utils/ringChains'
+// import { RingSupportedChainsType } from './providers'
 
 export const UniWalletSupportedChains = [
   ChainId.MAINNET,
@@ -21,20 +22,22 @@ export const CHAIN_IDS_TO_NAMES = {
   [ChainId.OPTIMISM]: 'optimism',
   [ChainId.OPTIMISM_GOERLI]: 'optimism_goerli',
   [ChainId.BNB]: 'bnb',
+  [ChainId.BNB_TEST]: 'bnb_test',
   [ChainId.AVALANCHE]: 'avalanche',
   [ChainId.BASE]: 'base',
+  [ChainId.BASE_GOERLI]: 'base_goerli',
 } as const
 
 // Include ChainIds in this array if they are not supported by the UX yet, but are already in the SDK.
-const NOT_YET_UX_SUPPORTED_CHAIN_IDS: number[] = [ChainId.BASE_GOERLI]
+const NOT_YET_UX_SUPPORTED_CHAIN_IDS: number[] = []
 
 // TODO: include BASE_GOERLI when routing is implemented
-export type SupportedInterfaceChain = Exclude<SupportedChainsType, ChainId.BASE_GOERLI>
+// export type SupportedInterfaceChain = Exclude<SupportedChainsType, ChainId.BASE_GOERLI>
 
 export function isSupportedChain(
   chainId: number | null | undefined | ChainId,
   featureFlags?: Record<number, boolean>
-): chainId is SupportedInterfaceChain {
+): chainId is SupportedChainsType {
   if (featureFlags && chainId && chainId in featureFlags) {
     return featureFlags[chainId]
   }
@@ -44,7 +47,7 @@ export function isSupportedChain(
 export function asSupportedChain(
   chainId: number | null | undefined | ChainId,
   featureFlags?: Record<number, boolean>
-): SupportedInterfaceChain | undefined {
+): SupportedChainsType | undefined {
   if (!chainId) return undefined
   if (featureFlags && chainId in featureFlags && !featureFlags[chainId]) {
     return undefined
@@ -61,6 +64,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   ChainId.BNB,
   ChainId.AVALANCHE,
   ChainId.BASE,
+  ChainId.BASE_GOERLI,
 ] as const
 
 /**
@@ -72,9 +76,11 @@ export const TESTNET_CHAIN_IDS = [
   ChainId.GOERLI,
   ChainId.SEPOLIA,
   ChainId.POLYGON_MUMBAI,
+  ChainId.BNB_TEST,
   ChainId.ARBITRUM_GOERLI,
   ChainId.OPTIMISM_GOERLI,
   ChainId.CELO_ALFAJORES,
+  ChainId.BASE_GOERLI,
 ] as const
 
 /**
@@ -104,6 +110,7 @@ export const L2_CHAIN_IDS = [
   ChainId.OPTIMISM,
   ChainId.OPTIMISM_GOERLI,
   ChainId.BASE,
+  ChainId.BASE_GOERLI,
 ] as const
 
 export type SupportedL2ChainId = (typeof L2_CHAIN_IDS)[number]
@@ -129,8 +136,10 @@ export function getChainPriority(chainId: ChainId): number {
     case ChainId.POLYGON_MUMBAI:
       return 3
     case ChainId.BASE:
+    case ChainId.BASE_GOERLI:
       return 4
     case ChainId.BNB:
+    case ChainId.BNB_TEST:
       return 5
     case ChainId.AVALANCHE:
       return 6

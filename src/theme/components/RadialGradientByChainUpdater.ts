@@ -1,4 +1,4 @@
-import { ChainId } from '@uniswap/sdk-core'
+import { ChainId } from 'utils/ringChains'
 import { useWeb3React } from '@web3-react/core'
 import { useIsNftPage } from 'hooks/useIsNftPage'
 import { useEffect } from 'react'
@@ -93,7 +93,8 @@ export default function RadialGradientByChainUpdater(): null {
         backgroundRadialGradientElement.style.background = darkMode ? celoDarkGradient : celoLightGradient
         break
       }
-      case ChainId.BNB: {
+      case ChainId.BNB:
+      case ChainId.BNB_TEST: {
         setBackground(backgroundResetStyles)
         const bscLightGradient =
           'radial-gradient(100% 100% at 50% 0%, rgba(242 , 186, 8, 0) 0%, rgba(238, 182, 6, 0) 50%, rgba(140, 185, 11, 0) 100%), #FFFFFF'
@@ -111,7 +112,8 @@ export default function RadialGradientByChainUpdater(): null {
         backgroundRadialGradientElement.style.background = darkMode ? avaxDarkGradient : avaxLightGradient
         break
       }
-      case ChainId.BASE: {
+      case ChainId.BASE:
+      case ChainId.BASE_GOERLI: {
         setBackground(backgroundResetStyles)
         const baseLightGradient =
           'radial-gradient(100% 100% at 50% 0%, rgba(0, 82, 255, 0) 0%, rgba(0, 82, 255, 0) 40.0%, rgba(252, 255, 82, 0.00) 100%), rgb(255, 255, 255)'
